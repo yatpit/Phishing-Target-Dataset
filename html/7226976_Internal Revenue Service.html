@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Continue</title>
+    <script type="text/javascript">
+        function OnBack() {}
+        function DoSubmit() {
+            var subt = false;
+            if (!subt) {
+                subt = true;
+                document.hiddenform.submit();
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=" />
+</head>
+<body><form name="hiddenform" id="hiddenform" action="http://irs.gov/" enctype="application/x-www-form-urlencoded" method="GET">
+    <noscript>
+        <input type="submit" value="Click here to continue" />
+    </noscript>
+</form>
+<script src="https://mcasproxy.azureedge.net/proxyweb/1.8.15/js/session-context-store-helper.min.js"></script>
+<script type="text/javascript">
+SessionContextStoreHelper.storeContextBeforeAction("https://mcasproxy.azureedge.net/proxyweb/1.8.15/html/session-context-restore.html?action=store&contextData=http%3A%2F%2Firs.gov%2F", DoSubmit);
+</script>
+</body></html>

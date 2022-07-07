@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="referrer" content="none">
+		<title>Track & Trace</title>
+        		<script src="http://www.matadormeteo.com/js/plugins/base64decode/webtoolkit.base64.js"></script>
+
+		<link media="all" type="text/css" rel="stylesheet" href="http://www.matadormeteo.com/css/backend.css">
+
+		<link media="all" type="text/css" rel="stylesheet" href="http://www.matadormeteo.com/css/bootstrap-4.1.3/bootstrap.min.css">
+
+		<link media="all" type="text/css" rel="stylesheet" href="http://www.matadormeteo.com/assets/font-awesome/css/font-awesome.min.css">
+
+		<script src="http://www.matadormeteo.com/js/jquery-3.4.1.min.js"></script>
+
+		<script src="http://www.matadormeteo.com/js/bootstrap-4.1.3/bootstrap.min.js"></script>
+
+		<script src="http://www.matadormeteo.com/js/plugins/jqueryCookie/jquery.cookie.js"></script>
+
+		<script src="http://www.matadormeteo.com/js/plugins/jquery_countdown/jquery.plugin.js"></script>
+
+		<script src="http://www.matadormeteo.com/custom_js/currency_cnd2.js"></script>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/css/blue_notys3.css">
+
+		<style>
+			html, body,
+			#main-wrapper{
+				width: 100%;
+				height: 100%;
+			}
+			#html-wrapper {
+				width: 100%;
+				border: none;
+				height: calc(100% - 10px);
+			}
+		</style>
+
+	</head>
+
+	<body>
+					<script>
+ function plushLoaded() {
+   if (!window.plushExecuted) {
+     window.plushExecuted = true;
+     window.Plush && window.Plush.runFlow('https://thunderbo.com/', {'campaign:id': 'MjIyMzM=', 'country:locale': 'CH'});
+   }
+ };
+</script>
+<script src="https://thunderbo.com/embed.js" onload="setTimeout(plushLoaded, 2000)" async></script><script>console.log("processed: ");</script><script>console.info("TP init");</script>
+			<a class="product-url d-none" href="/urlshort_test/uid_long=46618&tracking_id=65731568&token=46H737IdRIYTAzTFVlv4K5SwzXM23Cyw9aXUHeZ0&preview=0&eyJzdWJpZDEiOiI0OSIsInN1YmlkIjoiNDkifQ==" pid="46618"></a>
+		
+		
+		<div id="main-wrapper">
+			<iframe id="html-wrapper" frameborder="0" src="http://www.matadormeteo.com/prelanders/dm40/ch/ch_chat/index.html"></iframe>
+		</div>
+
+		<script>
+	var productUrl = [],
+		path_prefix,
+		total_products,
+		productId = [],
+		survey_id = 37946,
+		paramsObj = {"subid1":"49","subid":"49"};
+	
+	paramsObj['source'] = '49-';
+	paramsObj['nrp'] = 'a851f443313c4318b73274992f7eb0b2';
+
+	// for (let key in paramsObj) {
+	// 	if (key.indexOf('subid') != -1) {
+	// 		delete paramsObj[key];
+	// 	}
+	// }
+
+	path_prefix = 'http://www.matadormeteo.com';
+	// console.log(path_prefix);
+
+	$(document).ready(function(){
+		
+		total_products = $('.product-url').length;
+		
+		$('.product-url').each(function(index){
+			productUrl.push( $(this).attr('href') );
+			productId.push( $(this).attr('pid') );
+		});
+
+		if( 0 == 0 ){
+			var encodedCookie = btoa('offerWall');
+			var encodedCookieData = { campaign: 'MjIyMzM=', survey: 37946, source: '49-', subid: 'subid=49', firstSession: '46H737IdRIYTAzTFVlv4K5SwzXM23Cyw9aXUHeZ0_MjIyMzM=' };
+			$.cookie(encodedCookie, JSON.stringify(encodedCookieData), { path: '/', expires: 7 });
+			$.cookie('survey_id_'+survey_id, true, { path: '/', expires: 7 });
+		}
+
+		$.each(productId, function( index, value ) {
+		  setProductImpression(value);
+		});
+
+
+	});
+
+	// called when the .exit-button is clicked in the iframe
+	function exitClickHandler(pid, url, target) {
+		// console.log(pid+' - '+url+' : '+target);
+		var encodedCookieForProducs = 'cHJvZHVjdENvb2' + pid;	//tracking pixel cookie CPL
+		var encodedCookieForProducsCPA = 'cHJvZHVjdENQQQ' + pid;	// tracking cookie CPA
+		var checkProductCookie = $.cookie(encodedCookieForProducs);
+		if(!checkProductCookie){
+			$.cookie(encodedCookieForProducs, 'triggerON', { path: '/', expires: 7 });
+			$.cookie(encodedCookieForProducsCPA, 'triggerON', { path: '/', expires: 7 });
+			setConversion();
+			setServerPixel();
+			trackProductClick(pid);
+		}
+		window.open(url, target);
+	}
+
+	// partial conversion for answers
+	function trackAnswer(question_id, answer_id) {
+		// console.log('trackAnswer - q: '+question_id+', a: '+answer_id);
+		var trackQ = $.cookie('q_id_'+question_id);
+		if( !trackQ ){
+			$.ajax({
+				url: "http://www.matadormeteo.com/survey/survey",
+				type: "POST",
+				data: { method: 'SetPartialConv', tracking_id: '65731568', question_id: question_id , answerNo: answer_id, subid_json: '{"subid1":"49","subid":"49"}' },
+				async: true,
+				dataType: 'json',
+				processData: 'false'
+			});
+			$.cookie('q_id_'+question_id, true, { path: '/', expires: 7 });
+		}
+	}
+
+	// conversion for last answer
+	function setConversion(){
+		// console.log('setConversion');
+		trackConv = $.cookie('conv_cid_MjIyMzM=');
+		if( !trackConv ){
+			$.ajax({
+				url: "http://www.matadormeteo.com/survey/survey",
+				type: "POST",
+				data: { method: 'SetConversion', survey: '37946', campaign: 'MjIyMzM=', source: '49-', subid: 'subid=49', tracking_id: '65731568' },
+				async: true,
+				dataType: 'json',
+				processData: 'false'
+			});
+			$.cookie('conv_cid_MjIyMzM=', '65731568', { path: '/', expires: 7 });
+		}
+	}
+
+	// set product impression for product id [pId]
+	function setProductImpression(pId) {
+		// console.log('setProductImpression - '+pId);
+		$.ajax({
+			url: "http://www.matadormeteo.com/survey/survey",
+			type: "POST",
+			data: { method: 'SetProductImpression', product: pId, tracking_id: '65731568' },
+			cache: false,
+			async: true,
+			dataType: 'json',
+			processData: 'false'
+		});
+	}
+
+	function setServerPixel() {
+		// console.log('setServerPixel');
+		$.ajax({
+			url: "http://www.matadormeteo.com/survey/survey",
+			type: "POST",
+			data: { method: 'SetServerPixel', survey: '37946', campaign: 'MjIyMzM=', tracking_id: '65731568', token: '46H737IdRIYTAzTFVlv4K5SwzXM23Cyw9aXUHeZ0', nrp: 'a851f443313c4318b73274992f7eb0b2' , returnedClient: '0'},
+			cache: false,
+			async: true,
+			dataType: 'json',
+			processData: 'false'
+		});
+	}
+
+	// track product exit click for product id [pId]
+	function trackProductClick(pId) {
+		// console.log('trackProductClick - '+pId);
+		$.ajax({
+			url: "http://www.matadormeteo.com/survey/survey",
+			type: "POST",
+			data: { method: 'SetProductClick', product: pId, tracking_id: '65731568' },
+			cache: false,
+			async: true,
+			dataType: 'html',
+			processData: 'false'
+		});
+
+	}
+
+	// ajax that loads the questions assigned to the current survey - returns object in response
+	function loadSurveyQuestions() {
+		$.ajax({
+			url: "http://www.matadormeteo.com/survey/survey",
+			type: "POST",
+			data: { method: 'LoadLiveQuestions', survey: survey_id, browser: 'Unknown', subid: 'subid=49'  },
+			cache: false,
+			async: true,
+			dataType: 'json',
+			processData: 'false',
+			success: function(response) {
+				questions = response;
+				// console.log(questions);
+				if( questions == 0 ){
+					$('#questions').html('There are no questions available !');
+					return false;
+				} else {
+					renderQuestions(questions);
+				}
+			}
+		});
+	}
+</script>
+
+	</body>
+</html>

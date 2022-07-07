@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>楽天e-NAVI: ログイン画面</title>
+		<link rel="stylesheet" style="text/css" href="../css/index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div id="header"><img src="../img/rc-logo_CardEnavi_1.svg"><ul ref="headerul"><li v-for="(i,index) in headernav" @click="tp()">{{i}}</li></ul></div>
+		    <div id="main" ref="main">
+				<p id="main-p1">ご利用には楽天ユーザIDでログインしてください。 また、楽天e-NAVIを初めてご利用の場合は楽天e-NAVIサービス開始手続きが必要です。</p>
+			    <div id="form" ref="form1">
+					<p id="form-p1">楽天会員ログイン</p>
+					<input type="text" v-model="input1" placeholder="ユ一ザID (半角英数字)" />
+					<input type="password" v-model="input2" placeholder="パスワ一ド(半角英数字)"/>
+					<p id="form-p2"><a class="form-p2" @click="tp()">個人情報保護方針</a><img src="../img/rexicon-32-new-window-l.svg" class="disction">に同意してログイン (2017年02月13日改定)</p>
+				    <input type="button" value="ログイン" id="btn1" @click="send()" />
+					<p id="form-p3"><a class="form-p2" @click="tp()">ユーザID・パスワードを忘れた場合<img src="../img/rexicon-32-new-window-l.svg" class="disction"></a></p>
+				</div>
+				<div id="form2" @click="tp()" ref="form2">
+					<p id="form2-p1">ログインに関するご案内</p>
+					<p id="form2-p2">以下に同意のうえログインをお願いいたします。</p>
+					<p id="form2-p3">楽天カード株式会社（以下、当社）は、楽天グループ株式会社の<a class="form-p2">個人情報保護方針</a><img src="../img/rexicon-32-new-window-l.svg" class="disction">に基づいて提供を受けるお客様の情報を、当社の<a class="form-p2">「会員規約（個人情報の取扱に関する同意条項）</a><img src="../img/rexicon-32-new-window-l.svg" class="disction">」および<a class="form-p2">「プライバシーステートメント</a><img src="../img/rexicon-32-new-window-l.svg" class="disction">」に従って利用いたします。</p>
+				</div>
+				<div id="form3" ref="form3">
+					<p id="form3-p1">楽天会員に新規登録する</p>
+					<p id="form3-p2">楽天会員に新規登録してサ一ビスを利用する(無料)</p>
+					<p class="form-p2" @click="tp()">楽天会目とは?<img src="../img/rexicon-32-new-window-l.svg" class="disction"></p>
+				    <img src="../img/rexicon-32-chevron-right.svg" class="jiantou">
+				</div>
+				<div id="form4" ref="form4">
+					<p class="ul-title">ヘルプ・よくあるご質問</p>
+					<ul>
+						<li class="ul-li1" v-for="i in li1" @click="tp()">{{i}}<img src="../img/rexicon-32-new-window-l.svg" class="disction"></li>
+					</ul>
+					<p class="ul-title">ご利用にあたっての注意事項</p>
+					<ul>
+						<li class="ul-li2" v-for="i in li2" @click="tp()">{{i}}</li>
+					</ul>
+					<p class="ul-title">カードをご登録される場合、複数枚登録している場合</p>
+					<p class="form4-p1">楽天e-NAVIをご利用にあたり、お持ちの楽天カードを楽天e-NAVIにご登録いただく必要がございます。以下の方法でご登録後楽天e-NAVIをご利用ください。</p>
+				    <ul>
+						<li class="ul-li1" v-for="i in li3" @click="tp()">{{i}}<img src="../img/rexicon-32-new-window-l.svg" class="disction"></li>
+					</ul>
+				</div>
+				<div id="form5">
+					<p class="form5-title"><img src="../img/action.png">セキュリティに関するご案内</p>
+					<ul>
+						<li class="ul-li1" v-for="i in li4" @click="tp()">{{i}}</li>
+					</ul>
+					<img src="../img/stop.png" class="form5-img">
+				</div>
+				<ul class="form6">
+					<li v-for="i in li5" class="ul-li3" @click="tp()">{{i}}</li>
+				</ul>
+				<p class="footer" ref="footer">© Rakuten Card Co., Ltd.</p>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/RegularExpression.js"></script>
+</html>

